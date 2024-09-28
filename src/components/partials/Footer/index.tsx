@@ -1,7 +1,7 @@
 
 export default function Footer() {
     return (
-        <footer className="absolute bottom-4 right-4">
+        <footer className="">
             <p>
                 Copyright {new Date().getFullYear()}{" "}
                 <a

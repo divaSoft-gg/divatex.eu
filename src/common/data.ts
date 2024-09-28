@@ -1,14 +1,24 @@
-export const NAV = [
+import { INav } from "./types";
+
+export const NAV: INav[] = [
     {
-        label: 'Home',
-        route: '/',
+        label: "Accueil",
+        link: "/"
     },
     {
-        label: 'work',
-        route: '/what-we-did',
+        label: "ERP",
+        link: "/erp"
     },
     {
-        label: 'Contact',
-        route: '/get-in-touch',
+        label: "A propos",
+        link: "/about"
     },
+    {
+        label: "Contact",
+        link: "/contact"
+    },
+    {
+        label: "Réserver une démo",
+        link: "/demo"
+    }
 ]

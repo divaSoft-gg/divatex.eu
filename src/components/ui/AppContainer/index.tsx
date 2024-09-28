@@ -11,7 +11,7 @@ export function AppContainer({ className = '' }) {
 
     return (
         <NextUIProvider navigate={navigate}>
-            <div className={cn('w-full h-screen', className)}>
+            <div className={cn('w-full', className)}>
 
                 <NavBar />
 
