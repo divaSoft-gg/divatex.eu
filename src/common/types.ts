@@ -25,3 +25,11 @@ export interface IHeroConfig {
         link: string;
     }
 }
+
+export interface IContactInfo {
+    id: number;
+    location: string;
+    addresse: string;
+    email: string;
+    phone: string;
+}
