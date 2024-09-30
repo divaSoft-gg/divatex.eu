@@ -13,7 +13,7 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <HelmetProvider>
           <Helmet
-            titleTemplate="MAAK CORP | %s"
+            titleTemplate="DivaTex | %s"
             defaultTitle=""
           />
           <RouterProvider
