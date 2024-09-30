@@ -7,6 +7,7 @@ import { ErrorFallback } from './components/ui/ErrorFallback'
 import Home from './views/Home'
 import Contact from './views/Contact'
 import ERP from './views/ERP'
+import About from './views/About'
 
 const publicRoutes: RouteObject[] = [
     {
@@ -26,6 +27,12 @@ const publicRoutes: RouteObject[] = [
         element: <AppContainer />,
         errorElement: <ErrorFallback />,
         children: [{ index: true, element: <ERP /> }],
+    },
+    {
+        path: '/about',
+        element: <AppContainer />,
+        errorElement: <ErrorFallback />,
+        children: [{ index: true, element: <About /> }],
     },
 ]
 
