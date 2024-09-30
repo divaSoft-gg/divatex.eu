@@ -34,7 +34,7 @@ export default function TrustedBy() {
         <section className="py-20 bg-[#181819]">
             <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-10">
                 <div className="text-center space-y-6 max-w-2xl mx-auto">
-                    <h1 className="text-3xl font-bold text-whirte dark:text-white capitalize">Tous les métiers de la fabrication à la vente</h1>
+                    <h1 className="text-3xl font-bold text-white dark:text-white capitalize">Tous les métiers de la fabrication à la vente</h1>
                 </div>
                 <div className="flex justify-center flex-wrap gap-4">
                     {
