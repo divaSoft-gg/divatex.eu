@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { IHeroConfig } from "../../common/types";
 
-export default function HeroSection() {
+export default function HeroSection({ config }: { config: IHeroConfig }) {
     return (
         <section className="bg-gray-100 dark:bg-gray-900 py-32 sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative">
             <div className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-primary-600/70
@@ -21,22 +22,23 @@ translate-y-[40%] -translate-x-[40%] bottom-0">
             </div>
 
 
-            <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
-                <div className="text-center flex flex-col items-center space-y-10">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl text-primary-600 dark:text-white font-bold">Solutions dédiées au secteur du textile</h3>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 dark:text-white font-bold max-w-4xl capitalize">
-                        Augmentez vos rendements et maîtrisez votre rentabilité
+            <div className="w-full px-5 mx-auto lg:max-w-7xl sm:px-10 md:px-12 lg:px-5">
+                <div className="flex flex-col items-center space-y-10 text-center">
+                    <h3 className="text-2xl font-bold md:text-3xl lg:text-4xl text-primary-600 dark:text-white">{config.slug}</h3>
+                    <h1 className="max-w-4xl text-4xl font-bold text-gray-900 capitalize md:text-5xl lg:text-6xl/tight xl:text-7xl/tight dark:text-white">
+                        {config.title}
                     </h1>
 
-                    <p className="text-base my-0  text-gray-700 dark:text-gray-300 text-center max-w-xl">
-                        Visez l’excellence opérationnelle grâce à notre ERP métier conçu pour amplifier vos
-                        performances et répondre précisément aux besoins de votre secteur. efficacité. Chaque mise en place
-                        est accompagnée d’une augmentation minimale de 10% du CA et de 20% de la rentabilité.
+                    <p className="max-w-xl my-0 text-base text-center text-gray-700 dark:text-gray-300">
+                        {config.description}
                     </p>
 
-                    <div className="flex justify-center">
-                        <Link to="/demo" className="bg-[#0E5EFF] px-8 py-4 text-white text-xl w-fit p-4 rounded-3xl">Réserver une démo </Link>
-                    </div>
+                    {
+                        config.button.text !== '' &&
+                        <div className="flex justify-center">
+                            <Link to={config.button.link} className="bg-[#0E5EFF] px-8 py-4 text-white text-xl w-fit p-4 rounded-3xl">{config.button.text}</Link>
+                        </div>
+                    }
                 </div>
             </div>
         </section>

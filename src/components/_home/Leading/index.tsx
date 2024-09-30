@@ -1,12 +1,9 @@
-import { LEADING_ARRAY } from "../../../common/data";
 import IFeature from "../../../common/types";
 
 import FeatureCard from "../../FeatureCard";
 import CenteredLayout from "../../ui/centredLayout";
 
-export default function Leading() {
-
-    const features: IFeature[] = LEADING_ARRAY;
+export default function Leading({ featureArray }: { featureArray: any }) {
 
     return (
         <div className="w-full py-16 text-black bg-white" id="DivaTexHero">
@@ -18,7 +15,7 @@ export default function Leading() {
 
                 <div className="my-16 featuresGrid">
                     {
-                        features.map((feature: IFeature, index: number) => <FeatureCard key={index} data={feature} />
+                        featureArray.map((feature: IFeature, index: number) => <FeatureCard key={index} data={feature} />
                         )
                     }
                 </div>

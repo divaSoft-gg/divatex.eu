@@ -15,3 +15,13 @@ export default interface IFeature {
     description: string,
     subFeatures: string[],
 }
+
+export interface IHeroConfig {
+    slug: string;
+    title: string;
+    description: string;
+    button: {
+        text: string;
+        link: string;
+    }
+}
