@@ -8,6 +8,7 @@ import Home from './views/Home'
 import Contact from './views/Contact'
 import ERP from './views/ERP'
 import About from './views/About'
+import Demo from './views/Demo'
 
 const publicRoutes: RouteObject[] = [
     {
@@ -33,6 +34,12 @@ const publicRoutes: RouteObject[] = [
         element: <AppContainer />,
         errorElement: <ErrorFallback />,
         children: [{ index: true, element: <About /> }],
+    },
+    {
+        path: '/demo',
+        element: <AppContainer />,
+        errorElement: <ErrorFallback />,
+        children: [{ index: true, element: <Demo /> }],
     },
 ]
 
