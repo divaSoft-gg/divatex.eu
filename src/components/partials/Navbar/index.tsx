@@ -8,7 +8,7 @@ export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen}>
+        <Navbar onMenuOpenChange={setIsMenuOpen} className='dark'>
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -19,7 +19,7 @@ export default function NavBar() {
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent className="hidden gap-4 sm:flex" justify="center">
                 {
                     NAV.map((item, index) => (
                         <NavbarItem key={index}>
