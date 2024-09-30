@@ -1,11 +1,12 @@
+import HeroSection from "../../components/_home/HeroSection";
+
 export default function Home() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center h-4/5">
-            <p className="max-w-48">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde architecto sequi fugiat vitae, et mollitia sunt natus, aspernatur sed minima eos. Adipisci asperiores facere aliquid corrupti. Repellendus, architecto exercitationem minima ducimus nesciunt ipsa et laboriosam nihil nulla autem nemo temporibus aliquam tenetur tempore maiores earum velit eius quibusdam, sed voluptatem explicabo labore aspernatur? Voluptas amet aliquid possimus nobis dolores eos cum reprehenderit dicta soluta pariatur vero dolore laboriosam omnis ut labore, ab exercitationem repudiandae sint eius enim eveniet incidunt! Hic, repudiandae sequi tenetur facere sunt architecto quam numquam dolorum assumenda eveniet rem vitae deleniti ut sed eaque consectetur voluptate? Minus, id. Omnis aliquid repudiandae quas et porro, ducimus fugiat, repellat iusto nesciunt deserunt vel quam, veritatis at alias sint aperiam nemo. Esse est corporis facilis dignissimos totam alias voluptatem unde, asperiores tenetur consequuntur explicabo odit possimus hic quos. Asperiores debitis magnam aliquid temporibus nihil, animi, veritatis et fuga ut, dicta voluptas nulla consequatur! Dolorem soluta dolorum quos ipsa quod explicabo rerum voluptatem distinctio impedit, nisi, sunt repudiandae quisquam doloremque aspernatur assumenda fuga ullam praesentium nulla labore itaque inventore? Magnam minus consequatur accusamus ipsam totam libero at perspiciatis odio nulla quidem explicabo dolorum atque amet, tenetur provident laboriosam impedit dolore qui ex placeat eius natus suscipit. At, delectus. Odit sapiente iusto fugit omnis nostrum? Iusto tempore hic accusantium repellendus dolorum accusamus pariatur omnis, rem maxime, assumenda fugiat sed eaque illum sequi nulla quam iure dignissimos suscipit molestiae. Praesentium corrupti, tempora laborum quibusdam ipsam libero quasi eveniet doloremque nulla illo, quisquam atque fugit doloribus vitae voluptates. Asperiores similique ullam animi error maiores fugit eius doloremque commodi magnam voluptas, eligendi nobis incidunt, doloribus laboriosam suscipit? Dicta asperiores voluptatum deserunt inventore in iste nobis natus, fugiat sapiente odit, expedita repellat veniam porro quae reiciendis nihil doloremque dolore ullam! Dolorum impedit quis commodi veritatis quo sit, enim neque facere alias veniam quasi fuga expedita laborum totam a vitae eligendi libero accusamus eum. Distinctio libero aspernatur facilis ducimus ipsam tempore officiis assumenda aliquid fugit optio dolorum debitis quod impedit, nostrum adipisci vero necessitatibus nisi et consequatur officia iusto ipsa quo deserunt qui. Nobis tempore minus eius eligendi exercitationem fugiat distinctio quaerat, dignissimos neque quidem impedit laudantium ipsum incidunt velit esse molestiae assumenda quo officia similique a quasi sed porro? Iste id asperiores similique, quisquam temporibus maxime minus mollitia rerum. Delectus natus, tempore omnis facere quis dicta ipsam deserunt exercitationem, quidem molestias, explicabo iusto voluptatum animi fugit!
-            </p>
-        </div>
+
+        <>
+            <HeroSection />
+        </>
     )
 }
