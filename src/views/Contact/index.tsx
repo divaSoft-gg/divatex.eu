@@ -8,7 +8,7 @@ export default function Contact() {
     return (
         <div className="mt-16">
             <Helmet>
-                <title>Get in touch</title>
+                <title>Contactez-nous</title>
             </Helmet>
 
             <CenteredLayout>

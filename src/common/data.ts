@@ -15,7 +15,7 @@ export const NAV: INav[] = [
     },
     {
         label: "Contact",
-        link: "/contact"
+        link: "/get-in-touch"
     },
     {
         label: "Réserver une démo",

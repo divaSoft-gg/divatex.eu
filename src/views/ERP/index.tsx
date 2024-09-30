@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"
 import { FEATURES_ARRAY } from "../../common/data"
 import { IHeroConfig } from "../../common/types"
 import Leading from "../../components/_home/Leading"
@@ -19,6 +20,9 @@ export default function ERP() {
 
     return (
         <>
+            <Helmet>
+                <title>Notre ERP</title>
+            </Helmet>
             <HeroSection config={heroSectionConfiguration} />
             <Leading featureArray={erpLeadingArray} />
         </>

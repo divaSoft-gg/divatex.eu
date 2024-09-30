@@ -3,6 +3,7 @@ import HeroSection from "../../components/HeroSection";
 import Leading from "../../components/_home/Leading";
 import IFeature, { IHeroConfig } from "../../common/types";
 import { LEADING_ARRAY } from "../../common/data";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
 
@@ -21,6 +22,9 @@ export default function Home() {
     return (
 
         <>
+            <Helmet>
+                <title>Accueil</title>
+            </Helmet>
             <HeroSection config={heroSectionConfiguration} />
             <TrustedBy />
             <Leading featureArray={leadingFeatureArray} />
