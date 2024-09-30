@@ -182,3 +182,33 @@ export const CONTACT_ARRAY = [
         phone: "+21653333853%20"
     },
 ]
+
+export const DIVATEX_MODULES = [
+    {
+        image: "functionlity-1.png",
+        title: "Commercial",
+        functionalities: [
+            "etude de prix",
+            "Développment (PLM)",
+            "Gestion commerciale",
+        ]
+    },
+    {
+        image: "functionlity-2.png",
+        title: "Approvisionnement",
+        functionalities: [
+            "Gestion des stocks",
+            "Achat",
+            "Vision complàte",
+        ]
+    },
+    {
+        image: "functionlity-3.png",
+        title: "Production",
+        functionalities: [
+            "Suivi de la coupe",
+            "MES",
+            "Planification avancée",
+        ]
+    },
+]

@@ -33,3 +33,9 @@ export interface IContactInfo {
     email: string;
     phone: string;
 }
+
+export interface IFunctionality {
+    image: string;
+    title: string;
+    functionalities: string[];
+}

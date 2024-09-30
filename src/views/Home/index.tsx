@@ -4,6 +4,7 @@ import Leading from "../../components/_home/Leading";
 import IFeature, { IHeroConfig } from "../../common/types";
 import { LEADING_ARRAY } from "../../common/data";
 import { Helmet } from "react-helmet-async";
+import Stats from "../../components/_home/Stats";
 
 export default function Home() {
 
@@ -28,6 +29,7 @@ export default function Home() {
             <HeroSection config={heroSectionConfiguration} />
             <TrustedBy />
             <Leading featureArray={leadingFeatureArray} />
+            <Stats />
         </>
     )
 }
