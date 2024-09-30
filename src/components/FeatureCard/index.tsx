@@ -4,20 +4,22 @@ function index({ data }: any) {
     console.log("DAS IST THE FEATURE CARD ::: ", data.title);
 
     return (
-        <Card className='w-ful' shadow="sm" isPressable isBlurred isHoverable >
-            <CardHeader className="flex gap-3 flex-col items-start">
-                <Image
-                    alt="feature logo"
-                    radius="sm"
-                    src={`/images/icons/${data.icon}.svg`}
-                    height={40}
-                    width={40}
-                />
-                <h1 className="text-4xl uppercase font-semibold text-black dark:text-white">{data.title}</h1>
+        <Card className='w-ful group' shadow="sm" isPressable isBlurred isHoverable >
+            <CardHeader className="flex flex-col items-end gap-3">
+                <div className='block transition-all duration-300 opacity-40 group-hover:opacity-100 group-hover:scale-110'>
+                    <Image
+                        alt="feature logo"
+                        radius="sm"
+                        src={`/images/icons/${data.icon}.svg`}
+                        height={40}
+                        width={40}
+                    />
+                </div>
+                <h1 className="w-full text-4xl font-semibold text-left text-black uppercase dark:text-white">{data.title}</h1>
             </CardHeader>
 
             <CardBody>
-                <p className="my-4 text-lg text-gray-500  dark:text-white">{data.description}</p>
+                <p className="my-4 text-lg text-gray-500 dark:text-white">{data.description}</p>
                 <ul className="pl-4">
                     {data?.subFeatures?.map((sf: any) => {
                         return (
