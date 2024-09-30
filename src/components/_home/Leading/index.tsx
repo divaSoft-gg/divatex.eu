@@ -18,7 +18,12 @@ export default function Leading() {
 
                 <div className="featuresGrid my-16">
                     {
-                        features.map((feature: IFeature, index: number) => { return (<FeatureCard key={index} data={feature} />) })
+                        features.map((feature: IFeature, index: number) => {
+                            console.log(feature);
+
+                            return <FeatureCard key={index} data={feature} />
+                        }
+                        )
                     }
                 </div>
             </CenteredLayout>

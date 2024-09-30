@@ -1,7 +1,8 @@
+import { ILogo } from "../../../common/types"
 
 export default function TrustedBy() {
 
-    const logos = [
+    const logos: ILogo[] = [
         {
             id: 1,
             logo: "images/clients/client1.svg",
@@ -37,12 +38,11 @@ export default function TrustedBy() {
                 </div>
                 <div className="flex justify-center flex-wrap gap-4">
                     {
-                        logos.map(
-                            logo => (
-                                <div className="p-4 sm:p-5 rounded-lg group">
-                                    <img src={logo.logo} width={100} height={60} alt={logo.name} key={logo.id} className="h-7 sm:h-10 w-auto ease-linear duration-200 opacity-50 group-hover:opacity-100 group-hover:scale-105" />
-                                </div>
-                            )
+                        logos.map((logo: ILogo, index: number) => (
+                            <div className="p-4 sm:p-5 rounded-lg group" key={index}>
+                                <img src={logo.logo} width={100} height={60} alt={logo.name} className="h-7 sm:h-10 w-auto ease-linear duration-200 opacity-50 group-hover:opacity-100 group-hover:scale-105" />
+                            </div>
+                        )
                         )
                     }
                 </div>
