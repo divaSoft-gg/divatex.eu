@@ -1,7 +1,6 @@
 import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react"
 
 export default function ContactCard({
-    id,
     location,
     addresse,
     email,
