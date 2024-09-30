@@ -1,8 +1,6 @@
 import { Card, CardBody, CardHeader, Image } from '@nextui-org/react'
 
 function index({ data }: any) {
-    console.log("DAS IST THE FEATURE CARD ::: ", data.title);
-
     return (
         <Card className='w-ful group' shadow="sm" isPressable isBlurred isHoverable >
             <CardHeader className="flex flex-col items-end gap-3">
