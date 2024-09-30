@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { IHeroConfig } from "../../common/types";
+import { Button, Link } from "@nextui-org/react";
 
 export default function HeroSection({ config }: { config: IHeroConfig }) {
     return (
@@ -35,9 +35,16 @@ translate-y-[40%] -translate-x-[40%] bottom-0">
 
                     {
                         config.button.text !== '' &&
-                        <div className="flex justify-center">
-                            <Link to={config.button.link} className="bg-[#0E5EFF] px-8 py-4 text-white text-xl w-fit p-4 rounded-3xl">{config.button.text}</Link>
-                        </div>
+                        <Button
+                            href={config.button.link}
+                            as={Link}
+                            color="primary"
+                            variant="shadow"
+                            showAnchorIcon
+                            size="lg"
+                        >
+                            {config.button.text}
+                        </Button>
                     }
                 </div>
             </div>
