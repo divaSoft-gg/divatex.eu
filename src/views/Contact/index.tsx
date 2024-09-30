@@ -4,6 +4,7 @@ import CenteredLayout from "../../components/ui/centredLayout";
 import { CONTACT_ARRAY } from "../../common/data";
 import { IContactInfo } from "../../common/types";
 import ContactCard from "../../components/_contact";
+import { Button, Input, Textarea } from "@nextui-org/react";
 
 export default function Contact() {
 
@@ -53,71 +54,63 @@ export default function Contact() {
                         </div>
                     </div>
                 </section>
-            </CenteredLayout>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* <CenteredLayout>
-                <div className="flex flex-col items-center gap-4">
-                    <h1>
-                        E-mail us @
-                        <Snippet variant="bordered" symbol="">contact@maak-corp.tn</Snippet>
-                    </h1>
-
-                    <div className="flex flex-row justify-center gap-2">
-                        <Button isIconOnly color="default" variant="ghost" aria-label="LinkedIn" href="https://www.linkedin.com/company/maak-corp">
-                            <FaLinkedinIn />
-                        </Button>
-                        <Button isIconOnly color="default" variant="ghost" aria-label="GitHub">
-                            <VscGithubAlt />
-                        </Button>
-                    </div>
-                </div>
-
-                <Divider className="my-12" />
 
                 <form
                     name="maak-clients-submissions"
                     method="POST"
-                    className='lg:max-w-[500px] w-4/5 mx-auto'
                     data-netlify="true"
                     netlify-honeypot="bot-field"
+                    className="my-12"
                 >
                     <input type="hidden" name="form-name" value="maak-clients-submissions" />
-                    <Input
-                        type="text"
-                        label="Name"
-                        placeholder="Jhon Doe"
-                        description="How should I refer to you or your business?"
-                        className="w-full"
-                        name="client-name"
-                    />
+                    <div className="grid w-full grid-cols-2 gap-4">
+                        <Input
+                            type="text"
+                            label="Nom & Prénom"
+                            placeholder="Jhon Doe"
+                            name="client-name"
+                            required
+                        />
+                        <Input
+                            type="email"
+                            label="Email"
+                            placeholder="5RJpJ@example.com"
+                            name="client-email"
+                            required
+                        />
 
-                    <Textarea
-                        variant="faded"
-                        label="Description"
-                        placeholder="I have a business opportunity that I would like to discuss with you..."
-                        description="Tell me how I can be of help to you."
-                        className="w-full my-4"
-                        name='client-message'
-                    />
-                    <input className='w-full' type="submit" value="Submit message" />
+                        <Input
+                            type="text"
+                            label="Enterprise"
+                            placeholder="MAAK CORP"
+                            name="client-company"
+                            required
+                        />
+
+                        <Input
+                            type="tel"
+                            label="Téléphone"
+                            placeholder="xxx-xxx-xxxx"
+                            name="client-tel"
+                            required
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        />
+
+                        <Textarea
+                            variant="faded"
+                            label="Description"
+                            placeholder="Votre message..."
+                            className="w-full col-span-2"
+                            name='client-message'
+                            rows={20}
+                            required
+                        />
+                        <Button color="primary" size="lg" className="col-span-2" type="submit">Envoyer</Button>
+                    </div>
                 </form >
-            </CenteredLayout> */}
-        </div>
+            </CenteredLayout>
+
+        </div >
     )
 }
