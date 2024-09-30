@@ -30,7 +30,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-16 px-5 py-10 mx-auto bg-gray-100 max-w-7xl sm:px-10 md:px-12 lg:px-10 md:flex-row rounded-2xl dark:bg-gray-900">
+                <div className="flex flex-col-reverse gap-16 px-5 py-10 mx-auto bg-gray-100 lg:flex-col max-w-7xl sm:px-10 md:px-12 lg:px-10 md:flex-row rounded-2xl dark:bg-gray-900">
                     <div className="space-y-12 text-gray-700 md:w-1/2 dark:text-gray-300">
                         <div>
                             <strong className="block mb-2">Partenariats stratégiques et diversification</strong>

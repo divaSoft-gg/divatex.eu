@@ -14,7 +14,7 @@ export default function ContactCard({
     phone: string
 }) {
     return (
-        <Card shadow="sm" isBlurred isPressable>
+        <Card shadow="sm" isBlurred isPressable className="max-w-xs">
             <CardHeader className="flex gap-3">
                 <p className="text-2xl font-semibold uppercase">{location}</p>
             </CardHeader>

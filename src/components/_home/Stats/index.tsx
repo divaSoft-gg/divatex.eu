@@ -17,11 +17,11 @@ export default function Stats() {
             </Helmet>
 
             <CenteredLayout>
-                <h1 className="text-7xl text-[#191919] w-full font-thin leading-normal">L'essence de notre ERP textile</h1>
+                <h1 className="text-4xl lg:text-5xl text-[#191919] w-full font-thin leading-normal">L'essence de notre ERP textile</h1>
 
-                <div className="flex flex-row w-full dark:bg-gray-900 justify-evenly md:flex-col md:gap-10 md:items-center md:p-10 md:rounded-lg lg:flex-row sm:flex-col sm:gap-10 sm:p-10">
+                <div className="flex flex-col w-full dark:bg-gray-900 justify-evenly md:flex-col md:gap-10 md:items-center md:p-10 md:rounded-lg lg:flex-row sm:flex-col sm:gap-10 sm:p-10">
                     <img src="/images/a-propos-3.png" alt="image" className="object-cover w-full h-auto md:w-1/2 sm:w-full" />
-                    <div>
+                    <div className='w-full p-4 lg:p-0'>
                         <h1 className="text-3xl font-bold text-gray-900 capitalize dark:text-white">Innovation, rapidité & excellence</h1>
                         <small>DivaTex vous accompagne depuis plus de 15 ans</small>
                         <p>
@@ -44,8 +44,8 @@ export default function Stats() {
                     </div>
                 </div>
 
-                <div className="flex flex-row w-full dark:bg-gray-900 justify-evenly md:flex-col md:gap-10 md:items-center md:p-10 md:rounded-lg lg:flex-row sm:flex-col sm:gap-10 sm:p-10">
-                    <div>
+                <div className="flex flex-col-reverse w-full dark:bg-gray-900 justify-evenly md:flex-col md:gap-10 md:items-center md:p-10 md:rounded-lg lg:flex-row sm:flex-col sm:gap-10 sm:p-10">
+                    <div className='w-full p-4 lg:p-0'>
                         <h1 className="text-3xl font-bold text-gray-900 capitalize dark:text-white">Une vue à <strong>360°</strong> pour une solution complàte</h1>
                         <p>
                             DivaTex offre une perspective intégrale à activité textile, englobant toutes les étapes clés, de la recherche à l'assistance, pour garantir l'excellence à chaque niveau de votre entreprise.
@@ -94,11 +94,11 @@ export default function Stats() {
                 </div>
 
 
-                <div className='w-full p-10 my-12 lg:p-0'>
-                    <h1 className="text-3xl font-semibold text-gray-900 capitalize dark:text-white">Les piliers de notre solution ERP qui dynamisent chaque facette de votre activité.</h1>
-                    <p className="text-2xl text-gray-700 dark:text-gray-300">Transformer votre entreprise textile avec DivaTex</p>
+                <div className='w-full p-4 my-12 lg:p-0'>
+                    <h1 className="text-2xl font-semibold text-gray-900 capitalize lg:text-3xl dark:text-white">Les piliers de notre solution ERP qui dynamisent chaque facette de votre activité.</h1>
+                    <p className="text-lg text-gray-700 lg:text-2xl dark:text-gray-300">Transformer votre entreprise textile avec DivaTex</p>
 
-                    <div className='grid w-full grid-cols-3 gap-4 p-10 mt-8 lg:grid-cols-3 sm:grid-cols-2 lg:p-0'>
+                    <div className='grid w-full grid-cols-1 gap-4 p-4 mt-8 lg:grid-cols-3 lg:p-0'>
                         {
                             Functionalities.map((item, index) => {
                                 return (
@@ -113,7 +113,7 @@ export default function Stats() {
                                                 src={`/images/${item.image}`}
                                             />
                                         </CardBody>
-                                        <CardFooter className="flex flex-col items-start gap-2">
+                                        <CardFooter className="flex flex-col items-start gap-0 lg:p-0">
                                             <strong className='my-3 text-xl uppercase'>{item.title}</strong>
                                             <ul className='text-left'>
                                                 {

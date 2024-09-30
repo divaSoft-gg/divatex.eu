@@ -17,7 +17,7 @@ export default function Contact() {
             </Helmet>
 
             <CenteredLayout>
-                <div className="max-w-2xl space-y-4">
+                <div className="max-w-2xl p-4 space-y-4 lg:p-0">
                     <span
                         className="relative pl-6 font-semibold text-blue-600 dark:text-blue-400 before:absolute before:top-1/2 before:left-0 before:w-5 before:h-px before:bg-blue-600 dark:before:bg-blue-500 before:rounded-full">
                         DIVATEX – Logiciel métier pour le textile
@@ -25,8 +25,8 @@ export default function Contact() {
                     <h1 className="text-3xl font-bold text-gray-800 dark:text-white">Besoin d’informations sur notre ERP ?</h1>
                 </div>
 
-                <section className="py-24">
-                    <div className="px-5 mx-auto max-w-7xl sm:px-10 md:px-12 lg:px-5">
+                <section className="py-4 lg:py-24">
+                    <div className="mx-auto lg:px-5 max-w-7xl sm:px-10 md:px-12">
                         <div className="relative w-full px-6 py-8 md:py-10 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900">
                             <div className="absolute top-0 right-0 flex justify-end w-full h-full">
                                 <div className="relative flex overflow-hidden w-28 h-28 rounded-xl blur-2xl">
@@ -43,7 +43,7 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div className="relative w-full space-y-8">
-                                <h1 className="text-7xl text-[#191919] w-full font-thin leading-normal">Nos bureaux en <strong className="font-bold">Europe</strong> et en <strong className="font-bold">Afrique du Nord</strong></h1>
+                                <h1 className="lg:text-7xl text-4xl  text-[#191919] w-full font-thin leading-normal">Nos bureaux en <strong className="font-bold">Europe</strong> et en <strong className="font-bold">Afrique du Nord</strong></h1>
 
                                 <div className="grid w-full gap-4 my-8 contactGrid">
                                     {
@@ -64,7 +64,7 @@ export default function Contact() {
                     className="my-12"
                 >
                     <input type="hidden" name="form-name" value="maak-clients-submissions" />
-                    <div className="grid w-full grid-cols-2 gap-4">
+                    <div className="flex flex-col w-full gap-4 p-4 lg:grid lg:grid-cols-2 lg:p-0">
                         <Input
                             type="text"
                             label="Nom & Prénom"

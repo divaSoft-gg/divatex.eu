@@ -9,11 +9,11 @@ export default function Leading({ featureArray }: { featureArray: any }) {
         <div className="w-full py-16 text-black bg-white" id="DivaTexHero">
             <CenteredLayout>
                 <h1 className="text-5xl text-center">Votre <strong>partenaire technologique</strong> innovant</h1>
-                <p className="text-xl text-center text-[#191919] max-w-[800px] mx-auto mt-8">
+                <p className="text-xl text-center text-[#191919] max-w-[800px] mx-auto mt-8 p-4 lg:p-0">
                     Découvrez comment DivaTex propulse vos opérations à un niveau supérieur avec des solutions taillées sur mesure pour le secteur textile.
                 </p>
 
-                <div className="my-16 featuresGrid">
+                <div className="p-4 my-16 featuresGrid lg:p-0">
                     {
                         featureArray.map((feature: IFeature, index: number) => <FeatureCard key={index} data={feature} />
                         )
