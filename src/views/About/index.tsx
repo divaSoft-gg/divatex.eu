@@ -8,11 +8,11 @@ export default function About() {
             </Helmet>
             <div className="flex flex-col gap-8 py-12">
 
-                <div className="flex flex-col gap-16 px-5 py-10 mx-auto bg-gray-100 max-w-7xl sm:px-10 md:px-12 lg:px-10 md:flex-row rounded-2xl dark:bg-gray-900">
+                <div className="flex flex-col gap-16 px-5 py-10 mx-auto bg-gray-100 max-w-7xl sm:px-10 md:px-12 lg:px-10 md:flex-col lg:flex-row rounded-2xl dark:bg-gray-900">
                     <div className="flex md:flex-1">
-                        <img src="/images/a-propos-1.png" alt="working on housing" width={1300} className="object-cover w-full rounded-lg md:h-full" />
+                        <img src="/images/a-propos-1.png" alt="working on housing" width={1300} className="object-cover mx-auto rounded-lg w-60 lg:w-full md:h-full" />
                     </div>
-                    <div className="space-y-12 text-gray-700 md:w-1/2 dark:text-gray-300">
+                    <div className="space-y-12 text-gray-700 md:w-full lg:w-1/2 dark:text-gray-300">
                         <h1 className="text-2xl font-semibold text-gray-900 dark:text-white sm:text-3xl md:text-4xl">A propos de nous</h1>
                         <div>
                             <strong className="block mb-2">Un cheminement vers l’innovation et l’excellence</strong>
@@ -30,8 +30,8 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="flex flex-col-reverse gap-16 px-5 py-10 mx-auto bg-gray-100 lg:flex-col max-w-7xl sm:px-10 md:px-12 lg:px-10 md:flex-row rounded-2xl dark:bg-gray-900">
-                    <div className="space-y-12 text-gray-700 md:w-1/2 dark:text-gray-300">
+                <div className="flex flex-col-reverse gap-16 px-5 py-10 mx-auto bg-gray-100 lg:flex-row max-w-7xl sm:px-10 md:px-12 lg:px-10 md:flex-col-reverse rounded-2xl dark:bg-gray-900">
+                    <div className="space-y-12 text-gray-700 md:w-full lg:w-1/2 dark:text-gray-300">
                         <div>
                             <strong className="block mb-2">Partenariats stratégiques et diversification</strong>
                             <p>
@@ -60,7 +60,7 @@ export default function About() {
                     </div>
 
                     <div className="flex md:flex-1">
-                        <img src="/images/a-propos-2.png" alt="working on housing" width={1300} className="object-cover w-full rounded-lg md:h-full" />
+                        <img src="/images/a-propos-2.png" alt="working on housing" width={1300} className="object-cover mx-auto rounded-lg w-60 lg:w-full md:h-full" />
                     </div>
                 </div>
 
