@@ -26,7 +26,7 @@ export default function Contact() {
                 </div>
 
                 <section className="py-4 lg:py-24">
-                    <div className="mx-auto lg:px-5 max-w-7xl sm:px-10 md:px-12">
+                    <div className="mx-auto lg:px-5 sm:px-10 md:px-12">
                         <div className="relative w-full px-6 py-8 md:py-10 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900">
                             <div className="absolute top-0 right-0 flex justify-end w-full h-full">
                                 <div className="relative flex overflow-hidden w-28 h-28 rounded-xl blur-2xl">

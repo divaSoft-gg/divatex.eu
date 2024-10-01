@@ -113,7 +113,7 @@ export default function Stats() {
                                                 src={`/images/${item.image}`}
                                             />
                                         </CardBody>
-                                        <CardFooter className="flex flex-col items-start gap-0 lg:p-0">
+                                        <CardFooter className="flex flex-col items-start gap-0 p-4">
                                             <strong className='my-3 text-xl uppercase'>{item.title}</strong>
                                             <ul className='text-left'>
                                                 {
