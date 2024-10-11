@@ -1,41 +1,39 @@
+import { ReactNode } from "react";
+
 export interface INav {
-    label: string;
-    link: string;
+  label: string;
+  link: string;
 }
 
 export interface ILogo {
-    id: number;
-    logo: string;
-    name: string;
+  id: number;
+  logo: string;
+  name: string;
 }
 
 export default interface IFeature {
-    icon: string,
-    title: string,
-    description: string,
-    subFeatures: string[],
+  icon: string;
+  title: string;
+  description: string;
+  subFeatures: string[];
 }
 
 export interface IHeroConfig {
-    slug: string;
-    title: string;
-    description: string;
-    button: {
-        text: string;
-        link: string;
-    }
+  coverPath: string;
+  maxHeight: string;
+  renderContent: () => ReactNode;
 }
 
 export interface IContactInfo {
-    id: number;
-    location: string;
-    addresse: string;
-    email: string;
-    phone: string;
+  id: number;
+  location: string;
+  addresse: string;
+  email: string;
+  phone: string;
 }
 
 export interface IFunctionality {
-    image: string;
-    title: string;
-    functionalities: string[];
+  image: string;
+  title: string;
+  functionalities: string[];
 }

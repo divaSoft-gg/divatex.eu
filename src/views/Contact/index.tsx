@@ -1,116 +1,90 @@
-// import { Button, Divider, Input, Snippet, Textarea } from "@nextui-org/react";
-import { Helmet } from "react-helmet-async";
-import CenteredLayout from "../../components/ui/centredLayout";
 import { CONTACT_ARRAY } from "../../common/data";
 import { IContactInfo } from "../../common/types";
-import ContactCard from "../../components/_contact";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import HeroSection from "../../components/HeroSection";
 
 export default function Contact() {
+    const heroSectionParams = {
+        coverPath: "/images/it-services-4-asx-cuw3-2.jpg",
+        maxHeight: '500px',
+        renderContent: () => {
+            return (
+                <>
+                    <div className="max-w-[var(--max-content-width)] mx-auto py-12 text-white text-center">
+                        <h3 className="text-2xl">DIVATEX – Logiciel métier pour le textile</h3>
+                        <h1 className="mx-auto text-7xl w-[850px] mt-8">Besoin d’informations sur notre ERP ?</h1>
+                        <p className="mt-12 text-sm w-[650px] mx-auto">
+                            Pour des solutions personnalisées ou pour plus d’informations sur notre ERP, notre équipe d’experts est à votre écoute. Entamons ensemble le dialogue de votre transformation numérique.
+                        </p>
+                    </div>
+                </>
+            )
+
+
+        }
+    }
 
     const contactArray: IContactInfo[] = CONTACT_ARRAY;
-
     return (
-        <div className="mt-16">
-            <Helmet>
-                <title>Contactez-nous</title>
-            </Helmet>
+        <div className="w-full bg-gray-100">
+            <div className="relative w-full h-[500px] bg-center bg-fill bg-no-repeat">
 
-            <CenteredLayout>
-                <div className="max-w-2xl p-4 space-y-4 lg:p-0">
-                    <span
-                        className="relative pl-6 font-semibold text-blue-600 dark:text-blue-400 before:absolute before:top-1/2 before:left-0 before:w-5 before:h-px before:bg-blue-600 dark:before:bg-blue-500 before:rounded-full">
-                        DIVATEX – Logiciel métier pour le textile
-                    </span>
-                    <h1 className="text-3xl font-bold text-gray-800 dark:text-white">Besoin d’informations sur notre ERP ?</h1>
-                </div>
+                <HeroSection data={heroSectionParams} />
+            </div>
 
-                <section className="py-4 lg:py-24">
-                    <div className="mx-auto lg:px-5 sm:px-10 md:px-12">
-                        <div className="relative w-full px-6 py-8 md:py-10 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900">
-                            <div className="absolute top-0 right-0 flex justify-end w-full h-full">
-                                <div className="relative flex overflow-hidden w-28 h-28 rounded-xl blur-2xl">
-                                    <span className="absolute w-16 h-16 rotate-45 bg-blue-500 rounded-md -top-1 -right-1" />
-                                    <span className="absolute w-16 h-16 rotate-45 bg-teal-500 rounded-md -bottom-1 -right-1" />
-                                    <span className="absolute w-16 h-16 rotate-45 bg-indigo-300 rounded-md -bottom-1 -left-1" />
-                                </div>
-                            </div>
-                            <div className="absolute bottom-0 left-0 flex items-end w-full h-full">
-                                <div className="relative flex overflow-hidden w-28 h-28 rounded-xl blur-2xl">
-                                    <span className="absolute w-16 h-16 rotate-45 bg-blue-500 rounded-md -top-1 -right-1" />
-                                    <span className="absolute w-16 h-16 rotate-45 bg-teal-500 rounded-md -bottom-1 -right-1" />
-                                    <span className="absolute w-16 h-16 rotate-45 bg-indigo-300 rounded-md -bottom-1 -left-1" />
-                                </div>
-                            </div>
-                            <div className="relative w-full space-y-8">
-                                <h1 className="lg:text-7xl text-4xl  text-[#191919] w-full font-thin leading-normal">Nos bureaux en <strong className="font-bold">Europe</strong> et en <strong className="font-bold">Afrique du Nord</strong></h1>
 
-                                <div className="grid w-full gap-4 my-8 contactGrid">
-                                    {
-                                        contactArray.map((contact, index) => <ContactCard {...contact} key={index} />)
-                                    }
-                                </div>
-                            </div>
+            <div className="max-w-[var(--max-content-width)] mx-auto py-16">
+                <form className="max-w-[800px] mx-auto">
+                    <div className="grid gap-6 mb-4 md:grid-cols-2">
+                        <div>
+                            <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900">Nom</label>
+                            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="John" required />
+                        </div>
+                        <div>
+                            <label htmlFor="last_name" className="block mb-2 text-sm font-medium text-gray-900">Prénom</label>
+                            <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Doe" required />
+                        </div>
+                        <div>
+                            <label htmlFor="company" className="block mb-2 text-sm font-medium text-gray-900">Entreprise</label>
+                            <input type="text" id="company" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Diva-Software" required />
+                        </div>
+                        <div>
+                            <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900">Téléphone</label>
+                            <input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
                         </div>
                     </div>
-                </section>
 
+                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email</label>
+                    <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="john.doe@company.com" required />
 
-                <form
-                    name="maak-clients-submissions"
-                    method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    className="my-12"
-                >
-                    <input type="hidden" name="form-name" value="maak-clients-submissions" />
-                    <div className="flex flex-col w-full gap-4 p-4 lg:grid lg:grid-cols-2 lg:p-0">
-                        <Input
-                            type="text"
-                            label="Nom & Prénom"
-                            placeholder="Jhon Doe"
-                            name="client-name"
-                            required
-                        />
-                        <Input
-                            type="email"
-                            label="Email"
-                            placeholder="5RJpJ@example.com"
-                            name="client-email"
-                            required
-                        />
+                    <label htmlFor="message" className="block mt-2 mb-2 text-sm font-medium text-gray-900">Message</label>
+                    <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Votre message..."></textarea>
 
-                        <Input
-                            type="text"
-                            label="Enterprise"
-                            placeholder="MAAK CORP"
-                            name="client-company"
-                            required
-                        />
+                    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-8">Submit</button>
+                </form>
+            </div>
 
-                        <Input
-                            type="tel"
-                            label="Téléphone"
-                            placeholder="xxx-xxx-xxxx"
-                            name="client-tel"
-                            required
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        />
+            <div className="max-w-[var(--max-content-width)] mx-auto pb-12 text-center">
 
-                        <Textarea
-                            variant="faded"
-                            label="Description"
-                            placeholder="Votre message..."
-                            className="w-full col-span-2"
-                            name='client-message'
-                            rows={20}
-                            required
-                        />
-                        <Button color="primary" size="lg" className="col-span-2" type="submit">Envoyer</Button>
-                    </div>
-                </form >
-            </CenteredLayout>
+                <p className="text-2xl text--[#191919]">Où nous trouver</p>
+                <h1 className="text-7xl text-[#191919] mt-8 w-[850px] mx-auto font-thin leading-normal">Nos bureaux en <strong className="font-bold">Europe</strong> et en <strong className="font-bold">Afrique du Nord</strong></h1>
 
-        </div >
+                <div className="flex flex-row flex-wrap items-center justify-center gap-12 mt-12">
+                    {
+                        contactArray.map((contact, index) => {
+                            return (
+                                <div className="text-[#191919] shadow-sm p-8 w-[400px] flex flex-col gap-4" key={index}>
+                                    <p className="text-2xl font-bold">{contact.location}</p>
+                                    <p className="text-xs">{contact.addresse}</p>
+                                    <a href={`mailto:${contact.email}`} className="text-[#0E5EFF] w-fit mx-auto">{contact.email}</a>
+                                    <a href={`tel:${contact.phone}`} className="w-fit mx-auto text-[#0E5EFF] rounded-xl py-2 px-4 border border-[#0E5EFF] hover:bg-[#0E5EFF] hover:text-white transition-all duration-300">{contact.phone}</a>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+
+            </div>
+        </div>
     )
+
 }
