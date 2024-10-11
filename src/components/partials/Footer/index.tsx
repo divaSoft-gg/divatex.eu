@@ -1,4 +1,6 @@
+import { Button, Link } from "@nextui-org/react"
 import { IHeroConfig } from "../../../common/types"
+import { scrollToTop } from "../../../common/utils"
 import HeroSection from "../../HeroSection"
 
 export default function Footer() {
@@ -12,7 +14,7 @@ export default function Footer() {
 
                 <div className="max-w-[var(--max-content-width)] text-center">
                     <p className="font-light leading-snug text-center text-white font-primary text-7xl"><strong>La solution</strong> métier qui répond <br /> aux besoins de l’industrie textile</p>
-                    <a href="/demo" className="bg-[#0E5EFF] text-white text-xl w-fit p-4 mt-16 block mx-auto rounded-2xl">Réserver une démo</a>
+                    <Button href="/demo" onClick={() => { scrollToTop() }} as={Link} color="primary" className="text-white border-[#0E5EFF]" size="lg" variant="solid">Réserver une démo</Button>
                 </div>
 
             )
