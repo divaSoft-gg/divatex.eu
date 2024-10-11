@@ -6,6 +6,7 @@ import { LEADING_ARRAY } from "../../common/data";
 import { Helmet } from "react-helmet-async";
 import Stats from "../../components/_home/Stats";
 import { Button, Link } from "@nextui-org/react";
+import { scrollToTop } from "../../common/utils";
 
 export default function Home() {
 
@@ -30,9 +31,7 @@ export default function Home() {
 
                     <div className="flex flex-row justify-center gap-8 actionButtons">
                         <Button className="text-white border-[#0E5EFF]" size="lg" variant="bordered">En savoir plus</Button>
-                        <Link href="/demo">
-                            <Button color="primary" className="text-white border-[#0E5EFF]" size="lg" variant="solid">Réserver une démo</Button>
-                        </Link>
+                        <Button href="/demo" onClick={() => { scrollToTop() }} as={Link} color="primary" className="text-white border-[#0E5EFF]" size="lg" variant="solid">Réserver une démo</Button>
                     </div>
                 </>
             )

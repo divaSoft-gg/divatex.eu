@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Image } from "@nextui-org/react";
 import { NAV } from '../../../common/data';
+import { scrollToTop } from '../../../common/utils';
 
 export default function NavBar() {
 
@@ -23,7 +24,7 @@ export default function NavBar() {
                 {
                     NAV.map((item, index) => (
                         <NavbarItem key={index}>
-                            <a className='text-white' href={item.link}>{item.label}</a>
+                            <Link color="foreground" onClick={() => { scrollToTop() }} href={item.link}>{item.label}</Link>
                         </NavbarItem>
                     ))
                 }
@@ -34,7 +35,7 @@ export default function NavBar() {
             <NavbarMenu>
                 {NAV.map((item, index) => (
                     <NavbarMenuItem key={`${index}`}>
-                        <Link color="foreground" href={item.link}>{item.label}</Link>
+                        <Link color="foreground" href={item.link} onClick={() => { scrollToTop() }}>{item.label}</Link>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>
