@@ -23,7 +23,7 @@ export default function NavBar() {
                 {
                     NAV.map((item, index) => (
                         <NavbarItem key={index}>
-                            <Link color="foreground" href={item.link}>{item.label}</Link>
+                            <a className='text-white' href={item.link}>{item.label}</a>
                         </NavbarItem>
                     ))
                 }

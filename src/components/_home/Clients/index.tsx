@@ -32,15 +32,15 @@ export default function TrustedBy() {
 
     return (
         <section className="py-20 bg-[#181819]">
-            <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-10">
-                <div className="text-center space-y-6 max-w-2xl mx-auto">
-                    <h1 className="text-3xl font-bold text-white dark:text-white capitalize">Tous les métiers de la fabrication à la vente</h1>
+            <div className="px-5 mx-auto space-y-10 max-w-7xl sm:px-10 md:px-12 lg:px-5">
+                <div className="max-w-2xl mx-auto space-y-6 text-center">
+                    <h1 className="text-3xl font-bold text-white capitalize dark:text-white">Tous les métiers de la fabrication à la vente</h1>
                 </div>
-                <div className="flex justify-center flex-wrap gap-4">
+                <div className="flex flex-wrap justify-center gap-4">
                     {
                         logos.map((logo: ILogo, index: number) => (
-                            <div className="p-4 sm:p-5 rounded-lg group" key={index}>
-                                <img src={logo.logo} width={100} height={60} alt={logo.name} className="h-7 sm:h-10 w-auto ease-linear duration-200 opacity-50 group-hover:opacity-100 group-hover:scale-105" />
+                            <div className="p-4 rounded-lg sm:p-5 group" key={index}>
+                                <img src={logo.logo} width={100} height={60} alt={logo.name} className="w-auto duration-200 ease-linear opacity-50 h-7 sm:h-10 group-hover:opacity-100 group-hover:scale-105" />
                             </div>
                         )
                         )
