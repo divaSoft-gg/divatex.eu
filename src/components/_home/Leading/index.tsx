@@ -15,8 +15,7 @@ export default function Leading({ featureArray }: { featureArray: IFeature[] }) 
 
                 <div className="p-4 my-16 featuresGrid lg:p-0">
                     {
-                        featureArray.map((feature: IFeature, index: number) => <FeatureCard key={index} feature={feature} />
-                        )
+                        featureArray.map((feature: IFeature, index: number) => <FeatureCard key={index} feature={feature} />)
                     }
                 </div>
             </CenteredLayout >
