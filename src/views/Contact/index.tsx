@@ -8,15 +8,15 @@ export default function Contact() {
         maxHeight: '500px',
         renderContent: () => {
             return (
-                <>
-                    <div className="max-w-[var(--max-content-width)] mx-auto py-12 text-white text-center">
-                        <h3 className="text-2xl">DIVATEX – Logiciel métier pour le textile</h3>
-                        <h1 className="mx-auto text-7xl w-[850px] mt-8">Besoin d’informations sur notre ERP ?</h1>
-                        <p className="mt-12 text-sm w-[650px] mx-auto">
-                            Pour des solutions personnalisées ou pour plus d’informations sur notre ERP, notre équipe d’experts est à votre écoute. Entamons ensemble le dialogue de votre transformation numérique.
-                        </p>
-                    </div>
-                </>
+
+                <div className="max-w-[var(--max-content-width)] mx-auto py-12 text-white text-center">
+                    <h3 className="text-2xl">DIVATEX – Logiciel métier pour le textile</h3>
+                    <h1 className="mx-auto text-7xl w-[850px] mt-8">Besoin d’informations sur notre ERP ?</h1>
+                    <p className="mt-12 text-sm w-[650px] mx-auto">
+                        Pour des solutions personnalisées ou pour plus d’informations sur notre ERP, notre équipe d’experts est à votre écoute. Entamons ensemble le dialogue de votre transformation numérique.
+                    </p>
+                </div>
+
             )
 
 

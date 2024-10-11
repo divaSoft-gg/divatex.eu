@@ -1,7 +1,6 @@
 import IFeature from '../../common/types'
 
 function index({ feature }: { feature: IFeature }) {
-    console.log(feature)
     return (
         <div className="w-full h-auto p-8 pb-16 bg-white shadow-sm cursor-pointer rounded-2xl font-primary group hover:shadow-md">
             <img src={`/images/icons/${feature.icon}.svg`} alt="icon" className="w-24 mb-12 transition-all duration-150 group-hover:scale-105" />

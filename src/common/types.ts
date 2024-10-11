@@ -21,6 +21,7 @@ export default interface IFeature {
 export interface IHeroConfig {
   coverPath: string;
   maxHeight: string;
+  height?: string;
   renderContent: () => ReactNode;
 }
 

@@ -5,7 +5,7 @@ import IFeature, { IHeroConfig } from "../../common/types";
 import { LEADING_ARRAY } from "../../common/data";
 import { Helmet } from "react-helmet-async";
 import Stats from "../../components/_home/Stats";
-import { Link } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 export default function Home() {
 
@@ -29,8 +29,10 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-row justify-center gap-8 actionButtons">
-                        <a className="p-4 px-8 py-4 border border-[#0E5EFF] text-xl text-white bg-transparent w-fit rounded-3xl hover:bg-[#0E5EFF] duration-200 hover:text-white hover:border-transparent" href="#DivaTexHero">En savoir plus</a>
-                        <Link href="/demo" className="bg-[#0E5EFF] px-8 py-4 text-white text-xl w-fit p-4 rounded-3xl">Réserver une démo </Link>
+                        <Button className="text-white border-[#0E5EFF]" size="lg" variant="bordered">En savoir plus</Button>
+                        <Link href="/demo">
+                            <Button color="primary" className="text-white border-[#0E5EFF]" size="lg" variant="solid">Réserver une démo</Button>
+                        </Link>
                     </div>
                 </>
             )
