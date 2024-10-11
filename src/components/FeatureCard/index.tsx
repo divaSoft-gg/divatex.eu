@@ -7,7 +7,7 @@ function index({ feature }: { feature: IFeature }) {
             <h1 className="text-3xl font-bold">{feature.title}</h1>
             <p className="my-4 text-lg font-medium">{feature.description}</p>
             <ul className="pl-4">
-                {feature.subFeatures.map((sf: any) => {
+                {feature.subFeatures.map((sf: string) => {
                     return (
                         <li className="flex flex-row items-center gap-4 text-base font-medium" key={sf}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
