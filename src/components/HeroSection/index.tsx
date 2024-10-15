@@ -5,7 +5,7 @@ export default function HeroSection({ data }: { data: IHeroConfig }) {
 
     return (
         <section
-            className={` w-full  px-10 py-5 lg:flex justify-center items-center  bg-cover md:bg-center`}
+            className={` w-full  px-10 py-5 lg:flex justify-center items-center  bg-cover bg-center `}
             style={{
                 backgroundImage: `url('${data.coverPath}')`,
                 backgroundRepeat: 'no-repeat',
