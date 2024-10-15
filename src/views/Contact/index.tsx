@@ -1,21 +1,25 @@
+import { Helmet } from "react-helmet-async";
 import { CONTACT_ARRAY } from "../../common/data";
 import { IContactInfo } from "../../common/types";
 import HeroSection from "../../components/HeroSection";
+import { useMediaQuery } from "react-responsive";
 
 export default function Contact() {
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
     const heroSectionParams = {
         coverPath: "/images/it-services-4-asx-cuw3-2.jpg",
-        maxHeight: '500px',
+        maxHeight: isMobile ? '300px' : '500px',
         renderContent: () => {
             return (
 
-                <div className="max-w-[var(--max-content-width)] mx-auto py-12 text-white text-center">
+                < >
                     <h3 className="text-2xl">DIVATEX – Logiciel métier pour le textile</h3>
-                    <h1 className="mx-auto text-7xl w-[850px] mt-8">Besoin d’informations sur notre ERP ?</h1>
-                    <p className="mt-12 text-sm w-[650px] mx-auto">
+                    <h1 className="mx-auto lg:text-7xl text-3xl lg:w-[850px] mt-8">Besoin d’informations sur notre ERP ?</h1>
+                    <p className="mt-12 text-sm lg:w-[650px] mx-auto">
                         Pour des solutions personnalisées ou pour plus d’informations sur notre ERP, notre équipe d’experts est à votre écoute. Entamons ensemble le dialogue de votre transformation numérique.
                     </p>
-                </div>
+                </>
 
             )
 
@@ -24,15 +28,16 @@ export default function Contact() {
     }
 
     const contactArray: IContactInfo[] = CONTACT_ARRAY;
+
     return (
-        <div className="w-full bg-gray-100">
-            <div className="relative w-full h-[500px] bg-center bg-fill bg-no-repeat">
+        <div className="w-full bg-gray-100 ">
+            {/* <div className="relative w-full bg-center bg-no-repeat bg-fill"> */}
 
-                <HeroSection data={heroSectionParams} />
-            </div>
+            <HeroSection data={heroSectionParams} />
+            {/* </div> */}
 
 
-            <div className="max-w-[var(--max-content-width)] mx-auto py-16">
+            <div className="max-w-[var(--max-content-width)] px-5 mx-auto py-16">
                 <form className="max-w-[800px] mx-auto">
                     <div className="grid gap-6 mb-4 md:grid-cols-2">
                         <div>
@@ -66,7 +71,7 @@ export default function Contact() {
             <div className="max-w-[var(--max-content-width)] mx-auto pb-12 text-center">
 
                 <p className="text-2xl text--[#191919]">Où nous trouver</p>
-                <h1 className="text-7xl text-[#191919] mt-8 w-[850px] mx-auto font-thin leading-normal">Nos bureaux en <strong className="font-bold">Europe</strong> et en <strong className="font-bold">Afrique du Nord</strong></h1>
+                <h1 className="lg:text-7xl text-5xl text-[#191919] mt-8 lg:w-[850px] mx-auto font-thin leading-normal">Nos bureaux en <strong className="font-bold">Europe</strong> et en <strong className="font-bold">Afrique du Nord</strong></h1>
 
                 <div className="flex flex-row flex-wrap items-center justify-center gap-12 mt-12">
                     {
