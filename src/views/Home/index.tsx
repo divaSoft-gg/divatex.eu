@@ -15,7 +15,7 @@ export default function Home() {
 
     const leadingFeatureArray: IFeature[] = LEADING_ARRAY;
     const heroSectionParams: IHeroConfig = {
-        coverPath: "/images/header_background.webp",
+        coverPath: isMobile ? "/images/hero_section_mobile.png" : "/images/header_background.webp",
         maxHeight: isMobile ? '400px' : '600px',
         renderContent: () => {
             return (

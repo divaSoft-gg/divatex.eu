@@ -22,9 +22,9 @@ export default function Stats() {
                 <div className="flex flex-col w-full dark:bg-gray-900 justify-evenly md:flex-col md:gap-10 md:items-center md:p-10 md:rounded-lg lg:flex-row sm:flex-col sm:gap-10 sm:p-10">
                     <img src="/images/a-propos-3.png" alt="image" className="object-cover w-full h-auto md:w-1/2 sm:w-full" />
                     <div className='w-full p-4 lg:p-0'>
-                        <h1 className="text-3xl font-bold text-gray-900 capitalize dark:text-white">Innovation, rapidité & excellence</h1>
+                        <h1 className="text-2xl font-bold leading-loose text-gray-900 capitalize lg:text-3xl dark:text-white">Innovation, rapidité & excellence</h1>
                         <small>DivaTex vous accompagne depuis plus de 15 ans</small>
-                        <p>
+                        <p >
                             Résultat d'une expertise approfondie dans le domaine de la gestion de production pour le secteur textile, DivaTex se distingue comme une solution orientée vers l'atteinte de vos objectifs.
                             L'évolution constante de notre solution depuis sa création illustre notre engagement à répondre aux besoins évolutifs de nos clients, en fournissant une platforme à la fois robuste, flexible et facile à intégrer.
                         </p>
@@ -32,12 +32,12 @@ export default function Stats() {
                         <div className="flex flex-row gap-4 p-6 mt-8 text-center bg-gray-100 rounded-lg justify-evenly dark:bg-gray-900">
                             <div>
                                 <h2 className="text-xl font-medium text-gray-900 sm:text-2xl lg:text-3xl dark:text-white">140+</h2>
-                                <strong className='text-2xl uppercase'>Clients</strong>
+                                <strong className='text-lg uppercase lg:text-2xl'>Clients</strong>
                                 <p className="text-gray-700 dark:text-gray-300">Tous dans le milieu du textile, de sa fabrication à sa vente</p>
                             </div>
                             <div>
                                 <h2 className="text-xl font-medium text-gray-900 sm:text-2xl lg:text-3xl dark:text-white">190+</h2>
-                                <strong className='text-2xl uppercase'>usines</strong>
+                                <strong className='text-lg uppercase lg:text-2xl'>usines</strong>
                                 <p className="text-gray-700 dark:text-gray-300">une présence en europe et dans le nord de l'Afrique</p>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ export default function Stats() {
 
                 <div className="flex flex-col-reverse w-full dark:bg-gray-900 justify-evenly md:flex-col md:gap-10 md:items-center md:p-10 md:rounded-lg lg:flex-row sm:flex-col sm:gap-10 sm:p-10">
                     <div className='w-full p-4 lg:p-0'>
-                        <h1 className="text-3xl font-bold text-gray-900 capitalize dark:text-white">Une vue à <strong>360°</strong> pour une solution complàte</h1>
+                        <h1 className="text-2xl font-bold text-gray-900 capitalize lg:text-3xl dark:text-white">Une vue à <strong>360°</strong> pour une solution complàte</h1>
                         <p>
                             DivaTex offre une perspective intégrale à activité textile, englobant toutes les étapes clés, de la recherche à l'assistance, pour garantir l'excellence à chaque niveau de votre entreprise.
                         </p>
@@ -55,7 +55,7 @@ export default function Stats() {
                             <div className="p-5 space-y-4 bg-gray-100 rounded-lg md:p-6 dark:bg-gray-900">
                                 <div className="flex items-center gap-4 text-gray-900 dark:text-white">
 
-                                    <h2 className="text-2xl font-bold">Recherche</h2>
+                                    <h2 className="text-2xl font-bold ">Recherche</h2>
                                 </div>
                                 <p className="text-gray-700 dark:text-gray-300">
                                     innovations de pointe et utilisation de l'IA pour anticiper les besoins de demain et maintenir votre entreprise à la pointe du secteur.

@@ -6,10 +6,10 @@ import { scrollToTop } from '../../../common/utils';
 export default function NavBar() {
 
 
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [isMenuOpen, setIsMenuOpen] = React.useReducer((current) => !current, false);
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} className='dark'>
+        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark'>
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -35,7 +35,7 @@ export default function NavBar() {
             <NavbarMenu>
                 {NAV.map((item, index) => (
                     <NavbarMenuItem key={`${index}`}>
-                        <Link color="foreground" href={item.link} onClick={() => { scrollToTop() }}>{item.label}</Link>
+                        <Link color="foreground" href={item.link} onClick={() => { scrollToTop(); setIsMenuOpen() }}>{item.label}</Link>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>

@@ -3,8 +3,8 @@ import IFeature from '../../common/types'
 function index({ feature }: { feature: IFeature }) {
     return (
         <div className="w-full h-auto p-8 pb-16 bg-white shadow-sm cursor-pointer rounded-2xl font-primary group hover:shadow-md">
-            <img src={`/images/icons/${feature.icon}.svg`} alt="icon" className="w-24 mb-12 transition-all duration-150 group-hover:scale-105" />
-            <h1 className="text-3xl font-bold">{feature.title}</h1>
+            <img src={`/images/icons/${feature.icon}.svg`} alt="icon" className="w-16 mb-12 transition-all duration-150 lg:w-24 group-hover:scale-105" />
+            <h1 className="text-2xl font-bold lg:text-3xl">{feature.title}</h1>
             <p className="my-4 text-lg font-medium">{feature.description}</p>
             <ul className="pl-4">
                 {feature.subFeatures.map((sf: string) => {
