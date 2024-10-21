@@ -31,7 +31,7 @@ export default function TrustedBy() {
     ]
 
     return (
-        <section className="py-20 bg-[#181819]">
+        <section className="py-10 bg-[#181819]">
             <div className="px-5 mx-auto space-y-10 max-w-7xl sm:px-10 md:px-12 lg:px-5">
                 <div className="max-w-2xl mx-auto space-y-6 text-center">
                     <h1 className="text-lg font-bold text-white capitalize lg:text-3xl dark:text-white">Tous les métiers de la fabrication à la vente</h1>
