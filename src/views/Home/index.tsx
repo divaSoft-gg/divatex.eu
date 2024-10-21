@@ -21,7 +21,7 @@ export default function Home() {
             return (
                 <>
                     <p className="lg:text-2xl text-lg font-medium text-[#0E5EFF]">Solutions dédiées au secteur du textile</p>
-                    <p className="font-light lg:text-7xl text-4xl  leading-snug max-w-[900px] mt-4 mb-8">
+                    <p className="font-light lg:text-7xl text-3xl  leading-snug lg:max-w-[900px] mt-4 mb-8">
                         Augmentez vos rendements et maîtrisez votre rentabilité
                     </p>
 
@@ -32,8 +32,8 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-row justify-center gap-8 actionButtons">
-                        <Button className="text-white border-[#0E5EFF]" size="lg" variant="bordered">En savoir plus</Button>
-                        <Button href="/demo" onClick={() => { scrollToTop() }} as={Link} color="primary" className="text-white border-[#0E5EFF]" size="lg" variant="solid">Réserver une démo</Button>
+                        <Button className="text-white border-[#0E5EFF]" size="md" variant="bordered">En savoir plus</Button>
+                        <Button href="/demo" onClick={() => { scrollToTop() }} as={Link} color="primary" className="text-white border-[#0E5EFF]" size="md" variant="solid">Réserver une démo</Button>
                     </div>
                 </>
             )

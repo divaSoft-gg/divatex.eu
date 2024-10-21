@@ -17,7 +17,7 @@ export default function Stats() {
             </Helmet>
 
             <CenteredLayout>
-                <h1 className="text-4xl lg:text-5xl mt-10 text-[#191919] w-full font-thin leading-normal">L'essence de notre ERP textile </h1>
+                <h1 className="text-4xl px-4 lg:text-5xl lg:mt-10 text-[#191919] w-full font-thin leading-normal">L'essence de notre ERP textile </h1>
 
                 <div className="flex flex-col w-full dark:bg-gray-900 justify-evenly md:flex-col md:gap-10 md:items-center md:p-10 md:rounded-lg lg:flex-row sm:flex-col sm:gap-10 sm:p-10">
                     <img src="/images/a-propos-3.png" alt="image" className="object-cover w-full h-auto md:w-1/2 sm:w-full" />
@@ -94,11 +94,11 @@ export default function Stats() {
                 </div>
 
 
-                <div className='w-full p-4 my-12 lg:p-0'>
+                <div className='w-full px-4 my-12 lg:p-0'>
                     <h1 className="text-2xl font-semibold text-gray-900 capitalize lg:text-3xl dark:text-white">Les piliers de notre solution ERP qui dynamisent chaque facette de votre activité.</h1>
                     <p className="text-lg text-gray-700 lg:text-2xl dark:text-gray-300">Transformer votre entreprise textile avec DivaTex</p>
 
-                    <div className='grid w-full grid-cols-1 gap-4 p-4 mt-8 lg:grid-cols-3 lg:p-0'>
+                    <div className='grid w-full grid-cols-1 gap-4 mt-8 lg:grid-cols-3 lg:p-0'>
                         {
                             Functionalities.map((item, index) => {
                                 return (
