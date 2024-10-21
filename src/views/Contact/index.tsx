@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { CONTACT_ARRAY } from "../../common/data";
 import { IContactInfo } from "../../common/types";
 import HeroSection from "../../components/HeroSection";
