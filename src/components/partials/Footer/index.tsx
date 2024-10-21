@@ -14,7 +14,7 @@ export default function Footer() {
         renderContent: () => (
             <div className="max-w-[var(--max-content-width)] flex  flex-col justify-center items-center">
                 <p className="font-light leading-snug text-white font-primary lg:text-7xl"><strong>La solution</strong> métier qui répond <br /> aux besoins de l’industrie textile</p>
-                <Button href="/demo" onClick={() => { scrollToTop() }} as={Link} color="primary" className="text-white border-[#0E5EFF] mt-16" size="lg" variant="solid">Réserver une démo</Button>
+                <Button href="/demo" onClick={() => { scrollToTop() }} as={Link} color="primary" className="text-white border-[#0E5EFF] mt-16" size="md" variant="solid">Réserver une démo</Button>
             </div>
         )
     }
