@@ -10,17 +10,20 @@ export default function NavBar() {
 
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark'>
-            <NavbarContent>
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden"
-                />
+            <NavbarContent justify='start' >
                 <NavbarBrand>
                     <Image src='images/logo_white.png' width={50} />
                 </NavbarBrand>
             </NavbarContent>
+            <NavbarContent justify='end'>
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="sm:hidden"
+                />
 
-            <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+            </NavbarContent>
+
+            <NavbarContent className="hidden gap-4 lg:flex" justify="center">
                 {
                     NAV.map((item, index) => (
                         <NavbarItem key={index}>
