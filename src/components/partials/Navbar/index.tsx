@@ -2,14 +2,16 @@ import React from 'react';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Image } from "@nextui-org/react";
 import { NAV } from '../../../common/data';
 import { scrollToTop } from '../../../common/utils';
+import { useMediaQuery } from 'react-responsive';
 
 export default function NavBar() {
 
 
     const [isMenuOpen, setIsMenuOpen] = React.useReducer((current) => !current, false);
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark'>
+        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark' position="sticky">
             <NavbarContent justify='start' >
                 <NavbarBrand>
                     <Image src='images/logo_white.png' width={50} />
@@ -23,7 +25,7 @@ export default function NavBar() {
 
             </NavbarContent>
 
-            <NavbarContent className="hidden gap-4 lg:flex" justify="center">
+            <div className={`${isMobile ? 'hidden' : 'flex'} gap-4`}>
                 {
                     NAV.map((item, index) => (
                         <NavbarItem key={index}>
@@ -31,7 +33,7 @@ export default function NavBar() {
                         </NavbarItem>
                     ))
                 }
-            </NavbarContent>
+            </div>
 
 
             {/* MOBILE LAYOUT */}
