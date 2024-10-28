@@ -11,7 +11,7 @@ export default function NavBar() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark' position="sticky">
+        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark' position="sticky" >
             <NavbarContent justify='start' >
                 <NavbarBrand>
                     <Image src='images/logo_white.png' width={50} />
@@ -25,7 +25,10 @@ export default function NavBar() {
 
             </NavbarContent>
 
-            <div className={`${isMobile ? 'hidden' : 'flex'} gap-4`}>
+            <div
+                className='relative justify-end hidden bg-yellow-400 lg:bg-red-500 lg:flex lg:w-82 lg:gap-4'
+            // className={`${isMobile ? 'hidden' : 'flex'} gap-4`}
+            >
                 {
                     NAV.map((item, index) => (
                         <NavbarItem key={index}>
