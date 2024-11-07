@@ -24,7 +24,7 @@ export default function NavBar() {
             </NavbarContent>
 
             <div
-                className='relative justify-end hidden bg-yellow-400 lg:bg-red-500 lg:flex lg:w-82 lg:gap-4'
+                className='relative justify-end hidden lg:flex lg:w-82 lg:gap-4'
             // className={`${isMobile ? 'hidden' : 'flex'} gap-4`}
             >
                 {
