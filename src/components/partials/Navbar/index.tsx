@@ -2,14 +2,12 @@ import React from 'react';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Image } from "@nextui-org/react";
 import { NAV } from '../../../common/data';
 import { scrollToTop } from '../../../common/utils';
-import { useMediaQuery } from 'react-responsive';
+
 
 export default function NavBar() {
 
 
     const [isMenuOpen, setIsMenuOpen] = React.useReducer((current) => !current, false);
-    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark' position="sticky" >
             <NavbarContent justify='start' >
