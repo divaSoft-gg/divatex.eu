@@ -1,50 +1,46 @@
-import React from 'react';
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Image } from "@nextui-org/react";
-import { NAV } from '../../../common/data';
-import { scrollToTop } from '../../../common/utils';
+import { useTranslation } from "react-i18next";
+import { NavbarItemsProps } from "../../../common/types";
+import CentredLayout from "../../ui/centredLayout";
+import { Link } from "@nextui-org/react";
+import ThemeToggler from "../../shared/themeToggler";
 
+export default function Navbar() {
+  const { t } = useTranslation();
+  const navbarItems: NavbarItemsProps[] = t("navbar", {
+    returnObjects: true,
+  }) as NavbarItemsProps[];
 
-export default function NavBar() {
+  return (
+    <div className="sticky top-0 w-full bg-white">
+      <CentredLayout>
+        <nav className="flex flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-6">
+            <Link href="/">
+              <img
+                src="https://i.imgur.com/iqq372D.png"
+                className="w-16 invert"
+              />
+            </Link>
 
+            <ul className="flex flex-row items-center gap-6">
+              {navbarItems.map((element, index) => (
+                <li key={index}>
+                  <Link
+                    className="block font-normal text-gray-900 hover:text-blue-700"
+                    href={element.link}
+                  >
+                    {element.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-    const [isMenuOpen, setIsMenuOpen] = React.useReducer((current) => !current, false);
-    return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className='dark' position="sticky" >
-            <NavbarContent justify='start' >
-                <NavbarBrand>
-                    <Image src='images/logo_white.png' width={50} />
-                </NavbarBrand>
-            </NavbarContent>
-            <NavbarContent justify='end'>
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden"
-                />
-
-            </NavbarContent>
-
-            <div
-                className='relative justify-end hidden lg:flex lg:w-82 lg:gap-4'
-            // className={`${isMobile ? 'hidden' : 'flex'} gap-4`}
-            >
-                {
-                    NAV.map((item, index) => (
-                        <NavbarItem key={index}>
-                            <Link color="foreground" onClick={() => { scrollToTop() }} href={item.link}>{item.label}</Link>
-                        </NavbarItem>
-                    ))
-                }
-            </div>
-
-
-            {/* MOBILE LAYOUT */}
-            <NavbarMenu>
-                {NAV.map((item, index) => (
-                    <NavbarMenuItem key={`${index}`}>
-                        <Link color="foreground" href={item.link} onClick={() => { scrollToTop(); setIsMenuOpen() }}>{item.label}</Link>
-                    </NavbarMenuItem>
-                ))}
-            </NavbarMenu>
-        </Navbar>
-    )
+          <div className="flex items-start justify-start ">
+            <ThemeToggler />
+          </div>
+        </nav>
+      </CentredLayout>
+    </div>
+  );
 }
