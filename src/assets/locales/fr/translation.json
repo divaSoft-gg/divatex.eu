@@ -1,0 +1,20 @@
+{
+  "navbar": [
+    {
+      "label": "Home",
+      "link": "/"
+    },
+    {
+      "label": "Tarification",
+      "link": "/pricing"
+    },
+    {
+      "label": "Contactez Nous ",
+      "link": "/contact-us"
+    },
+    {
+      "label": "FAQ",
+      "link": "/"
+    }
+  ]
+}

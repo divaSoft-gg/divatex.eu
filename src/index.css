@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-    /* VARIABLES */
-    --max-content-width: 1300px;
-}
-
-#DivaTexHero {
-    .featuresGrid {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-}
-
-.contactGrid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* VARIABLES */
+  --max-content-width: 1200px;
 }
