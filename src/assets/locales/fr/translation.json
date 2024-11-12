@@ -22,5 +22,42 @@
     "paragraph": "Visez l’excellence opérationnelle grâce à notre ERP métier conçu pour amplifier vos performances et répondre précisément aux besoins de votre secteur. efficacité. Chaque mise en place est accompagnée d’une augmentation minimale de 10% du CA et de 20% de la rentabilité.",
     "moreButton": "En Savoir Plus",
     "demoButton": "Réserver une démo"
+  },
+  "ourClients": {
+    "title": "Nos Clients",
+    "description": "Plus de 140+ entreprises ont fait confiance à DIVATEX pour se développer grâce à notre expertise en matière de conception et de technologie.",
+    "clientsDetails": [
+      {
+        "logo": "images/clients/client1.svg",
+        "name": "Alsico",
+        "websiteLink": "https://www.alsico.com/eu-fr/",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque laborum iure commodi, veritatis vitae perspiciatis reprehenderit ea facilis qui temporibus, perferendis voluptatibus. Aliquam omnis minima temporibus veniam tempore saepe."
+      },
+      {
+        "logo": "/images/clients/client2.svg",
+        "name": "Granjard",
+        "websiteLink": "https://granjard.fr/",
+
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque laborum iure commodi, veritatis vitae perspiciatis reprehenderit ea facilis qui temporibus, perferendis voluptatibus. Aliquam omnis minima temporibus veniam tempore saepe."
+      },
+      {
+        "logo": "/images/clients/client3.svg",
+        "name": "Aubade",
+        "websiteLink": "https://www.aubade.fr/?srsltid=AfmBOopPKNU0AAlQa5VLOp9bftL_Lq5S5DHK7TjAmFDhRVtrsV7-XwCd",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque laborum iure commodi, veritatis vitae perspiciatis reprehenderit ea facilis qui temporibus, perferendis voluptatibus. Aliquam omnis minima temporibus veniam tempore saepe."
+      },
+      {
+        "logo": "/images/clients/client4.svg",
+        "name": "Bleu Oceane",
+        "websiteLink": "https://www.bleu-oceane.com/",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque laborum iure commodi, veritatis vitae perspiciatis reprehenderit ea facilis qui temporibus, perferendis voluptatibus. Aliquam omnis minima temporibus veniam tempore saepe."
+      },
+      {
+        "logo": "/images/clients/client5.svg",
+        "name": "NAFNAF",
+        "websiteLink": "https://www.nafnaf.com/",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque laborum iure commodi, veritatis vitae perspiciatis reprehenderit ea facilis qui temporibus, perferendis voluptatibus. Aliquam omnis minima temporibus veniam tempore saepe."
+      }
+    ]
   }
 }

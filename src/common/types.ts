@@ -9,3 +9,9 @@ export interface NavbarItemsProps {
   label: string;
   link: string;
 }
+export interface IClient {
+  logo: string;
+  name: string;
+  description: string;
+  websiteLink: string;
+}
