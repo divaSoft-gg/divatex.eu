@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { featuresProps } from "../../common/types";
 import { useState, useEffect, useCallback } from "react";
 import { cn } from "../../common/utils";
+import SectionTitle from "../shared/sectionTitle";
 
 export default function FeaturesSection() {
   const { t } = useTranslation();
@@ -36,47 +37,53 @@ export default function FeaturesSection() {
   return (
     <section id="features-section">
       <CentredLayout>
-        <div className="flex flex-row gap-6">
-          <Accordion
-            showDivider={false}
-            selectedKeys={selectedKeys}
-            onSelectionChange={(e: any) => {
-              const selectedKey = e.currentKey;
-              const newIndex = parseInt(selectedKey, 10);
-              setCurrentIndex(newIndex);
-              handleChange(newIndex);
-            }}
-          >
-            {features.map((element: featuresProps, index: number) => (
-              <AccordionItem
-                className={cn(
-                  "p-2 py-6 rounded-2xl",
-                  selectedKeys.has(index.toString()) &&
-                    "bg-gray-200 dark:bg-[#161616]"
-                )}
-                hideIndicator
-                key={index}
-                aria-label={`Accordion ${index}`}
-                title={
-                  <h1 className="text-lg text-black dark:text-white">
-                    {element.title}
-                  </h1>
-                }
-                startContent={
-                  <Image
-                    src={element.icon}
-                    width={50}
-                    className="dark:invert"
-                  />
-                }
-              >
-                {element.description}
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <div className="flex flex-col gap-10">
+          <SectionTitle
+            title={t("featuresSection.sectionTitle")}
+            subtitle={t("featuresSection.sectionSubtitle")}
+          />
+          <div className="flex flex-row gap-6">
+            <Accordion
+              showDivider={false}
+              selectedKeys={selectedKeys}
+              onSelectionChange={(e: any) => {
+                const selectedKey = e.currentKey;
+                const newIndex = parseInt(selectedKey, 10);
+                setCurrentIndex(newIndex);
+                handleChange(newIndex);
+              }}
+            >
+              {features.map((element: featuresProps, index: number) => (
+                <AccordionItem
+                  className={cn(
+                    "p-2 py-6 rounded-2xl",
+                    selectedKeys.has(index.toString()) &&
+                      "bg-gray-200 dark:bg-[#161616]"
+                  )}
+                  hideIndicator
+                  key={index}
+                  aria-label={`Accordion ${index}`}
+                  title={
+                    <h1 className="text-lg text-black dark:text-white">
+                      {element.title}
+                    </h1>
+                  }
+                  startContent={
+                    <Image
+                      src={element.icon}
+                      width={50}
+                      className="dark:invert"
+                    />
+                  }
+                >
+                  {element.description}
+                </AccordionItem>
+              ))}
+            </Accordion>
 
-          <div className="flex items-center w-full">
-            <Image src={selectedImage} className="max-h-min" />
+            <div className="flex items-center w-full">
+              <Image src={selectedImage} className="max-h-min" />
+            </div>
           </div>
         </div>
       </CentredLayout>
