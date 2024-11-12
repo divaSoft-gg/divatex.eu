@@ -20,4 +20,5 @@ export interface featuresProps {
   title: string;
   description: string;
   imagePreview: string;
+  cardWidthClass: string;
 }
