@@ -12,3 +12,6 @@
   /* VARIABLES */
   --max-content-width: 1200px;
 }
+.pause {
+  animation-play-state: paused;
+}
