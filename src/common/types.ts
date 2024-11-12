@@ -15,3 +15,9 @@ export interface IClient {
   description: string;
   websiteLink: string;
 }
+export interface featuresProps {
+  icon: string;
+  title: string;
+  description: string;
+  imagePreview: string;
+}
