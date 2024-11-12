@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
   const { t } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -19,25 +20,33 @@ export default function HeroSection() {
     verticalSwiping: true,
     arrows: false,
   };
+
   return (
-    <section id="hero-section">
+    <section id="hero-section" className="h-screen overflow-hidden">
       <CentredLayout>
-        <div className="flex flex-row gap-12">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-row gap-8">
+          <div>
             <Navbar />
-            <div className="flex flex-col justify-between h-full">
-              <h1 className="text-6xl font-bold">{t("heroSection.title")}</h1>
-              <p className="text-sm text-gray-800 dark:text-white">
-                {t("heroSection.paragraph")}
-              </p>
-            </div>
-            <div className="flex items-center gap-6">
-              <Button> {t("heroSection.moreButton")}</Button>
-              <Button variant="bordered"> {t("heroSection.demoButton")}</Button>
+            <div className="flex flex-col h-full justify-evenly">
+              <h1 className="text-6xl font-bold leading-tight">
+                {t("heroSection.title")}
+              </h1>
+
+              <div className="flex flex-col gap-6">
+                <p className="text-sm font-light text-gray-800 dark:text-white">
+                  {t("heroSection.paragraph")}
+                </p>
+                <div className="flex gap-3">
+                  <Button color="default">{t("heroSection.moreButton")}</Button>
+                  <Button color="default" variant="bordered">
+                    {t("heroSection.demoButton")}
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="max-w-[500px]">
+          <div className="max-w-[600px]">
             <Slider {...settings}>
               {swiperImages.map(
                 (element: { src: string; alt: string }, index: number) => (
