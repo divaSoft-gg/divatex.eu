@@ -1,0 +1,26 @@
+{
+  "navbar": [
+    {
+      "label": "Home",
+      "link": "/"
+    },
+    {
+      "label": "Tarification",
+      "link": "/pricing"
+    },
+    {
+      "label": "Contactez Nous ",
+      "link": "/contact-us"
+    },
+    {
+      "label": "FAQ",
+      "link": "/"
+    }
+  ],
+  "heroSection": {
+    "title": "Augmentez vos rendements et maîtrisez votre rentabilité",
+    "paragraph": "Visez l’excellence opérationnelle grâce à notre ERP métier conçu pour amplifier vos performances et répondre précisément aux besoins de votre secteur. efficacité. Chaque mise en place est accompagnée d’une augmentation minimale de 10% du CA et de 20% de la rentabilité.",
+    "moreButton": "En Savoir Plus",
+    "demoButton": "Réserver une démo"
+  }
+}

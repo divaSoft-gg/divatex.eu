@@ -1,32 +1,24 @@
-import React, { useRef } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
-import { NextUIProvider } from '@nextui-org/react'
-import { cn } from '../../../common/utils'
-import Footer from '../../partials/Footer'
-import NavBar from '../../partials/Navbar'
-import FallBackElement from '../FallBack'
-import { DivaGeneralNavbar } from '@aymen_diva/diva-shared-navbar'
-import '@aymen_diva/diva-shared-navbar/dist/index.css'
-export function AppContainer({ className = '' }) {
-    const navigate = useNavigate()
-    const ref: any = useRef()
+import React from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import { NextUIProvider, Spinner } from "@nextui-org/react";
+import { cn } from "../../../common/utils";
 
-    return (
-        <NextUIProvider navigate={navigate}>
-            <div className={cn('w-full bg-white', className)} ref={ref}>
-                <DivaGeneralNavbar />
+export function AppContainer({ className = "" }) {
+  const navigate = useNavigate();
 
-                <NavBar />
-
-                <React.Suspense fallback={<FallBackElement />}>
-
-                    <Outlet />
-
-                </React.Suspense>
-
-                <Footer />
-
+  return (
+    <NextUIProvider navigate={navigate}>
+      <div className={cn("w-full h-full", className)}>
+        <React.Suspense
+          fallback={
+            <div className="flex items-center justify-center w-full h-full">
+              <Spinner />
             </div>
-        </NextUIProvider >
-    )
+          }
+        >
+          <Outlet />
+        </React.Suspense>
+      </div>
+    </NextUIProvider>
+  );
 }

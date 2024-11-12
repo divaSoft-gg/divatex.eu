@@ -1,40 +1,11 @@
-import { ReactNode } from "react";
+export type Theme = "light" | "dark";
 
-export interface INav {
+export interface ThemeContextType {
+  theme: Theme;
+  toggleTheme: () => void;
+}
+
+export interface NavbarItemsProps {
   label: string;
   link: string;
-}
-
-export interface ILogo {
-  id: number;
-  logo: string;
-  name: string;
-}
-
-export default interface IFeature {
-  icon: string;
-  title: string;
-  description: string;
-  subFeatures: string[];
-}
-
-export interface IHeroConfig {
-  coverPath: string;
-  maxHeight: string;
-  height?: string;
-  renderContent: () => ReactNode;
-}
-
-export interface IContactInfo {
-  id: number;
-  location: string;
-  addresse: string;
-  email: string;
-  phone: string;
-}
-
-export interface IFunctionality {
-  image: string;
-  title: string;
-  functionalities: string[];
 }
