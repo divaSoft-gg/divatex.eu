@@ -16,7 +16,6 @@ export interface IClient {
   websiteLink: string;
 }
 export interface featuresProps {
-  icon: string;
   title: string;
   description: string;
   imagePreview: string;

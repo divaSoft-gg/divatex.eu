@@ -51,15 +51,12 @@ function FeaturesCard({
   return (
     <div
       key={index}
-      className="min-h-[33pc] p-8 bg-gray-200 rounded-xl dark:bg-[#161616]"
+      className="min-h-[33pc] p-8 bg-[#F7F7F7] rounded-xl dark:bg-[#161616]"
     >
       <div className="flex flex-col gap-8">
-        <div className="flex flex-row items-center justify-center gap-4">
-          <img src={element.icon} width={25} className="dark:invert" />
-          <h1 className="self-center text-4xl font-medium text-black dark:text-white">
-            {element.title}
-          </h1>
-        </div>
+        <h1 className="self-start text-4xl font-medium text-left text-black dark:text-white">
+          {element.title}
+        </h1>
         <small>{element.description}</small>
         <div className="flex items-center justify-center">
           <Image src={element.imagePreview} width={300} />
