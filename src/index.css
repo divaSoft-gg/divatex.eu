@@ -15,3 +15,9 @@
 .pause {
   animation-play-state: paused;
 }
+.sharedGrid {
+  grid-template-columns: 500px 1fr;
+}
+.secondGrid {
+  grid-template-columns: 1fr 500px;
+}
