@@ -5,16 +5,20 @@
       "link": "/"
     },
     {
-      "label": "Tarification",
-      "link": "/pricing"
+      "label": "ERP",
+      "link": "/erp"
     },
     {
-      "label": "Contactez Nous ",
+      "label": "À propos",
+      "link": "/about-us"
+    },
+    {
+      "label": "Contact",
       "link": "/contact-us"
     },
     {
-      "label": "FAQ",
-      "link": "/"
+      "label": "Réserver Un Démo",
+      "link": "/demo"
     }
   ],
   "heroSection": {

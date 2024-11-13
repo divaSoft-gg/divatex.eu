@@ -22,7 +22,7 @@ export default function Navbar() {
               />
             </Link>
 
-            <ul className="flex flex-row items-center gap-6">
+            <ul className="flex flex-row items-center gap-4">
               {navbarItems.map((element, index) => (
                 <li key={index}>
                   <Link
