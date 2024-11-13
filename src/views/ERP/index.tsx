@@ -18,6 +18,7 @@ import { SlWallet } from "react-icons/sl";
 import { HiOutlineWrench } from "react-icons/hi2";
 import { ImStatsBars } from "react-icons/im";
 import { IconType } from "react-icons";
+import { Helmet } from "react-helmet-async";
 
 export default function ERPView() {
   const { t } = useTranslation();
@@ -28,6 +29,13 @@ export default function ERPView() {
 
   return (
     <section id="erp-section">
+      <Helmet>
+        <title>{t("helmetPagesDescription.erp.pageTitle")}</title>
+        <meta
+          name="description"
+          content={t("helmetPagesDescription.erp.pageDescription")}
+        />
+      </Helmet>{" "}
       <CentredLayout>
         <div className="flex flex-col">
           {/* Title Description Column */}
