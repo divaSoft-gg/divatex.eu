@@ -21,3 +21,10 @@ export interface featuresProps {
   imagePreview: string;
   cardWidthClass: string;
 }
+export interface erpFeaturesCardProps {
+  title: string;
+  icon: string;
+  backgroundImage: string;
+  description: string;
+  list: string[];
+}
