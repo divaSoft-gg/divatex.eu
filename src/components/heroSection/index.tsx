@@ -22,7 +22,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero-section" className="h-screen overflow-hidden">
+    <section id="hero-section" className="h-[900px]">
       <CentredLayout>
         <div className="flex flex-row gap-8">
           <div>

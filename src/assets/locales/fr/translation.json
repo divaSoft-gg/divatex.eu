@@ -1,20 +1,30 @@
 {
+  "helmetPagesDescription": {
+    "home": {
+      "pageTitle": "DIVATEX Page d'accueil",
+      "pageDescription": "Depuis sa création en 2009 en Tunisie, notre société s'est distinguée comme un pionnier dans le domaine des solutions ERP dédiées à l'industrie textile. Avec une vision claire axée sur l'innovation et l'excellence, nous avons su développer des solutions performantes qui répondent aux besoins spécifiques de nos clients. Notre engagement à offrir des services de qualité, rapides et efficaces a favorisé une croissance continue, nous permettant d’étendre notre portée. Une présence internationale affirmée En 2014, notre expansion vers les marchés internationaux a consolidé notre position de leader, avec des collaborations prestigieuses aux côtés de marques telles que Fil Rouge, Alsico et Bleu Océane. Cette ouverture vers de nouveaux horizons témoigne de notre capacité à répondre aux exigences de la production industrielle, en s'adaptant aux besoins d'une clientèle variée et exigeante. Aujourd'hui, nous poursuivons notre cheminement vers l'excellence en développant des solutions innovantes pour accompagner nos clients dans leurs défis quotidiens."
+    }
+  },
   "navbar": [
     {
       "label": "Home",
       "link": "/"
     },
     {
-      "label": "Tarification",
-      "link": "/pricing"
+      "label": "ERP",
+      "link": "/erp"
     },
     {
-      "label": "Contactez Nous ",
+      "label": "À propos",
+      "link": "/about-us"
+    },
+    {
+      "label": "Contact",
       "link": "/contact-us"
     },
     {
-      "label": "FAQ",
-      "link": "/"
+      "label": "Réserver Un Démo",
+      "link": "/demo"
     }
   ],
   "heroSection": {
