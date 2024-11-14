@@ -33,3 +33,14 @@ export interface locationProps {
   country: string;
   address: string;
 }
+export interface socialsProps {
+  question: string;
+  answer: string;
+}
+export interface locationsProps {
+  countryName: string;
+  map: string;
+  flag: string;
+  address: string;
+  list: string[];
+}

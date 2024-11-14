@@ -194,8 +194,9 @@
     ]
   },
   "contactUs": {
-    "sectionTitle": "",
+    "sectionTitleView": "Prenez contact avec nous",
     "title": "Besoin d’informations sur notre ERP ?",
+    "contactUsAt": "Contactez-nous à",
     "description": "Pour des solutions personnalisées ou pour plus d’informations sur notre ERP, notre équipe d’experts est à votre écoute. Entamons ensemble le dialogue de votre transformation numérique.",
     "locationQuestion": "Où nous trouver?",
     "places": [
@@ -218,6 +219,58 @@
       {
         "country": "Tunisie",
         "address": "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse"
+      }
+    ],
+    "socials": [
+      {
+        "question": "E-mail",
+        "answer": "exemple@exemple.com"
+      },
+      {
+        "question": "Adresse",
+        "answer": "4054 Rue. de Yasser Arafat, Sousse"
+      },
+      {
+        "question": "Téléphone",
+        "answer": "(+216) 53 333 850"
+      }
+    ],
+    "locationTitle": "Nos bureaux en Europe et en Afrique du Nord",
+    "locations": [
+      {
+        "countryName": "Luxembourg",
+        "map": "images/location/luxembourg.png",
+        "flag": "images/location/luxembourg-flag.png",
+        "address": "8 rue des marguerites 8056 Strassen",
+        "list": ["luxembourg@divatex.eu", "+352621545054"]
+      },
+      {
+        "countryName": "Belgique",
+        "map": "images/location/belgium.png",
+        "flag": "images/location/belgium-flag.png",
+        "address": "Apostelhuizen 93 9000 Gent",
+        "list": ["belgique@divatex.eu", "+32460228844"]
+      },
+      {
+        "countryName": "France",
+        "map": "images/location/france.png",
+        "flag": "images/location/france-flag.png",
+        "address": "5 impasse de la colombette 31000 Toulouse",
+        "list": ["france@divatex.eu", "+33756810077"]
+      },
+      {
+        "countryName": "Maroc",
+        "map": "images/location/morocco.png",
+        "flag": "images/location/morocco-flag.png",
+        "address": "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca.",
+        "list": ["fabrizio@divatex.eu", "+212763086382"]
+      },
+      {
+        "countryName": "Tunisie",
+        "map": "images/location/tunisia.png",
+        "flag": "images/location/tunisia-flag.png",
+        "address": "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse",
+        "list": ["contact@diva-software.com", "+21653333853"]
       }
     ],
     "form": {
