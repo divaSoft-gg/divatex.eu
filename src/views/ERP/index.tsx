@@ -39,8 +39,8 @@ export default function ERPView() {
       <CentredLayout>
         <div className="flex flex-col">
           {/* Title Description Column */}
-          <div className="flex flex-col gap-8 py-20 ">
-            <h1 className="text-6xl font-bold text-center text-black dark:text-white">
+          <div className="flex flex-col gap-8 my-8">
+            <h1 className="text-6xl font-bold text-left text-black dark:text-white">
               DivaTex au coeur de votre perfomance
             </h1>
             <p className="text-lg text-left text-[#3C3D37] dark:text-white ">
@@ -92,7 +92,7 @@ function FeatureCard({
       onMouseLeave={() => setHoveredIndex(null)}
       key={index}
       className={cn(
-        "flex flex-col gap-10 p-8  bg-center bg-cover border group feature-card cursor-pointer ",
+        "flex flex-col gap-10 p-8  bg-center bg-cover border group feature-card cursor-pointer",
         hoveredIndex === index ? "hovered" : ""
       )}
       style={{
@@ -100,29 +100,26 @@ function FeatureCard({
           hoveredIndex === index ? `url(${element.backgroundImage})` : "none",
       }}
     >
-      <p className="self-center font-semibold leading-6 text-2xl text-[#1a1d1e80] group-hover:text-white dark:text-white ">
+      <p className="font-bold text-center uppercase text-2xl text-[#1a1d1e80] group-hover:text-white dark:text-white ">
         {element.title}
       </p>
       <div className="flex flex-col items-center gap-8">
         <IconComponent
-          size={60}
-          className="opacity-80 group-hover:text-white"
+          size={40}
+          className="opacity-50 group-hover:text-white group-hover:opacity-100"
         />
 
-        <small className="text-center text-[#1a1d1e80] text-medium font-semibold px-8 group-hover:text-white dark:text-white">
+        <small className="text-center text-[#1a1d1e80] text-medium font-regular group-hover:text-white dark:text-white">
           {element.description}
         </small>
       </div>
-      <ul className="flex flex-col gap-3 px-3 ">
+      <ul className="pl-6 list-disc">
         {element.list.map((element: string, idx: number) => (
           <li
             key={idx}
-            className="flex flex-row items-center justify-start gap-1 "
+            className=" text-[#161616] group-hover:text-white dark:text-white"
           >
-            <TiInputChecked size={20} />
-            <p className="text-[#161616] text-lg text-left group-hover:text-white dark:text-white">
-              {element}
-            </p>
+            {element}
           </li>
         ))}
       </ul>
