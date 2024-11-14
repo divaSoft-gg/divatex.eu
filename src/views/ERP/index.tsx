@@ -1,5 +1,4 @@
 import CentredLayout from "../../components/ui/centredLayout";
-import { TiInputChecked } from "react-icons/ti";
 import { useTranslation } from "react-i18next";
 import { erpFeaturesCardProps } from "../../common/types";
 import { useState } from "react";
@@ -41,12 +40,10 @@ export default function ERPView() {
           {/* Title Description Column */}
           <div className="flex flex-col gap-8 my-8">
             <h1 className="text-6xl font-bold text-left text-black dark:text-white">
-              DivaTex au coeur de votre perfomance
+              {t("erp.sectionTitle")}
             </h1>
             <p className="text-lg text-left text-[#3C3D37] dark:text-white ">
-              Maximisez l’efficacité et la rentabilité avec une solution ERP qui
-              redéfinit la gestion textile. Découvrez ci-dessous les différents
-              modules qui composent notre outil global.
+              {t("erp.sectionSubtitle")}
             </p>
           </div>
 
