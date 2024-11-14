@@ -21,3 +21,14 @@
 .secondGrid {
   grid-template-columns: 1fr 500px;
 }
+.erpGrid {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.feature-card {
+  transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
+.feature-card.hovered {
+  opacity: 1;
+}
