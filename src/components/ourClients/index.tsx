@@ -23,6 +23,7 @@ export default function OurClients() {
           <div className="w-full lg:w-[60%] flex flex-col gap-2">
             {[0, 1].map((element) => (
               <AutoplayCarousel
+                invert={false}
                 key={element}
                 directionClass={
                   element === 0 ? "animate-slideRtl" : "animate-slideLtr"

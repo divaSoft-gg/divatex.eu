@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import CentredLayout from "../../components/ui/centredLayout";
 import { demoStepsProps } from "../../common/types";
 import { InlineWidget } from "react-calendly";
+import AutoplayCarousel from "../../components/ourClients/carousel";
 
 export default function DemoView() {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export default function DemoView() {
   return (
     <section id="contact-us">
       <CentredLayout>
-        <div className="flex flex-col gap-8 my-10">
+        <div className="flex flex-col gap-12 my-10">
           <div className="flex flex-row gap-6 bg-[url('/images/cover.jpg')] bg-cover bg-center rounded-2xl  relative shadow-2xl ">
             <div className="absolute inset-0 z-0 bg-black opacity-50 rounded-2xl"></div>
 
@@ -40,6 +41,18 @@ export default function DemoView() {
                 }}
               />
             </div>
+          </div>
+          <div className="flex flex-col w-full gap-2 ">
+            {[0, 1].map((element) => (
+              <AutoplayCarousel
+                invert={true}
+                key={element}
+                directionClass={
+                  element === 0 ? "animate-slideRtl" : "animate-slideLtr"
+                }
+                elementIndex={element}
+              />
+            ))}
           </div>
         </div>
       </CentredLayout>
