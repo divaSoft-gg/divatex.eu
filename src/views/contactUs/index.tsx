@@ -48,7 +48,7 @@ export default function ContactUsView() {
           </h1>
           <div className="grid erpGrid">
             {locations.map((element, index) => (
-              <LocationCard element={element} index={index} />
+              <LocationCard key={index} element={element} index={index} />
             ))}
           </div>
         </div>
@@ -65,11 +65,11 @@ function LocationCard({
     <div
       role="presentation"
       key={index}
-      className="flex flex-col gap-10 p-8 bg-center bg-cover border cursor-pointer group feature-card"
+      className="flex flex-col gap-10 p-8 bg-center bg-cover border cursor-pointer group feature-card dark:bg-[#161616]"
     >
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row items-center justify-center gap-2">
         <Avatar src={element.flag} size="sm" />
-        <p className="text-2xl font-bold text-center text-black uppercase dark:text-white ">
+        <p className="text-2xl font-bold text-black uppercase dark:text-white ">
           {element.countryName}
         </p>
       </div>
