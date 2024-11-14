@@ -44,3 +44,7 @@ export interface locationsProps {
   address: string;
   list: string[];
 }
+export interface demoStepsProps {
+  title: string;
+  tooltip: string;
+}
