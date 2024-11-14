@@ -3,6 +3,7 @@ import { AppContainer } from "./components/ui/AppContainer";
 import { ErrorFallback } from "./components/ui/ErrorFallback";
 import Home from "./views/Home";
 import ERPView from "./views/ERP";
+import ContactUsView from "./views/contactUs";
 
 const publicRoutes: RouteObject[] = [
   {
@@ -16,6 +17,12 @@ const publicRoutes: RouteObject[] = [
     element: <AppContainer />,
     errorElement: <ErrorFallback />,
     children: [{ index: true, element: <ERPView /> }],
+  },
+  {
+    path: "/contact-us",
+    element: <AppContainer />,
+    errorElement: <ErrorFallback />,
+    children: [{ index: true, element: <ContactUsView /> }],
   },
 ];
 

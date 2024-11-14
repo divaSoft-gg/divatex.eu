@@ -121,10 +121,7 @@
         "icon": "BsBoxes",
         "backgroundImage": "images/erp/2.jpg",
         "description": "Maîtrisez vos niveaux de stock, simplifiez les processus d’achat et conservez une visibilité totale sur vos opérations d’approvisionnement.",
-        "list": [
-          "Gestion des stocks",
-          "Achats"
-        ]
+        "list": ["Gestion des stocks", "Achats"]
       },
       {
         "title": "Planning",
@@ -142,54 +139,35 @@
         "icon": "BsCardChecklist",
         "backgroundImage": "images/erp/4.jpg",
         "description": "Standardisez les opérations, détaillez les gammes de montage et équilibrez les charges de travail pour une efficience maximale en production.",
-        "list": [
-          "Catalogue du temps",
-          "Gamme de montage",
-          "Équilibrage"
-        ]
+        "list": ["Catalogue du temps", "Gamme de montage", "Équilibrage"]
       },
       {
         "title": "Production",
         "icon": "GiSewingNeedle",
         "backgroundImage": "images/erp/5.jpg",
         "description": "Contrôlez le processus de coupe, gérez l’exécution de la production en temps réel et planifiez précisément grâce à notre système MES avancé.",
-        "list": [
-          "Suivi de la coupe",
-          "Manufacturing Execution System"
-        ]
+        "list": ["Suivi de la coupe", "Manufacturing Execution System"]
       },
       {
         "title": "Qualité",
         "icon": "IoDiamondOutline",
         "backgroundImage": "images/erp/6.jpg",
         "description": "Assurez la surveillance qualité tout au long de la production et réalisez des audits de qualité pour maintenir les standards élevés de vos produits.",
-        "list": [
-          "Encours de chaîne",
-          "Fin de chaîne",
-          "Audit qualité par AQL"
-        ]
+        "list": ["Encours de chaîne", "Fin de chaîne", "Audit qualité par AQL"]
       },
       {
         "title": "Logistique",
         "icon": "BsTruck",
         "backgroundImage": "images/erp/7.jpg",
         "description": "Gérez le colisage et les expéditions avec efficacité et assurez la conformité douanière pour une livraison sans heurt de vos produits.",
-        "list": [
-          "Colisage",
-          "Gestion douanière (apurement)",
-          "Étude de Prix"
-        ]
+        "list": ["Colisage", "Gestion douanière (apurement)", "Étude de Prix"]
       },
       {
         "title": "Finance",
         "icon": "SlWallet",
         "backgroundImage": "images/erp/3.jpg",
         "description": "Automatisez la facturation, suivez les paiements avec précision et gérez la trésorerie pour une santé financière robuste de l’entreprise.",
-        "list": [
-          "Facturation",
-          "Règlement",
-          "Trésorerie"
-        ]
+        "list": ["Facturation", "Règlement", "Trésorerie"]
       },
       {
         "title": "GMAO",
@@ -214,5 +192,99 @@
         ]
       }
     ]
+  },
+  "contactUs": {
+    "sectionTitleView": "Prenez contact avec nous",
+    "title": "Besoin d’informations sur notre ERP ?",
+    "contactUsAt": "Contactez-nous à",
+    "description": "Pour des solutions personnalisées ou pour plus d’informations sur notre ERP, notre équipe d’experts est à votre écoute. Entamons ensemble le dialogue de votre transformation numérique.",
+    "locationQuestion": "Où nous trouver?",
+    "places": [
+      {
+        "country": "Luxembourg",
+        "address": "8 rue des marguerites 8056 Strassen"
+      },
+      {
+        "country": "Belgique",
+        "address": "Apostelhuizen 93 9000 Gent"
+      },
+      {
+        "country": "France",
+        "address": "5 impasse de la colombette 31000 Toulouse"
+      },
+      {
+        "country": "Maroc",
+        "address": "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca."
+      },
+      {
+        "country": "Tunisie",
+        "address": "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse"
+      }
+    ],
+    "socials": [
+      {
+        "question": "E-mail",
+        "answer": "exemple@exemple.com"
+      },
+      {
+        "question": "Adresse",
+        "answer": "4054 Rue. de Yasser Arafat, Sousse"
+      },
+      {
+        "question": "Téléphone",
+        "answer": "(+216) 53 333 850"
+      }
+    ],
+    "locationTitle": "Nos bureaux en Europe et en Afrique du Nord",
+    "locations": [
+      {
+        "countryName": "Luxembourg",
+        "map": "images/location/luxembourg.png",
+        "flag": "images/location/luxembourg-flag.png",
+        "address": "8 rue des marguerites 8056 Strassen",
+        "list": ["luxembourg@divatex.eu", "+352621545054"]
+      },
+      {
+        "countryName": "Belgique",
+        "map": "images/location/belgium.png",
+        "flag": "images/location/belgium-flag.png",
+        "address": "Apostelhuizen 93 9000 Gent",
+        "list": ["belgique@divatex.eu", "+32460228844"]
+      },
+      {
+        "countryName": "France",
+        "map": "images/location/france.png",
+        "flag": "images/location/france-flag.png",
+        "address": "5 impasse de la colombette 31000 Toulouse",
+        "list": ["france@divatex.eu", "+33756810077"]
+      },
+      {
+        "countryName": "Maroc",
+        "map": "images/location/morocco.png",
+        "flag": "images/location/morocco-flag.png",
+        "address": "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca.",
+        "list": ["fabrizio@divatex.eu", "+212763086382"]
+      },
+      {
+        "countryName": "Tunisie",
+        "map": "images/location/tunisia.png",
+        "flag": "images/location/tunisia-flag.png",
+        "address": "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse",
+        "list": ["contact@diva-software.com", "+21653333853"]
+      }
+    ],
+    "form": {
+      "fullName": "Nom et Prénom",
+      "fullNamePlaceholder": "John Doe",
+      "email": "E-mail",
+      "emailPlaceholder": "E-mail@exemple.com",
+      "company": "Entreprise",
+      "companyPlaceholder": "MAAK Corp.",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "xxx_xxx_xxx",
+      "description": "Description",
+      "descriptionPlaceholder": "Votre message",
+      "button": "Envoyer"
+    }
   }
 }
