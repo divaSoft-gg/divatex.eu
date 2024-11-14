@@ -28,3 +28,8 @@ export interface erpFeaturesCardProps {
   description: string;
   list: string[];
 }
+
+export interface locationProps {
+  country: string;
+  address: string;
+}
