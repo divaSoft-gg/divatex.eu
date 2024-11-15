@@ -59,3 +59,11 @@ export interface solutionCardProps {
   title: string;
   description: string;
 }
+export interface subSectionsProps {
+  subsectionTitle: {
+    title: string;
+    grayTitle: string;
+  };
+  subSectionDescription: string;
+  cards: featuresCardProps[] | solutionCardProps[];
+}
