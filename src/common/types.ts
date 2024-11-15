@@ -48,3 +48,10 @@ export interface demoStepsProps {
   title: string;
   tooltip: string;
 }
+
+export interface aboutUsProps {
+  year: string;
+  sectionTitle: string;
+  sectionDescription: string;
+  imagePath: string;
+}
