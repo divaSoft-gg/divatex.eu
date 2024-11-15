@@ -286,5 +286,28 @@
       "descriptionPlaceholder": "Votre message",
       "button": "Envoyer"
     }
+  },
+  "demo": {
+    "sectionTitle": "Prêt à Commencer ? Réservez Votre Démo !",
+    "sectionDescription": "Prêt à en savoir plus ? Réservez une démo pour découvrir notre solution en action. Nos experts vous guideront à travers les fonctionnalités clés et répondront à toutes vos questions pour vous aider à voir comment nous pouvons soutenir votre réussite.",
+    "stepsTitle": "Suivez Ces Étapes pour Réserver Votre Démo",
+    "steps": [
+      {
+        "title": "Choisissez la Date",
+        "tooltip": "Sélectionnez le jour qui vous convient le mieux pour planifier la démo avec notre équipe. Consultez notre calendrier et choisissez la date qui vous arrange."
+      },
+      {
+        "title": "Définissez la Durée de la Démo",
+        "tooltip": "Selon vos besoins, choisissez la durée de la démo. Notre équipe propose des sessions de 15, 30, ou 60 minutes pour couvrir vos questions et vos objectifs."
+      },
+      {
+        "title": "Ajoutez les Participants (jusqu'à 10 personnes)",
+        "tooltip": "Vous pouvez inviter d’autres membres de votre équipe ou partenaires à participer à la démo. Il vous suffit de fournir leurs coordonnées pour qu’ils soient inclus dans l’invitation."
+      },
+      {
+        "title": "Partagez des Détails Importants",
+        "tooltip": "Aidez-nous à mieux préparer notre rencontre en partageant toutes les informations pertinentes. Indiquez vos objectifs, défis, ou questions spécifiques que vous aimeriez aborder pendant la démo."
+      }
+    ]
   }
 }
