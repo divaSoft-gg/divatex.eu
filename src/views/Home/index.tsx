@@ -4,6 +4,7 @@ import HeroSection from "../../components/heroSection";
 import OurClients from "../../components/ourClients";
 import { useTranslation } from "react-i18next";
 import ContactUsSection from "../../components/ContactUsSection";
+import TextileErpFeatures from "../../components/TextileErpFeatures";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -20,6 +21,7 @@ export default function Home() {
       <HeroSection />
       <OurClients />
       <FeaturesSection />
+      <TextileErpFeatures />
       <ContactUsSection />
     </div>
   );
