@@ -7,7 +7,6 @@ import Navbar from "../../partials/navbar";
 export function AppContainer({ className = "" }) {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   return (
     <NextUIProvider navigate={navigate}>

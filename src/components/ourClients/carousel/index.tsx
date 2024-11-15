@@ -72,7 +72,6 @@ function CarouselItem({
   invert: boolean;
 }>) {
   const theme = useTheme();
-  console.log(theme);
   return (
     <div className="flex items-center justify-center w-full h-full transition-transform transform hover:scale-90 hover:shadow-lg shadow-gray-200">
       <Tooltip
