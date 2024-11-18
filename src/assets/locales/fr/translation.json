@@ -309,5 +309,61 @@
         "tooltip": "Aidez-nous à mieux préparer notre rencontre en partageant toutes les informations pertinentes. Indiquez vos objectifs, défis, ou questions spécifiques que vous aimeriez aborder pendant la démo."
       }
     ]
+  },
+  "ErpSection": {
+    "subSections": [
+      {
+        "subsectionTitle": {
+          "title": "L'essence de notre",
+          "grayTitle": "ERP textile"
+        },
+        "subSectionDescription": "Résultat d'une expertise approfondie dans le domaine de la gestion de production pour le secteur textile, DivaTex se distingue comme une solution orientée vers l'atteinte de vos objectifs. L'évolution constante de notre solution depuis sa création illustre notre engagement à répondre aux besoins évolutifs de nos clients, en fournissant une platforme à la fois robuste, flexible et facile à intégrer.",
+        "cards": [
+          {
+            "cardTitle": "Clients",
+            "cardNumber": "140+",
+            "cardDescription": "Tous dans le milieu du textile, de sa fabrication à sa vente"
+          },
+          {
+            "cardTitle": "Usines",
+            "cardNumber": "190+",
+            "cardDescription": "une présence en europe et dans le nord de l'Afrique"
+          }
+        ]
+      },
+      {
+        "subsectionTitle": {
+          "title": "Une vue à 360°",
+          "grayTitle": "pour une solution complàte"
+        },
+        "subSectionDescription": "DivaTex offre une perspective intégrale à activité textile, englobant toutes les étapes clés, de la recherche à l'assistance, pour garantir l'excellence à chaque niveau de votre entreprise.",
+        "cards": [
+          {
+            "imagePath": "images/view-section/search.png",
+            "coloredImagePath": "images/view-section/searchColored.png",
+            "title": "Recherche",
+            "description": "innovations de pointe et utilisation de l'IA pour anticiper les besoins de demain et maintenir votre entreprise à la pointe du secteur."
+          },
+          {
+            "imagePath": "images/view-section/developpement.png",
+            "coloredImagePath": "images/view-section/developpement-hover.png",
+            "title": "Développement",
+            "description": "Méthode agile et sure-musure pour intégrer rapidement les fonctionalités les plus avancées avec performance et adaptabilité."
+          },
+          {
+            "imagePath": "images/view-section/commercial.png",
+            "coloredImagePath": "images/view-section/commercial-hover.png",
+            "title": "Commercial",
+            "description": "Approche orientée solution pour identifier et répondre précisément à vos besoins, assurant l'adéquation parfaite entre nos offres et vos exigences."
+          },
+          {
+            "imagePath": "images/view-section/online.png",
+            "coloredImagePath": "images/view-section/online-hover.png",
+            "title": "Support",
+            "description": "Assistance complète et réactive pour résoudre rapidement toutes problématique, garantissant la continuité de vos opérations."
+          }
+        ]
+      }
+    ]
   }
 }
