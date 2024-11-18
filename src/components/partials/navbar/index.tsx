@@ -11,7 +11,7 @@ export default function Navbar() {
   }) as NavbarItemsProps[];
 
   return (
-    <div className="sticky top-0 w-full bg-white">
+    <div className="sticky top-0 z-50 w-full bg-white">
       <CentredLayout>
         <nav className="flex flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">

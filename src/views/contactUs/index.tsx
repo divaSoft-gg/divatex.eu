@@ -15,7 +15,7 @@ export default function ContactUsView() {
     returnObjects: true,
   }) as locationsProps[];
   return (
-    <section id="contact-us">
+    <section id="contact-us" className="my-8">
       <CentredLayout>
         <div className="flex flex-col gap-12">
           <div className="flex flex-col w-full gap-6 p-4 lg:gap-0 lg:p-0 lg:flex-row">
