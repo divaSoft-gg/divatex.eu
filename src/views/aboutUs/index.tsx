@@ -3,6 +3,7 @@ import { cn } from "../../common/utils";
 import CentredLayout from "../../components/ui/centredLayout";
 import { useTranslation } from "react-i18next";
 import { aboutUsProps } from "../../common/types";
+import { Helmet } from "react-helmet-async";
 
 export default function AboutUs() {
   const { t } = useTranslation();
@@ -11,6 +12,13 @@ export default function AboutUs() {
   }) as aboutUsProps[];
   return (
     <section id="aboutUs-view" className="my-8">
+      <Helmet>
+        <title>{t("helmetPagesDescription.aboutus.pageTitle")}</title>
+        <meta
+          name="description"
+          content={t("helmetPagesDescription.aboutus.pageDescription")}
+        />
+      </Helmet>
       <CentredLayout>
         <div className="flex flex-col gap-24 px-4 lg:px-0">
           <h1 className="text-3xl font-semibold text-center text-black dark:text-white">

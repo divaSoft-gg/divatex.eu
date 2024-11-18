@@ -7,6 +7,10 @@
     "erp": {
       "pageTitle": "DIVATEX ERP Page",
       "pageDescription": ""
+    },
+    "aboutus": {
+      "pageTitle": "Diva Software: Notre Parcours Vers l’Excellence dans l’ERP Textile",
+      "pageDescription": "Découvrez l'évolution de Diva Software depuis sa fondation en 2009 en Tunisie jusqu'à son expansion internationale et ses partenariats stratégiques. Explorez notre engagement envers l’innovation, la transformation digitale, et la gestion textile à grande échelle en Europe et en Afrique du Nord"
     }
   },
   "navbar": [
