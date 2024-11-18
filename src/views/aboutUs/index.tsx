@@ -30,16 +30,18 @@ export default function AboutUs() {
               {t("aboutus.subtitle")}
             </p>
           </div>
-          {[0, 1].map((element) => (
-            <AutoplayCarousel
-              invert={true}
-              key={element}
-              directionClass={
-                element === 0 ? "animate-slideRtl" : "animate-slideLtr"
-              }
-              elementIndex={element}
-            />
-          ))}
+          <div className="flex flex-col w-full gap-2">
+            {[0, 1].map((element) => (
+              <AutoplayCarousel
+                invert={true}
+                key={element}
+                directionClass={
+                  element === 0 ? "animate-slideRtl" : "animate-slideLtr"
+                }
+                elementIndex={element}
+              />
+            ))}
+          </div>
           {aboutUsSection.map((element: aboutUsProps, index: number) => (
             <div
               key={index}
