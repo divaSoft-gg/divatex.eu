@@ -19,13 +19,18 @@ export default function TextileErpFeatures() {
     <section id="textile-features">
       <CentredLayout>
         {sectionsData.map((element: subSectionsProps, index: number) => (
-          <div className={cn("flex flex-col gap-16", index !== 0 && "mt-32")}>
-            <div className="flex flex-col w-4/5 gap-8">
-              <div className="text-5xl font-bold text-left ">
-                <h1 className="block text-black opacity-70 dark:text-white">
+          <div
+            className={cn(
+              "flex flex-col gap-16 px-4 lg:px-0",
+              index !== 0 && "mt-32"
+            )}
+          >
+            <div className="flex flex-col gap-8 lg:w-4/5">
+              <div className="text-3xl font-bold text-left lg:text-5xl ">
+                <h1 className="block text-black dark:text-white">
                   {element.subsectionTitle.title}
                 </h1>
-                <h1 className="text-left text-black opacity-70 dark:text-slate-300">
+                <h1 className="text-left text-black dark:text-white">
                   {element.subsectionTitle.grayTitle}
                 </h1>
               </div>
@@ -34,7 +39,7 @@ export default function TextileErpFeatures() {
               </p>
             </div>
 
-            <div className="grid gap-6 advantagesCardGrid">
+            <div className="grid gap-6 grid-cols-1 lg:grid-cols-[repeat(auto-fill,_minmax(500px,_1fr))]">
               {element.cards.map(
                 (item: featuresCardProps | solutionCardProps, idx: number) =>
                   index === 0 ? (

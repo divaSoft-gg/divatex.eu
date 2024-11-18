@@ -16,9 +16,9 @@ export default function FeaturesSection() {
   return (
     <section id="features-section">
       <CentredLayout>
-        <div className="flex flex-col gap-6">
-          <div className="flex items-center justify-between ">
-            <h1 className="text-5xl font-semibold leading-relaxed">
+        <div className="flex flex-col gap-6 px-4 lg:px:0">
+          <div className="flex flex-col items-center justify-between gap-3 lg:flex-row ">
+            <h1 className="text-3xl font-semibold leading-relaxed text-center lg:text-start lg:text-5xl">
               {t("featuresSection.sectionTitle")}
             </h1>
             <Button
@@ -28,12 +28,12 @@ export default function FeaturesSection() {
               Voir Plus
             </Button>
           </div>
-          <div className="grid gap-6 sharedGrid">
+          <div className="grid gap-6 grid-cols-1 lg:grid-cols-[500px_1fr]">
             {featuresCol1.map((element: featuresProps, index: number) => (
               <FeaturesCard element={element} index={index} />
             ))}
           </div>
-          <div className="grid gap-6 secondGrid">
+          <div className="grid gap-6 grid-cols-1 lg:grid-cols-[1fr_500px]">
             {featuresCol2.map((element: featuresProps, index: number) => (
               <FeaturesCard element={element} index={index} />
             ))}

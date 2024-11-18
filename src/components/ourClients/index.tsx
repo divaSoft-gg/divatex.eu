@@ -13,7 +13,7 @@ export default function OurClients() {
       <CenteredLayout>
         <div className="flex flex-col gap-6 lg:flex-row">
           <div className="">
-            <h1 className="pb-3 text-4xl font-semibold leading-normal text-left text-white lg:text-6xl">
+            <h1 className="pb-3 text-3xl font-semibold leading-normal text-left text-white lg:text-6xl">
               {t("ourClients.title")}
             </h1>
             <p className="mt-2 leading-8 text-white lg:text-lg text-md muted ">

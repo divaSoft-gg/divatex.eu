@@ -12,7 +12,7 @@ export default function Footer() {
   }) as FooterItems[];
 
   return (
-    <footer className="dark:bg-[#161616] bg-black py-8 mt-36">
+    <footer className="dark:bg-[#161616] bg-black py-8 mt-[393.2px] lg:mt-[301.2px]">
       <CenteredLayout>
         <div className="flex flex-col justify-between w-full lg:flex-row">
           <div className="max-w-full items-start lg:max-w-[40%] flex flex-col gap-4 ">
@@ -22,7 +22,7 @@ export default function Footer() {
             </p>
             <ThemeToggler />
           </div>
-          <div className="flex flex-row justify-around gap-8 pt-10 lg:pt-0">
+          <div className="flex flex-col items-center justify-center gap-8 pt-10 lg:justify-around lg:flex-row lg:pt-0">
             {footerSiteMap.map((element: FooterItems, index: number) => (
               <div key={index}>
                 <h1 className="text-lg font-semibold text-white">
