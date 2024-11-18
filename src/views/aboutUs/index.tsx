@@ -4,6 +4,7 @@ import CentredLayout from "../../components/ui/centredLayout";
 import { useTranslation } from "react-i18next";
 import { aboutUsProps } from "../../common/types";
 import { Helmet } from "react-helmet-async";
+import AutoplayCarousel from "../../components/ourClients/carousel";
 
 export default function AboutUs() {
   const { t } = useTranslation();
@@ -29,24 +30,36 @@ export default function AboutUs() {
               {t("aboutus.subtitle")}
             </p>
           </div>
+          {[0, 1].map((element) => (
+            <AutoplayCarousel
+              invert={false}
+              key={element}
+              directionClass={
+                element === 0 ? "animate-slideRtl" : "animate-slideLtr"
+              }
+              elementIndex={element}
+            />
+          ))}
           {aboutUsSection.map((element: aboutUsProps, index: number) => (
             <div
               key={index}
               className={cn(
-                "flex  gap-10 w-full",
+                "flex  gap-32 w-full",
                 index % 2 === 0
                   ? " flex-col-reverse lg:flex-row-reverse"
                   : "flex-col-reverse lg:flex-row"
               )}
             >
               <div className="flex flex-col items-center justify-center flex-1 gap-6 lg:items-start lg:justify-start ">
-                <p className="text-xl font-bold text-gray-400 dark:text-white">
-                  {element.year}
-                </p>
-                <h1 className="text-xl font-bold text-black dark:text-white">
-                  {element.sectionTitle}
-                </h1>
-                <p className="font-semibold text-gray-600 lg:w-2/3 w-fu dark:text-white">
+                <div>
+                  <p className="text-base font-normal text-gray-400 dark:text-white">
+                    {element.year}
+                  </p>
+                  <h1 className="text-4xl font-semibold text-black dark:text-white">
+                    {element.sectionTitle}
+                  </h1>
+                </div>
+                <p className="font-normal text-gray-600 dark:text-white">
                   {element.sectionDescription}
                 </p>
               </div>
