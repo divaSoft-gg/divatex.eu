@@ -55,3 +55,22 @@ export interface aboutUsProps {
   sectionDescription: string;
   imagePath: string;
 }
+export interface featuresCardProps {
+  cardTitle: string;
+  cardNumber: string;
+  cardDescription: string;
+}
+export interface solutionCardProps {
+  imagePath: string;
+  coloredImagePath: string;
+  title: string;
+  description: string;
+}
+export interface subSectionsProps {
+  subsectionTitle: {
+    title: string;
+    grayTitle: string;
+  };
+  subSectionDescription: string;
+  cards: featuresCardProps[] | solutionCardProps[];
+}
