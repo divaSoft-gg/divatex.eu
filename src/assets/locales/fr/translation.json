@@ -7,6 +7,10 @@
     "erp": {
       "pageTitle": "DIVATEX ERP Page",
       "pageDescription": ""
+    },
+    "aboutus": {
+      "pageTitle": "Diva Software: Notre Parcours Vers l’Excellence dans l’ERP Textile",
+      "pageDescription": "Découvrez l'évolution de Diva Software depuis sa fondation en 2009 en Tunisie jusqu'à son expansion internationale et ses partenariats stratégiques. Explorez notre engagement envers l’innovation, la transformation digitale, et la gestion textile à grande échelle en Europe et en Afrique du Nord"
     }
   },
   "navbar": [
@@ -363,6 +367,36 @@
             "description": "Assistance complète et réactive pour résoudre rapidement toutes problématique, garantissant la continuité de vos opérations."
           }
         ]
+      }
+    ]
+  },
+  "aboutus": {
+    "title": "A propos de nous",
+    "subtitle": "DIVATEX est un leader innovant dans les solutions ERP pour l’industrie textile, dédié à optimiser la gestion et la transformation digitale des entreprises à travers l’Europe et l’Afrique du Nord.",
+    "timeline": [
+      {
+        "year": "2009",
+        "sectionTitle": "Un cheminement vers l’innovation et l’excellence",
+        "sectionDescription": "Fondée en 2009 en Tunisie, notre société s’est rapidement imposée comme un acteur clé dans le secteur de l’ERP dédié à l’industrie textile. Avec un engagement indéfectible envers l’innovation, l’excellence et la rapidité, nous avons connu une croissance soutenue, attirant de nouveaux clients et élargissant constamment notre portée.",
+        "imagePath": "images/aboutus/1.webp"
+      },
+      {
+        "year": "2014",
+        "sectionTitle": "Expansion sur la scène internationale",
+        "sectionDescription": "En 2014, nous avons franchi un cap majeur en nous introduisant sur le marché international, en collaborant avec des marques renommées telles que Fil Rouge, Alsico et Bleu Océane. Cette avancée a marqué notre ascension en tant que leader dans le domaine de l’ERP textile, affirmant notre capacité à répondre aux exigences de la production à grande échelle.",
+        "imagePath": "images/aboutus/2.webp"
+      },
+      {
+        "year": "2018",
+        "sectionTitle": "Partenariats stratégiques et diversification",
+        "sectionDescription": "L’année 2018 a été un tournant décisif, symbolisant notre capacité à intégrer des marques prestigieuses comme Aubade pour leurs besoins en production et Naf Naf pour une gestion intégrale du cycle de l’entreprise. Ces partenariats ont consolidé notre réputation et démontré la polyvalence de notre ERP.",
+        "imagePath": "images/aboutus/3.webp"
+      },
+      {
+        "year": "2023",
+        "sectionTitle": "Accélération à grande échelle",
+        "sectionDescription": "In 2023, Diva Software formed a joint venture with a Luxembourg-based company specializing in digital transformation, eCommerce, and SaaS solutions, to expand in Europe. Supported by a Belgian private fund, this partnership accelerated our growth, enabling us to deploy our ERP solutions across Europe and North Africa while driving innovation in textile management.",
+        "imagePath": "images/aboutus/4.webp"
       }
     ]
   }
