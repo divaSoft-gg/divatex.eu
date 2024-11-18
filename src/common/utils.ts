@@ -14,3 +14,6 @@ export function shuffleArray(array: IClient[]) {
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value);
 }
+export function getCurrentYear() {
+  return new Date().getFullYear();
+}

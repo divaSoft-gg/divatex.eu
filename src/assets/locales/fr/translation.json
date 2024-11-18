@@ -399,5 +399,50 @@
         "imagePath": "images/aboutus/4.webp"
       }
     ]
+  },
+  "footer": {
+    "description": "Depuis 2009, Diva Software s’engage à révolutionner la gestion textile grâce à des solutions ERP innovantes. Avec une présence internationale et des partenariats stratégiques, nous accompagnons les entreprises dans leur transformation digitale en Europe et en Afrique du Nord.",
+    "pages": "Pages",
+    "siteMap": [
+      {
+        "title": "Plan du site",
+        "sections": [
+          {
+            "label": "Home",
+            "link": "/"
+          },
+          {
+            "label": "ERP",
+            "link": "/erp"
+          },
+          {
+            "label": "À propos",
+            "link": "/about-us"
+          },
+          {
+            "label": "Contact",
+            "link": "/contact-us"
+          },
+          {
+            "label": "Réserver Un Démo",
+            "link": "/demo"
+          }
+        ]
+      },
+      {
+        "title": "Réseaux sociaux",
+        "sections": [
+          { "label": "Facebook", "link": "#" },
+          { "label": "Instagram", "link": "#" },
+          { "label": "LinkedIn", "link": "#" }
+        ]
+      }
+    ],
+    "home": "Home",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "resources": "Resources",
+    "faqs": "FAQs",
+    "copyright": "DIVATEX. Tous droits réservés."
   }
 }

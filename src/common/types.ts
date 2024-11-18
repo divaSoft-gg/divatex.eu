@@ -74,3 +74,7 @@ export interface subSectionsProps {
   subSectionDescription: string;
   cards: featuresCardProps[] | solutionCardProps[];
 }
+export interface FooterItems {
+  title: string;
+  sections: NavbarItemsProps[];
+}
