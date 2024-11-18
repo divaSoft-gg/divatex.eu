@@ -10,29 +10,35 @@ export default function AboutUs() {
     returnObjects: true,
   }) as aboutUsProps[];
   return (
-    <section id="aboutUs-view">
+    <section id="aboutUs-view" className="my-8">
       <CentredLayout>
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-24 px-4 lg:px-0">
+          <h1 className="text-3xl font-semibold text-center text-black dark:text-white">
+            {t("aboutus.title")}
+          </h1>
           {aboutUsSection.map((element: aboutUsProps, index: number) => (
             <div
+              key={index}
               className={cn(
                 "flex  gap-10 w-full",
-                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+                index % 2 === 0
+                  ? " flex-col-reverse lg:flex-row-reverse"
+                  : "flex-col-reverse lg:flex-row"
               )}
             >
-              <div className="flex flex-col items-start justify-start flex-1 gap-6 ">
-                <p className="text-xl font-bold text-gray-400">
+              <div className="flex flex-col items-center justify-center flex-1 gap-6 lg:items-start lg:justify-start ">
+                <p className="text-xl font-bold text-gray-400 dark:text-white">
                   {element.year}
                 </p>
-                <h1 className="text-xl font-bold text-black">
+                <h1 className="text-xl font-bold text-black dark:text-white">
                   {element.sectionTitle}
                 </h1>
-                <p className="w-2/3 font-semibold text-gray-600">
+                <p className="font-semibold text-gray-600 lg:w-2/3 w-fu dark:text-white">
                   {element.sectionDescription}
                 </p>
               </div>
               <div className="flex-1">
-                <Image src={element.imagePath} className="bg-cover " />
+                <Image src={element.imagePath} className="bg-cover -z-20" />
               </div>
             </div>
           ))}
