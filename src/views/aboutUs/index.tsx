@@ -21,9 +21,14 @@ export default function AboutUs() {
       </Helmet>
       <CentredLayout>
         <div className="flex flex-col gap-24 px-4 lg:px-0">
-          <h1 className="text-3xl font-semibold text-center text-black dark:text-white">
-            {t("aboutus.title")}
-          </h1>
+          <div className="flex flex-col gap-8">
+            <h1 className="text-6xl font-bold text-left text-black dark:text-white">
+              {t("aboutus.title")}
+            </h1>
+            <p className="text-lg text-left text-[#3C3D37] dark:text-white ">
+              {t("aboutus.subtitle")}
+            </p>
+          </div>
           {aboutUsSection.map((element: aboutUsProps, index: number) => (
             <div
               key={index}
