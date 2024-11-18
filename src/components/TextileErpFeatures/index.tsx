@@ -25,7 +25,7 @@ export default function TextileErpFeatures() {
                 <h1 className="block text-black opacity-70 dark:text-white">
                   {element.subsectionTitle.title}
                 </h1>
-                <h1 className="text-left text-gray-600 dark:text-slate-300">
+                <h1 className="text-left text-black opacity-70 dark:text-slate-300">
                   {element.subsectionTitle.grayTitle}
                 </h1>
               </div>

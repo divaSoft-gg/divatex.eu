@@ -3,6 +3,7 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { NextUIProvider, Spinner } from "@nextui-org/react";
 import { cn } from "../../../common/utils";
 import Navbar from "../../partials/navbar";
+import Footer from "../../partials/footer";
 
 export function AppContainer({ className = "" }) {
   const navigate = useNavigate();
@@ -21,6 +22,8 @@ export function AppContainer({ className = "" }) {
           }
         >
           <Outlet />
+
+          <Footer />
         </React.Suspense>
       </div>
     </NextUIProvider>

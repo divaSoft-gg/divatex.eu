@@ -17,7 +17,6 @@ export default function Home() {
           content={t("helmetPagesDescription.home.pageDescription")}
         />
       </Helmet>
-      <Helmet title="" />
       <HeroSection />
       <OurClients />
       <FeaturesSection />
