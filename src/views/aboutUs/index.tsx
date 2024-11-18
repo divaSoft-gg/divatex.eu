@@ -32,7 +32,7 @@ export default function AboutUs() {
           </div>
           {[0, 1].map((element) => (
             <AutoplayCarousel
-              invert={false}
+              invert={true}
               key={element}
               directionClass={
                 element === 0 ? "animate-slideRtl" : "animate-slideLtr"
