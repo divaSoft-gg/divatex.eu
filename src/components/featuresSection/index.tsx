@@ -30,12 +30,12 @@ export default function FeaturesSection() {
           </div>
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-[500px_1fr]">
             {featuresCol1.map((element: featuresProps, index: number) => (
-              <FeaturesCard element={element} index={index} />
+              <FeaturesCard key={index} element={element} index={index} />
             ))}
           </div>
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-[1fr_500px]">
             {featuresCol2.map((element: featuresProps, index: number) => (
-              <FeaturesCard element={element} index={index} />
+              <FeaturesCard key={index} element={element} index={index} />
             ))}
           </div>
         </div>

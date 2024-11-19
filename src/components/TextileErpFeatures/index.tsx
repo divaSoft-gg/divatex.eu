@@ -20,6 +20,7 @@ export default function TextileErpFeatures() {
       <CentredLayout>
         {sectionsData.map((element: subSectionsProps, index: number) => (
           <div
+            key={index}
             className={cn(
               "flex flex-col gap-16 px-4 lg:px-0",
               index !== 0 && "mt-32"
@@ -44,11 +45,13 @@ export default function TextileErpFeatures() {
                 (item: featuresCardProps | solutionCardProps, idx: number) =>
                   index === 0 ? (
                     <FeaturesCard
+                      key={idx}
                       item={item as featuresCardProps}
                       index={index}
                     />
                   ) : (
                     <SolutionsCard
+                      key={idx}
                       item={item as solutionCardProps}
                       index={idx}
                     />

@@ -23,7 +23,7 @@ export default function AboutUs() {
       <CentredLayout>
         <div className="flex flex-col gap-24 px-4 lg:px-0">
           <div className="flex flex-col gap-8">
-            <h1 className="text-6xl font-bold text-left text-black dark:text-white">
+            <h1 className="text-3xl font-bold text-left text-black lg:text-6xl dark:text-white">
               {t("aboutus.title")}
             </h1>
             <p className="text-lg text-left text-[#3C3D37] dark:text-white ">

@@ -2,17 +2,26 @@ import { useTranslation } from "react-i18next";
 import CenteredLayout from "../../ui/centredLayout";
 import ThemeToggler from "../../shared/themeToggler";
 import { Link } from "@nextui-org/react";
-import { getCurrentYear } from "../../../common/utils";
+import { cn, getCurrentYear } from "../../../common/utils";
 import { FooterItems, NavbarItemsProps } from "../../../common/types";
+import { useLocation } from "react-router-dom";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const location = useLocation();
   const footerSiteMap: FooterItems[] = t("footer.siteMap", {
     returnObjects: true,
   }) as FooterItems[];
 
   return (
-    <footer className="dark:bg-[#161616] bg-black py-8 mt-[393.2px] lg:mt-[301.2px]">
+    <footer
+      className={cn(
+        "dark:bg-[#161616] bg-black py-8",
+        location.pathname === "/" || location.pathname === "demo"
+          ? " mt-[393.2px] lg:mt-[301.2px]"
+          : "mt-20"
+      )}
+    >
       <CenteredLayout>
         <div className="flex flex-col justify-between w-full lg:flex-row">
           <div className="max-w-full items-start lg:max-w-[40%] flex flex-col gap-4 ">

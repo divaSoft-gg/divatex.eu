@@ -17,13 +17,13 @@ export default function ContactUsView() {
   return (
     <section id="contact-us" className="my-8">
       <CentredLayout>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 px-4 lg:px-0">
           <div className="flex flex-col w-full gap-6 p-4 lg:gap-0 lg:p-0 lg:flex-row">
             <div className="flex flex-col w-full gap-12 ">
-              <h6 className="font-semibold text-left text-black text-7xl dark:text-white">
+              <h6 className="text-3xl font-semibold text-left text-black lg:text-7xl dark:text-white">
                 {t("contactUs.sectionTitleView")}
               </h6>
-              <p className="text-left text-gray-700 text-medium w-96 dark:text-white">
+              <p className="text-left text-gray-700 text-medium max-w-96 dark:text-white">
                 {t("contactUs.description")}
               </p>
               <ul className="flex flex-col w-full gap-4 list-none lg:pb-0">
@@ -46,7 +46,7 @@ export default function ContactUsView() {
           <h1 className="self-center text-2xl font-semibold">
             {t("contactUs.locationTitle")}
           </h1>
-          <div className="grid erpGrid">
+          <div className="grid grid-cols-1 lg:grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))]">
             {locations.map((element, index) => (
               <LocationCard key={index} element={element} index={index} />
             ))}
