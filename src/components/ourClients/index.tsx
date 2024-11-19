@@ -13,8 +13,10 @@ export default function OurClients() {
       <CenteredLayout>
         <div className="flex flex-col gap-6 lg:flex-row">
           <div className="">
-            <h1 className="custom-heading">{t("ourClients.title")}</h1>
-            <p className="mt-2 custom-description">
+            <h1 className="text-white custom-heading">
+              {t("ourClients.title")}
+            </h1>
+            <p className="mt-2 text-sm font-light text-white">
               {t("ourClients.description")}
             </p>
           </div>
