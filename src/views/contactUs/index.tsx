@@ -17,40 +17,41 @@ export default function ContactUsView() {
   return (
     <section id="contact-us" className="my-8">
       <CentredLayout>
-        <div className="flex flex-col gap-12">
-          <div className="flex flex-col w-full gap-6 p-4 lg:gap-0 lg:p-0 lg:flex-row">
-            <div className="flex flex-col w-full gap-12 ">
-              <h6 className="font-semibold text-left text-black text-7xl dark:text-white">
+        <div className="flex flex-col gap-12 px-4 lg:px-0">
+          <section className="flex flex-col w-full gap-16 lg:flex-row">
+            <div className="flex flex-col w-full gap-12">
+              <h6 className="custom-heading">
                 {t("contactUs.sectionTitleView")}
               </h6>
-              <p className="text-left text-gray-700 text-medium w-96 dark:text-white">
-                {t("contactUs.description")}
-              </p>
-              <ul className="flex flex-col w-full gap-4 list-none lg:pb-0">
-                <li>
-                  <h6 className="text-sm font-semibold tracking-wide text-gray-500 dark:text-white">
-                    {t("contactUs.contactUsAt")}
-                  </h6>
-                </li>
+              <p className="custom-description">{t("contactUs.description")}</p>
+
+              <div>
+                <p className="text-base font-semibold tracking-tight text-black dark:text-white">
+                  {t("contactUs.contactUsAt")}
+                </p>
                 {socials.map((element: socialsProps, index: number) => (
-                  <li key={index}>
-                    <span className="text-left text-gray-700 text-medium w-96 dark:text-white">
-                      {element.answer}
-                    </span>
-                  </li>
+                  <p
+                    key={index}
+                    className="text-sm leading-tight text-left text-gray-700 dark:text-white"
+                  >
+                    {element.answer}
+                  </p>
                 ))}
-              </ul>
+              </div>
             </div>
-            <ContactUsForm t={t} />
-          </div>
-          <h1 className="self-center text-2xl font-semibold">
-            {t("contactUs.locationTitle")}
-          </h1>
-          <div className="grid erpGrid">
-            {locations.map((element, index) => (
-              <LocationCard key={index} element={element} index={index} />
-            ))}
-          </div>
+            <div className="bg-white rounded-lg shadow-md w-full mx-auto lg:min-w-[500px]">
+              <ContactUsForm t={t} />
+            </div>
+          </section>
+
+          <section>
+            <h1 className="custom-heading">{t("contactUs.locationTitle")}</h1>
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] mt-8">
+              {locations.map((element, index) => (
+                <LocationCard key={index} element={element} index={index} />
+              ))}
+            </div>
+          </section>
         </div>
       </CentredLayout>
     </section>

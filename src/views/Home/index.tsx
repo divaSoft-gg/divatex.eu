@@ -9,7 +9,7 @@ import TextileErpFeatures from "../../components/TextileErpFeatures";
 export default function Home() {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col gap-44">
+    <div className="flex flex-col gap-24 lg:gap-44">
       <Helmet>
         <title>{t("helmetPagesDescription.home.pageTitle")}</title>
         <meta

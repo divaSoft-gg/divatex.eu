@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 const { nextui } = require("@nextui-org/react");
 
 export default {
@@ -27,10 +26,17 @@ export default {
           "100%": { left: "0%" },
         },
       },
+      components: {
+        ".custom-heading": {
+          "@apply text-4xl lg:text-6xl leading-tight text-left": "",
+        },
+        ".custom-description": {
+          "@apply text-sm font-light text-gray-800 dark:text-white": "",
+        },
+      },
     },
   },
   darkMode: "class",
-
   plugins: [
     require("@tailwindcss/typography"),
     nextui({

@@ -8,7 +8,7 @@ export default function ContactUsForm({ t }: Readonly<{ t: TFunction }>) {
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
-      className="w-full lg:px-0"
+      className="w-full p-4"
     >
       <input type="hidden" name="form-name" value="diva-software-submissions" />
       <div className="flex flex-col gap-6">

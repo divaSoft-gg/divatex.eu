@@ -22,18 +22,16 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero-section" className="max-h-[900px]">
+    <section id="hero-section" className="lg:max-h-[900px]">
       <CentredLayout>
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-row gap-8 px-0">
           <div>
             <Navbar />
-            <div className="flex flex-col h-full justify-evenly">
-              <h1 className="text-6xl font-bold leading-tight">
-                {t("heroSection.title")}
-              </h1>
+            <div className="flex flex-col h-full gap-6 lg:gap-0 justify-evenly">
+              <h1 className="px-4 custom-heading">{t("heroSection.title")}</h1>
 
-              <div className="flex flex-col gap-6">
-                <p className="text-sm font-light text-gray-800 dark:text-white">
+              <div className="flex flex-col items-center gap-6 px-4 lg:items-start lg:px-0">
+                <p className="custom-description">
                   {t("heroSection.paragraph")}
                 </p>
                 <div className="flex gap-3">
@@ -46,7 +44,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="max-w-[600px]">
+          <div className="hidden lg:block lg:max-w-xl ">
             <Slider {...settings}>
               {swiperImages.map(
                 (element: { src: string; alt: string }, index: number) => (

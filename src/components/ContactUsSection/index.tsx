@@ -10,33 +10,38 @@ export default function ContactUsSection() {
     returnObjects: true,
   }) as locationProps[];
   return (
-    <section id="contact-us">
+    <section id="contact-us" className="h-[500px]">
       <CentredLayout>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-row gap-6 bg-[url('/images/cover.jpg')] bg-cover bg-center rounded-2xl  relative shadow-2xl ">
-            <div className="absolute inset-0 z-0 bg-black opacity-50 rounded-2xl"></div>
+        <div className="flex flex-row gap-6 bg-[url('/images/cover.jpg')] bg-cover bg-center lg:rounded-2xl relative shadow-2xl h-[300px] lg:h-full">
+          <div className="absolute inset-0 z-0 bg-black opacity-50 rounded-2xl"></div>
 
-            <div className="z-10 flex flex-col justify-center w-2/3 gap-6 p-8">
+          <div className="z-10 flex-col justify-center hidden gap-20 p-4 lg:flex">
+            <div className="flex flex-col gap-4">
               <h1 className="text-5xl text-white">{t("contactUs.title")}</h1>
               <p className="text-base text-white">
                 {t("contactUs.description")}
               </p>
-              <p className="text-white"> {t("contactUs.locationQuestion")}</p>
-              <ul className="space-y-2 text-white">
+            </div>
+            <div className="flex flex-col gap-4">
+              <p className="font-semibold text-white">
+                {t("contactUs.locationQuestion")}
+              </p>
+
+              <ul className="text-white ">
                 {location.map((element: locationProps, index: number) => (
                   <li className="flex flex-row items-center gap-3" key={index}>
-                    <FaArrowRightLong />
+                    <FaArrowRightLong className="scale-75" />
                     <h1>
-                      <strong>{element.country} :</strong>
+                      <strong>{element.country}: </strong>
                       {element.address}
                     </h1>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="absolute w-1/3 p-6 bg-white shadow-2xl right-5 top-10 rounded-2xl">
-              <ContactUsForm t={t} />
-            </div>
+          </div>
+          <div className="bg-white shadow-2xl h-fit rounded-2xl lg:w-[700px] w-[90%] mx-auto relative -bottom-8 lg:-bottom-20 lg:right-4">
+            <ContactUsForm t={t} />
           </div>
         </div>
       </CentredLayout>

@@ -21,14 +21,10 @@ export default function AboutUs() {
         />
       </Helmet>
       <CentredLayout>
-        <div className="flex flex-col gap-24 px-4 lg:px-0">
+        <div className="flex flex-col gap-16 px-4 lg:px-0">
           <div className="flex flex-col gap-8">
-            <h1 className="text-6xl font-bold text-left text-black dark:text-white">
-              {t("aboutus.title")}
-            </h1>
-            <p className="text-lg text-left text-[#3C3D37] dark:text-white ">
-              {t("aboutus.subtitle")}
-            </p>
+            <h1 className="custom-heading">{t("aboutus.title")}</h1>
+            <p className="custom-description">{t("aboutus.subtitle")}</p>
           </div>
           <div className="flex flex-col w-full gap-2">
             {[0, 1].map((element) => (
@@ -46,7 +42,7 @@ export default function AboutUs() {
             <div
               key={index}
               className={cn(
-                "flex  gap-32 w-full",
+                "flex gap-8 lg:gap-32 w-full",
                 index % 2 === 0
                   ? " flex-col-reverse lg:flex-row-reverse"
                   : "flex-col-reverse lg:flex-row"

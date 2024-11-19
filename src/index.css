@@ -15,12 +15,7 @@
 .pause {
   animation-play-state: paused;
 }
-.sharedGrid {
-  grid-template-columns: 500px 1fr;
-}
-.secondGrid {
-  grid-template-columns: 1fr 500px;
-}
+
 .erpGrid {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
@@ -34,4 +29,10 @@
 }
 .advantagesCardGrid {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+.custom-heading {
+  @apply text-4xl leading-tight text-left lg:text-6xl;
+}
+.custom-description {
+  @apply text-sm font-light text-gray-800 dark:text-white;
 }

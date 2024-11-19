@@ -27,7 +27,7 @@ export default function AutoplayCarousel({
       <div
         role="presentation"
         className={cn(
-          "absolute flex items-center justify-center h-full gap-1 w-[200%]",
+          "absolute flex items-center justify-center h-full gap-3 w-[200%]",
           directionClass
         )}
         onMouseEnter={(e) => e.currentTarget.classList.add("pause")}
@@ -90,7 +90,7 @@ function CarouselItem({
           className={cn(
             "",
             invert && theme.theme === "light" && "invert",
-            invert ? "w-3/5 h-3/5" : "w-4/5 h-4/5"
+            invert ? "w-[120px]" : "w-4/5 h-4/5"
           )}
           src={imgUrl}
           alt={imgTitle}

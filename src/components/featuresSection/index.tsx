@@ -16,9 +16,9 @@ export default function FeaturesSection() {
   return (
     <section id="features-section">
       <CentredLayout>
-        <div className="flex flex-col gap-6">
-          <div className="flex items-center justify-between ">
-            <h1 className="text-5xl font-semibold leading-relaxed">
+        <div className="flex flex-col gap-6 px-4 lg:px:0">
+          <div className="flex flex-col justify-between gap-8 lg:flex-row ">
+            <h1 className="text-3xl font-semibold leading-tight lg:text-start lg:text-5xl">
               {t("featuresSection.sectionTitle")}
             </h1>
             <Button
@@ -28,14 +28,14 @@ export default function FeaturesSection() {
               Voir Plus
             </Button>
           </div>
-          <div className="grid gap-6 sharedGrid">
+          <div className="grid gap-6 grid-cols-1 lg:grid-cols-[500px_1fr]">
             {featuresCol1.map((element: featuresProps, index: number) => (
-              <FeaturesCard element={element} index={index} />
+              <FeaturesCard key={index} element={element} index={index} />
             ))}
           </div>
-          <div className="grid gap-6 secondGrid">
+          <div className="grid gap-6 grid-cols-1 lg:grid-cols-[1fr_500px]">
             {featuresCol2.map((element: featuresProps, index: number) => (
-              <FeaturesCard element={element} index={index} />
+              <FeaturesCard key={index} element={element} index={index} />
             ))}
           </div>
         </div>
@@ -49,10 +49,7 @@ function FeaturesCard({
   index,
 }: Readonly<{ element: featuresProps; index: number }>) {
   return (
-    <div
-      key={index}
-      className="min-h-[33pc] p-8 bg-[#F7F7F7] rounded-xl dark:bg-[#161616]"
-    >
+    <div key={index} className=" p-4 bg-[#F7F7F7] rounded-xl dark:bg-[#161616]">
       <div className="flex flex-col gap-8">
         <h1 className="self-start text-4xl font-medium text-left text-black dark:text-white">
           {element.title}

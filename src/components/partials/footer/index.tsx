@@ -12,9 +12,9 @@ export default function Footer() {
   }) as FooterItems[];
 
   return (
-    <footer className="dark:bg-[#161616] bg-black py-8 mt-36">
+    <footer className="dark:bg-[#161616] bg-black py-8 lg:mt-36 mt-24">
       <CenteredLayout>
-        <div className="flex flex-col justify-between w-full lg:flex-row">
+        <div className="flex flex-col justify-between w-full px-4 lg:flex-row lg:px-0">
           <div className="max-w-full items-start lg:max-w-[40%] flex flex-col gap-4 ">
             <img src="https://i.imgur.com/iqq372D.png" className="w-16 " />{" "}
             <p className="text-sm text-gray-300 hover:text-gray-100">
@@ -22,7 +22,7 @@ export default function Footer() {
             </p>
             <ThemeToggler />
           </div>
-          <div className="flex flex-row justify-around gap-8 pt-10 lg:pt-0">
+          <div className="flex flex-row items-center justify-around gap-8 pt-10 lg:pt-0">
             {footerSiteMap.map((element: FooterItems, index: number) => (
               <div key={index}>
                 <h1 className="text-lg font-semibold text-white">
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
       </CenteredLayout>
-      <p className="flex items-center justify-center w-full h-full text-white">
+      <p className="flex items-center justify-center w-full h-full mt-6 text-white">
         {" "}
         &copy; {getCurrentYear()} {t("footer.copyright")}{" "}
       </p>
