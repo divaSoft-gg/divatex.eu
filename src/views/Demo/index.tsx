@@ -30,7 +30,7 @@ export default function DemoView() {
                   {" "}
                   {t("demo.stepsTitle")}
                 </p>
-                <ol className="space-y-2 text-white list-decimal ">
+                <ol className="px-4 space-y-2 text-white list-decimal">
                   {steps.map((element: demoStepsProps, index: number) => (
                     <li key={index}>
                       <h1 className="text-sm">
