@@ -40,4 +40,12 @@ const publicRoutes: RouteObject[] = [
   },
 ];
 
-export const router = createBrowserRouter([...publicRoutes]);
+export const router = createBrowserRouter([...publicRoutes], {
+  future: {
+    v7_skipActionErrorRevalidation: true, // For 4xx/5xx `action` revalidation behavior
+    v7_relativeSplatPath: true, // Updates relative route resolution within splats
+    v7_fetcherPersist: true, // Changes fetcher persistence behavior
+    v7_normalizeFormMethod: true, // Normalizes formMethod casing to uppercase
+    v7_partialHydration: true, // Updates RouterProvider hydration behavior
+  },
+});
