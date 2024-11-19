@@ -34,17 +34,13 @@ export default function ERPView() {
           name="description"
           content={t("helmetPagesDescription.erp.pageDescription")}
         />
-      </Helmet>{" "}
+      </Helmet>
       <CentredLayout>
         <div className="flex flex-col px-4 lg:px-0">
           {/* Title Description Column */}
           <div className="flex flex-col gap-8 my-8">
-            <h1 className="text-3xl font-bold text-left text-black lg:text-6xl dark:text-white">
-              {t("erp.sectionTitle")}
-            </h1>
-            <p className="text-base lg:text-lg text-left text-[#3C3D37] dark:text-white ">
-              {t("erp.sectionSubtitle")}
-            </p>
+            <h1 className="custom-heading">{t("erp.sectionTitle")}</h1>
+            <p className="custom-description">{t("erp.sectionSubtitle")}</p>
           </div>
 
           {/* Cards Columns */}

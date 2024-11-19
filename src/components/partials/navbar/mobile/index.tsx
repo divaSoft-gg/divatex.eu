@@ -29,7 +29,10 @@ export default function MobileNavbar({
     >
       <NavbarContent justify="start">
         <NavbarBrand>
-          <img src="https://i.imgur.com/iqq372D.png" className="w-16 invert" />
+          <img
+            src="https://i.imgur.com/iqq372D.png"
+            className="w-16 invert dark:invert-0"
+          />
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent justify="center">

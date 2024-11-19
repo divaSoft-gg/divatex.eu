@@ -28,12 +28,10 @@ export default function HeroSection() {
           <div>
             <Navbar />
             <div className="flex flex-col h-full gap-6 lg:gap-0 justify-evenly">
-              <h1 className="px-4 text-4xl leading-tight text-left lg:px-0 lg:font-bold lg:text-start lg:text-6xl">
-                {t("heroSection.title")}
-              </h1>
+              <h1 className="px-4 custom-heading">{t("heroSection.title")}</h1>
 
               <div className="flex flex-col items-center gap-6 px-4 lg:items-start lg:px-0">
-                <p className="text-sm font-light text-gray-800 dark:text-white">
+                <p className="custom-description">
                   {t("heroSection.paragraph")}
                 </p>
                 <div className="flex gap-3">

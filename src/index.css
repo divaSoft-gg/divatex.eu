@@ -30,3 +30,9 @@
 .advantagesCardGrid {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
+.custom-heading {
+  @apply text-4xl leading-tight text-left lg:text-6xl;
+}
+.custom-description {
+  @apply text-sm font-light text-gray-800 dark:text-white;
+}

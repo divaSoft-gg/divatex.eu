@@ -10,7 +10,7 @@ export default function ContactUsSection() {
     returnObjects: true,
   }) as locationProps[];
   return (
-    <section id="contact-us" className="lg:max-h-[500px] ">
+    <section id="contact-us" className="h-[500px]">
       <CentredLayout>
         <div className="flex flex-row gap-6 bg-[url('/images/cover.jpg')] bg-cover bg-center lg:rounded-2xl relative shadow-2xl h-[300px] lg:h-full">
           <div className="absolute inset-0 z-0 bg-black opacity-50 rounded-2xl"></div>
