@@ -2,6 +2,7 @@ import { Link } from "@nextui-org/react";
 import { NavbarItemsProps } from "../../../../common/types";
 import CentredLayout from "../../../ui/centredLayout";
 import ThemeToggler from "../../../shared/themeToggler";
+import { scrollToTop } from "../../../../common/utils";
 
 export default function DesktopNavbar({
   navbarItems,
@@ -24,6 +25,7 @@ export default function DesktopNavbar({
                   <Link
                     className="block font-normal text-gray-900 hover:text-blue-700"
                     href={element.link}
+                    onClick={() => scrollToTop()}
                   >
                     {element.label}
                   </Link>
