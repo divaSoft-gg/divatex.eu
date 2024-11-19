@@ -12,36 +12,36 @@ export default function ContactUsSection() {
   return (
     <section id="contact-us" className="lg:max-h-[500px] ">
       <CentredLayout>
-        <div className="flex flex-col gap-8 lg:px-0">
-          <div className="flex flex-row gap-6 bg-[url('/images/cover.jpg')] bg-cover bg-center  lg:rounded-2xl   relative shadow-2xl  min-h-[300px] lg:min-h-full ">
-            <div className="absolute inset-0 z-0 bg-black opacity-50 rounded-2xl"></div>
+        <div className="flex flex-row gap-6 bg-[url('/images/cover.jpg')] bg-cover bg-center lg:rounded-2xl relative shadow-2xl h-[300px] lg:h-full">
+          <div className="absolute inset-0 z-0 bg-black opacity-50 rounded-2xl"></div>
 
-            <div className="z-10 flex flex-col justify-center gap-6 p-8 lg:w-2/3">
-              <h1 className="hidden text-5xl text-white lg:block">
-                {t("contactUs.title")}
-              </h1>
-              <p className="hidden text-base text-white lg:block">
+          <div className="z-10 flex-col justify-center hidden gap-20 p-4 lg:flex">
+            <div className="flex flex-col gap-4">
+              <h1 className="text-5xl text-white">{t("contactUs.title")}</h1>
+              <p className="text-base text-white">
                 {t("contactUs.description")}
               </p>
-              <p className="hidden text-white lg:block">
-                {" "}
+            </div>
+            <div className="flex flex-col gap-4">
+              <p className="font-semibold text-white">
                 {t("contactUs.locationQuestion")}
               </p>
-              <ul className="hidden space-y-2 text-white lg:block">
+
+              <ul className="text-white ">
                 {location.map((element: locationProps, index: number) => (
                   <li className="flex flex-row items-center gap-3" key={index}>
-                    <FaArrowRightLong />
+                    <FaArrowRightLong className="scale-75" />
                     <h1>
-                      <strong>{element.country} :</strong>
+                      <strong>{element.country}: </strong>
                       {element.address}
                     </h1>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="absolute w-[90%]  p-6 translate-x-1/2 lg:translate-x-0  bg-white shadow-2xl lg:w-1/3 lg:right-5  right-1/2 top-10 rounded-2xl">
-              <ContactUsForm t={t} />
-            </div>
+          </div>
+          <div className="bg-white shadow-2xl h-fit rounded-2xl lg:w-[700px] w-[90%] mx-auto relative -bottom-8 lg:-bottom-20 lg:right-4">
+            <ContactUsForm t={t} />
           </div>
         </div>
       </CentredLayout>

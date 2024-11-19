@@ -25,11 +25,10 @@ export default function MobileNavbar({
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
       position="sticky"
-      maxWidth="2xl"
+      maxWidth="full"
     >
       <NavbarContent justify="start">
         <NavbarBrand>
-          {" "}
           <img src="https://i.imgur.com/iqq372D.png" className="w-16 invert" />
         </NavbarBrand>
       </NavbarContent>

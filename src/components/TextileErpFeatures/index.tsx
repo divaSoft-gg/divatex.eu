@@ -27,7 +27,7 @@ export default function TextileErpFeatures() {
             )}
           >
             <div className="flex flex-col gap-8 lg:w-4/5">
-              <div className="text-3xl font-bold text-left lg:text-5xl ">
+              <div className="text-3xl font-semibold text-left lg:text-5xl ">
                 <h1 className="block text-black dark:text-white">
                   {element.subsectionTitle.title}
                 </h1>
@@ -77,12 +77,12 @@ function FeaturesCard({
         {item.cardTitle}
       </h1>
 
-      <div>
+      <div className="flex flex-col gap-3">
         <h1 className="font-semibold tracking-tighter text-left text-transparent bg-gradient-to-t from-slate-600 to-neutral-900 bg-clip-text text-8xl dark:text-white">
           {item.cardNumber}
         </h1>
 
-        <p className="text-base leading-loose text-gray-600 dark:text-white">
+        <p className="text-base leading-tight text-gray-600 dark:text-white">
           {item.cardDescription}
         </p>
       </div>
@@ -100,7 +100,7 @@ function SolutionsCard({
       role="presentation"
       onMouseEnter={() => setHoveredIndex(index)}
       onMouseLeave={() => setHoveredIndex(null)}
-      className="flex flex-col gap-3 p-6 shadow-md cursor-pointer bg-gradient-to-bl from-zinc-50 to-gray-50 rounded-2xl group dark:bg-gradient-to-tr dark:from-stone-900 dark:to-slate-700"
+      className="flex flex-col gap-4 p-4 shadow-md cursor-pointer bg-gradient-to-bl from-zinc-50 to-gray-50 rounded-2xl group dark:bg-gradient-to-tr dark:from-stone-900 dark:to-slate-700"
     >
       <h1 className="text-lg font-normal leading-loose text-gray-600 uppercase dark:text-white">
         {item.title}
@@ -110,7 +110,7 @@ function SolutionsCard({
         src={hoveredIndex === index ? item.coloredImagePath : item.imagePath}
         className="group-hover:scale-110 dark:invert dark:group-hover:invert-0"
       />
-      <p className="text-base leading-loose text-gray-600 dark:text-white">
+      <p className="text-base leading-tight text-gray-600 dark:text-white">
         {item.description}
       </p>
     </div>

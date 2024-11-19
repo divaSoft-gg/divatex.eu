@@ -24,15 +24,15 @@ export default function HeroSection() {
   return (
     <section id="hero-section" className="lg:max-h-[900px]">
       <CentredLayout>
-        <div className="flex flex-row gap-8 px-4 lg:px-0">
+        <div className="flex flex-row gap-8 px-0">
           <div>
             <Navbar />
             <div className="flex flex-col h-full gap-6 lg:gap-0 justify-evenly">
-              <h1 className="text-3xl font-bold leading-tight text-center lg:text-start lg:text-6xl">
+              <h1 className="px-4 text-4xl leading-tight text-left lg:px-0 lg:font-bold lg:text-start lg:text-6xl">
                 {t("heroSection.title")}
               </h1>
 
-              <div className="flex flex-col items-center gap-6 lg:items-start">
+              <div className="flex flex-col items-center gap-6 px-4 lg:items-start lg:px-0">
                 <p className="text-sm font-light text-gray-800 dark:text-white">
                   {t("heroSection.paragraph")}
                 </p>
