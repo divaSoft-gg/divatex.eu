@@ -1,7 +1,8 @@
-import { Button, Image } from "@nextui-org/react";
+import { Button, Image, Link } from "@nextui-org/react";
 import CentredLayout from "../ui/centredLayout";
 import { useTranslation } from "react-i18next";
 import { featuresProps } from "../../common/types";
+import { scrollToTop } from "../../common/utils";
 
 export default function FeaturesSection() {
   const { t } = useTranslation();
@@ -22,6 +23,9 @@ export default function FeaturesSection() {
               {t("featuresSection.sectionTitle")}
             </h1>
             <Button
+              as={Link}
+              href="/erp"
+              onClick={() => scrollToTop()}
               variant="flat"
               className="text-white bg-black rounded-2xl dark:text-black dark:bg-white"
             >
