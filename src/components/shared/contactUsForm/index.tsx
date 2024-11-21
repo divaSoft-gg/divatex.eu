@@ -18,7 +18,12 @@ export default function ContactUsForm({ t }: Readonly<{ t: TFunction }>) {
           placeholder={t("contactUs.form.fullNamePlaceholder")}
           name="client-name"
           required
+          className="focus:!border-black"
           variant="bordered"
+          classNames={{
+            label: "!text-black dark:!text-black",
+            input: ["!text-black"],
+          }}
         />
         <Input
           type="tel"
@@ -28,6 +33,10 @@ export default function ContactUsForm({ t }: Readonly<{ t: TFunction }>) {
           required
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           variant="bordered"
+          classNames={{
+            label: "!text-black dark:!text-black",
+            input: ["!text-black"],
+          }}
         />
         <Input
           type="text"
@@ -36,6 +45,10 @@ export default function ContactUsForm({ t }: Readonly<{ t: TFunction }>) {
           name="client-company"
           required
           variant="bordered"
+          classNames={{
+            label: "!text-black dark:!text-black",
+            input: ["!text-black"],
+          }}
         />
         <Input
           type="email"
@@ -44,6 +57,10 @@ export default function ContactUsForm({ t }: Readonly<{ t: TFunction }>) {
           name="client-email"
           variant="bordered"
           required
+          classNames={{
+            label: "!text-black dark:!text-black",
+            input: ["!text-black"],
+          }}
         />
         <Textarea
           variant="bordered"
@@ -52,6 +69,10 @@ export default function ContactUsForm({ t }: Readonly<{ t: TFunction }>) {
           name="client-message"
           rows={20}
           required
+          classNames={{
+            label: "!text-black dark:!text-black",
+            input: ["!text-black"],
+          }}
         />
         <Button size="lg" className="w-full" variant="shadow" type="submit">
           {t("contactUs.form.button")}

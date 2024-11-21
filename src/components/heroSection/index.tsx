@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button, Image, Link } from "@nextui-org/react";
 import Navbar from "../partials/navbar";
 import CentredLayout from "../ui/centredLayout";
 
@@ -35,8 +35,15 @@ export default function HeroSection() {
                   {t("heroSection.paragraph")}
                 </p>
                 <div className="flex gap-3">
-                  <Button color="default">{t("heroSection.moreButton")}</Button>
-                  <Button color="default" variant="bordered">
+                  <Button as={Link} href="/erp" color="default">
+                    {t("heroSection.moreButton")}
+                  </Button>
+                  <Button
+                    as={Link}
+                    href="/demo"
+                    color="default"
+                    variant="bordered"
+                  >
                     {t("heroSection.demoButton")}
                   </Button>
                 </div>
@@ -49,8 +56,8 @@ export default function HeroSection() {
               {swiperImages.map(
                 (element: { src: string; alt: string }, index: number) => (
                   <div key={index}>
-                    <img
-                      className="shadow-md rounded-2xl"
+                    <Image
+                      className="w-full bg-cover shadow-md h-fit rounded-2xl"
                       src={element.src}
                       alt={element.alt}
                     />

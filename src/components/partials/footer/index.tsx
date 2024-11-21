@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import CenteredLayout from "../../ui/centredLayout";
 import ThemeToggler from "../../shared/themeToggler";
 import { Link } from "@nextui-org/react";
-import { getCurrentYear } from "../../../common/utils";
+import { getCurrentYear, scrollToTop } from "../../../common/utils";
 import { FooterItems, NavbarItemsProps } from "../../../common/types";
 
 export default function Footer() {
@@ -34,6 +34,7 @@ export default function Footer() {
                     (item: NavbarItemsProps, index: number) => (
                       <li key={index}>
                         <Link
+                        onClick={()=>scrollToTop()}
                           href={item.link}
                           className="text-gray-300 hover:text-gray-100"
                         >
