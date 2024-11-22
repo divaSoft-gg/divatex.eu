@@ -77,10 +77,10 @@ function FeatureCard({ element }: Readonly<{ element: erpFeaturesCardProps }>) {
   return (
     <SharedCard>
       <div className="flex flex-col gap-10 py-8">
-        <p className="font-bold text-center uppercase text-2xl text-[#1a1d1e80] group-hover:text-white dark:text-white ">
+        <p className="font-bold text-start uppercase text-2xl text-[#1a1d1e80] group-hover:text-white dark:text-white ">
           {element.title}
         </p>
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-start gap-8">
           <IconComponent
             size={40}
             className="opacity-50 dark:opacity-100 group-hover:text-white group-hover:opacity-100"

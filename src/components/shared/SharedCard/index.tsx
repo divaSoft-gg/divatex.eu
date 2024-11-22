@@ -22,7 +22,7 @@ export default function SharedCard({
           setHoveredIndex(null);
         }
       }}
-      className="rounded-md border gap-4 p-6 bg-[#F8FAFC] dark:bg-gradient-to-br dark:from-stone-900 dark:to-slate-700"
+      className="rounded-md border gap-4 p-6 bg-[#F8FAFC] dark:bg-[#161616]"
     >
       {children}
     </div>
