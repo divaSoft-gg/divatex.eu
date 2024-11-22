@@ -38,7 +38,7 @@ export default function DemoCallToAction() {
               {t("demoCallToAction.buttonText")}
             </Button>
           </div>
-          <div className="absolute hidden lg:block -bottom-24 right-4 ">
+          <div className="absolute hidden -right-4 lg:block -bottom-48 ">
             <Image
               src="images/demo-call-to-action/cover.webp"
               width={350}
