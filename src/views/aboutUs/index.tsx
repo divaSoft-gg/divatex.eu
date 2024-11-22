@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { aboutUsProps } from "../../common/types";
 import { Helmet } from "react-helmet-async";
 import AutoplayCarousel from "../../components/ourClients/carousel";
+import DemoCallToAction from "../../components/shared/DemoCallToAction";
 
 export default function AboutUs() {
   const { t } = useTranslation();
@@ -39,32 +40,35 @@ export default function AboutUs() {
             ))}
           </div>
           {aboutUsSection.map((element: aboutUsProps, index: number) => (
-            <div
-              key={index}
-              className={cn(
-                "flex gap-8 lg:gap-32 w-full",
-                index % 2 === 0
-                  ? " flex-col-reverse lg:flex-row-reverse"
-                  : "flex-col-reverse lg:flex-row"
-              )}
-            >
-              <div className="flex flex-col items-center justify-center flex-1 gap-6 lg:items-start lg:justify-start ">
-                <div>
-                  <p className="text-base font-normal text-gray-400 dark:text-white">
-                    {element.year}
+            <>
+              <div
+                key={index}
+                className={cn(
+                  "flex gap-8 lg:gap-32 w-full",
+                  index % 2 === 0
+                    ? " flex-col-reverse lg:flex-row-reverse"
+                    : "flex-col-reverse lg:flex-row"
+                )}
+              >
+                <div className="flex flex-col items-center justify-center flex-1 gap-6 lg:items-start lg:justify-start ">
+                  <div>
+                    <p className="text-base font-normal text-gray-400 dark:text-white">
+                      {element.year}
+                    </p>
+                    <h1 className="text-4xl font-semibold text-black dark:text-white">
+                      {element.sectionTitle}
+                    </h1>
+                  </div>
+                  <p className="font-normal text-gray-600 dark:text-white">
+                    {element.sectionDescription}
                   </p>
-                  <h1 className="text-4xl font-semibold text-black dark:text-white">
-                    {element.sectionTitle}
-                  </h1>
                 </div>
-                <p className="font-normal text-gray-600 dark:text-white">
-                  {element.sectionDescription}
-                </p>
+                <div className="flex-1">
+                  <Image src={element.imagePath} className="bg-cover -z-20" />
+                </div>
               </div>
-              <div className="flex-1">
-                <Image src={element.imagePath} className="bg-cover -z-20" />
-              </div>
-            </div>
+              {index === 1 && <DemoCallToAction />}
+            </>
           ))}
         </div>
       </CentredLayout>

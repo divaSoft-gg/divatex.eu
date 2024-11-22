@@ -444,5 +444,10 @@
     "resources": "Resources",
     "faqs": "FAQs",
     "copyright": "DIVATEX. Tous droits réservés."
+  },
+  "demoCallToAction": {
+    "title": "Votre atout stratégique",
+    "description": "Maximisez l’efficacité et la rentabilité avec une solution ERP qui redéfinit la gestion textile. Découvrez ci-dessous les différents modules qui composent notre outil global.",
+    "buttonText": "Réserver Un Démo"
   }
 }

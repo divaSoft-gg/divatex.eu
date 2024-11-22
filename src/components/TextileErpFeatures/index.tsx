@@ -16,7 +16,7 @@ export default function TextileErpFeatures() {
   }) as subSectionsProps[];
 
   return (
-    <section id="textile-features">
+    <section id="textile-features" className="z-50">
       <CentredLayout>
         {sectionsData.map((element: subSectionsProps, index: number) => (
           <div

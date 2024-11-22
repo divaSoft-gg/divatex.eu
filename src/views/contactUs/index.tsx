@@ -5,6 +5,7 @@ import { locationsProps, socialsProps } from "../../common/types";
 import { MdOutlineEmail, MdOutlinePhoneEnabled } from "react-icons/md";
 
 import { Avatar } from "@nextui-org/react";
+import DemoCallToAction from "../../components/shared/DemoCallToAction";
 
 export default function ContactUsView() {
   const { t } = useTranslation();
@@ -43,6 +44,7 @@ export default function ContactUsView() {
               <ContactUsForm t={t} />
             </div>
           </section>
+          <DemoCallToAction />
 
           <section>
             <h1 className="custom-heading">{t("contactUs.locationTitle")}</h1>
