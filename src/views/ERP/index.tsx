@@ -18,6 +18,7 @@ import { HiOutlineWrench } from "react-icons/hi2";
 import { ImStatsBars } from "react-icons/im";
 import { IconType } from "react-icons";
 import { Helmet } from "react-helmet-async";
+import DemoCallToAction from "../../components/shared/DemoCallToAction";
 
 export default function ERPView() {
   const { t } = useTranslation();
@@ -36,21 +37,24 @@ export default function ERPView() {
         />
       </Helmet>
       <CentredLayout>
-        <div className="flex flex-col px-4 lg:px-0">
-          {/* Title Description Column */}
-          <div className="flex flex-col gap-8 my-8">
-            <h1 className="custom-heading">{t("erp.sectionTitle")}</h1>
-            <p className="custom-description">{t("erp.sectionSubtitle")}</p>
-          </div>
+        <div className="flex flex-col gap-20">
+          <div className="flex flex-col px-4 lg:px-0">
+            {/* Title Description Column */}
+            <div className="flex flex-col gap-8 my-8">
+              <h1 className="custom-heading">{t("erp.sectionTitle")}</h1>
+              <p className="custom-description">{t("erp.sectionSubtitle")}</p>
+            </div>
 
-          {/* Cards Columns */}
-          <div className="grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))]">
-            {featuresData.map(
-              (element: erpFeaturesCardProps, index: number) => (
-                <FeatureCard key={index} element={element} index={index} />
-              )
-            )}
+            {/* Cards Columns */}
+            <div className="grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))]">
+              {featuresData.map(
+                (element: erpFeaturesCardProps, index: number) => (
+                  <FeatureCard key={index} element={element} index={index} />
+                )
+              )}
+            </div>
           </div>
+          <DemoCallToAction />
         </div>
       </CentredLayout>
     </section>
