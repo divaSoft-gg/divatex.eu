@@ -24,7 +24,6 @@ export interface featuresProps {
 export interface erpFeaturesCardProps {
   title: string;
   icon: string;
-  backgroundImage: string;
   description: string;
   list: string[];
 }
