@@ -19,7 +19,7 @@ export default function DemoCallToAction() {
       )}
     >
       <CentredLayout>
-        <div className="flex items-center justify-between p-6 overflow-hidden bg-white bg-cover border rounded-lg lg:flex-row dark:bg-black">
+        <div className="relative flex items-center justify-between p-6 overflow-hidden bg-white bg-cover border rounded-lg lg:flex-row min-h-96 dark:bg-black">
           <div className="flex flex-col gap-8">
             <h1 className="text-4xl font-bold">
               {t("demoCallToAction.title")}
@@ -38,11 +38,11 @@ export default function DemoCallToAction() {
               {t("demoCallToAction.buttonText")}
             </Button>
           </div>
-          <div className="hidden lg:block">
+          <div className="absolute hidden lg:block -bottom-24 right-4 ">
             <Image
               src="images/demo-call-to-action/cover.webp"
               width={350}
-              className="dark:invert"
+              className="scale-75 grayscale dark:invert"
             />
           </div>
         </div>
