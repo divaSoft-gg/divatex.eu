@@ -5,7 +5,7 @@ import { locationsProps, socialsProps } from "../../common/types";
 import { MdOutlineEmail, MdOutlinePhoneEnabled } from "react-icons/md";
 
 import { Avatar } from "@nextui-org/react";
-import DemoCallToAction from "../../components/shared/DemoCallToAction";
+import SharedCard from "../../components/shared/SharedCard";
 
 export default function ContactUsView() {
   const { t } = useTranslation();
@@ -44,13 +44,12 @@ export default function ContactUsView() {
               <ContactUsForm t={t} />
             </div>
           </section>
-          <DemoCallToAction />
 
           <section>
             <h1 className="custom-heading">{t("contactUs.locationTitle")}</h1>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] mt-8">
+            <div className="grid grid-cols-3 gap-3 mt-8">
               {locations.map((element, index) => (
-                <LocationCard key={index} element={element} index={index} />
+                <LocationCard key={index} element={element} />
               ))}
             </div>
           </section>
@@ -60,40 +59,39 @@ export default function ContactUsView() {
   );
 }
 
-function LocationCard({
-  element,
-  index,
-}: Readonly<{ element: locationsProps; index: number }>) {
+function LocationCard({ element }: Readonly<{ element: locationsProps }>) {
   return (
-    <div
-      role="presentation"
-      key={index}
-      className="flex flex-col gap-10 p-8 bg-center bg-cover border cursor-pointer group feature-card dark:bg-[#161616]"
-    >
-      <div className="flex flex-row items-center justify-center gap-2">
-        <Avatar src={element.flag} size="sm" />
-        <p className="text-2xl font-bold text-black uppercase dark:text-white ">
-          {element.countryName}
-        </p>
-      </div>
+    <SharedCard>
+      <div className="flex flex-col gap-10 ">
+        <div className="flex flex-row items-center justify-start gap-2">
+          <Avatar src={element.flag} size="sm" className="scale-75" />
+          <p className="text-2xl font-bold text-black uppercase dark:text-white ">
+            {element.countryName}
+          </p>
+        </div>
 
-      <div className="flex flex-col items-center gap-8">
-        <p className="text-center text-black text-medium font-regular dark:text-white">
-          {element.address}
-        </p>
-        <img src={element.map} width={100} className="dark:invert" />
+        <div className="flex flex-col gap-8">
+          <p className="text-black text-start text-medium font-regular dark:text-white">
+            {element.address}
+          </p>
+          <img
+            src={element.map}
+            width={100}
+            className="self-center dark:invert"
+          />
+        </div>
+        <ul className="self-start">
+          {element.list.map((element: string, idx: number) => (
+            <li
+              key={idx}
+              className=" text-[#161616]  dark:text-white flex flex-row gap-2 items-center"
+            >
+              {idx === 0 ? <MdOutlineEmail /> : <MdOutlinePhoneEnabled />}
+              {element}
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="pl-6 ">
-        {element.list.map((element: string, idx: number) => (
-          <li
-            key={idx}
-            className=" text-[#161616]  dark:text-white flex flex-row gap-2 items-center"
-          >
-            {idx === 0 ? <MdOutlineEmail /> : <MdOutlinePhoneEnabled />}
-            {element}
-          </li>
-        ))}
-      </ul>
-    </div>
+    </SharedCard>
   );
 }
