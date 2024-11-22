@@ -1,8 +1,7 @@
 import CentredLayout from "../../components/ui/centredLayout";
 import { useTranslation } from "react-i18next";
 import { erpFeaturesCardProps } from "../../common/types";
-import { useState } from "react";
-import { cn } from "../../common/utils";
+
 import {
   BsCreditCard2Front,
   BsBoxes,
@@ -19,6 +18,7 @@ import { ImStatsBars } from "react-icons/im";
 import { IconType } from "react-icons";
 import { Helmet } from "react-helmet-async";
 import DemoCallToAction from "../../components/shared/DemoCallToAction";
+import SharedCard from "../../components/shared/SharedCard";
 
 export default function ERPView() {
   const { t } = useTranslation();
@@ -44,12 +44,10 @@ export default function ERPView() {
               <h1 className="custom-heading">{t("erp.sectionTitle")}</h1>
               <p className="custom-description">{t("erp.sectionSubtitle")}</p>
             </div>
-
-            {/* Cards Columns */}
-            <div className="grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))]">
+            <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 gap-">
               {featuresData.map(
                 (element: erpFeaturesCardProps, index: number) => (
-                  <FeatureCard key={index} element={element} index={index} />
+                  <FeatureCard key={index} element={element} />
                 )
               )}
             </div>
@@ -61,12 +59,7 @@ export default function ERPView() {
   );
 }
 
-function FeatureCard({
-  element,
-  index,
-}: Readonly<{ element: erpFeaturesCardProps; index: number }>) {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
+function FeatureCard({ element }: Readonly<{ element: erpFeaturesCardProps }>) {
   const iconMap: { [key: string]: IconType } = {
     BsCreditCard2Front,
     BsBoxes,
@@ -81,45 +74,33 @@ function FeatureCard({
     ImStatsBars,
   };
   const IconComponent: IconType = iconMap[element.icon];
-
   return (
-    <div
-      role="presentation"
-      onMouseEnter={() => setHoveredIndex(index)}
-      onMouseLeave={() => setHoveredIndex(null)}
-      key={index}
-      className={cn(
-        "flex flex-col gap-10 p-8  bg-center bg-cover border group feature-card cursor-pointer",
-        hoveredIndex === index ? "hovered" : ""
-      )}
-      style={{
-        backgroundImage:
-          hoveredIndex === index ? `url(${element.backgroundImage})` : "none",
-      }}
-    >
-      <p className="font-bold text-center uppercase text-2xl text-[#1a1d1e80] group-hover:text-white dark:text-white ">
-        {element.title}
-      </p>
-      <div className="flex flex-col items-center gap-8">
-        <IconComponent
-          size={40}
-          className="opacity-50 group-hover:text-white group-hover:opacity-100"
-        />
+    <SharedCard>
+      <div className="flex flex-col gap-10 p-8">
+        <p className="font-bold text-center uppercase text-2xl text-[#1a1d1e80] group-hover:text-white dark:text-white ">
+          {element.title}
+        </p>
+        <div className="flex flex-col items-center gap-8">
+          <IconComponent
+            size={40}
+            className="opacity-50 group-hover:text-white group-hover:opacity-100"
+          />
 
-        <small className="text-center text-[#1a1d1e80] text-medium font-regular group-hover:text-white dark:text-white">
-          {element.description}
-        </small>
+          <small className="text-center text-[#1a1d1e80] text-medium font-regular group-hover:text-white dark:text-white">
+            {element.description}
+          </small>
+        </div>
+        <ul className="pl-6 list-disc">
+          {element.list.map((element: string, idx: number) => (
+            <li
+              key={idx}
+              className=" text-[#161616] group-hover:text-white dark:text-white"
+            >
+              {element}
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="pl-6 list-disc">
-        {element.list.map((element: string, idx: number) => (
-          <li
-            key={idx}
-            className=" text-[#161616] group-hover:text-white dark:text-white"
-          >
-            {element}
-          </li>
-        ))}
-      </ul>
-    </div>
+    </SharedCard>
   );
 }
