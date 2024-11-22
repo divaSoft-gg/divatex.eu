@@ -8,6 +8,7 @@ import {
   subSectionsProps,
 } from "../../common/types";
 import { cn } from "../../common/utils";
+import SharedCard from "../shared/SharedCard";
 
 export default function TextileErpFeatures() {
   const { t } = useTranslation();
@@ -40,15 +41,18 @@ export default function TextileErpFeatures() {
               </p>
             </div>
 
-            <div className="grid gap-6 grid-cols-1 lg:grid-cols-[repeat(auto-fill,_minmax(500px,_1fr))]">
+            <div
+              className={cn(
+                "grid gap-3 grid-cols-1",
+                index === 0
+                  ? "lg:grid-cols-[repeat(auto-fill,_minmax(500px,_1fr))]"
+                  : "lg:grid-cols-4"
+              )}
+            >
               {element.cards.map(
                 (item: featuresCardProps | solutionCardProps, idx: number) =>
                   index === 0 ? (
-                    <FeaturesCard
-                      key={idx}
-                      item={item as featuresCardProps}
-                      index={index}
-                    />
+                    <FeaturesCard key={idx} item={item as featuresCardProps} />
                   ) : (
                     <SolutionsCard
                       key={idx}
@@ -64,29 +68,25 @@ export default function TextileErpFeatures() {
     </section>
   );
 }
-function FeaturesCard({
-  item,
-  index,
-}: Readonly<{ item: featuresCardProps; index: number }>) {
+function FeaturesCard({ item }: Readonly<{ item: featuresCardProps }>) {
   return (
-    <div
-      key={index}
-      className="relative flex flex-col gap-12 p-5 shadow-sm bg-gradient-to-tr from-zinc-50 to-gray-50 rounded-2xl dark:bg-gradient-to-tr dark:from-stone-900 dark:to-slate-700"
-    >
-      <h1 className="text-lg font-normal leading-loose text-gray-600 uppercase dark:text-white">
-        {item.cardTitle}
-      </h1>
-
-      <div className="flex flex-col gap-3">
-        <h1 className="font-semibold tracking-tighter text-left text-transparent bg-gradient-to-t from-slate-600 to-neutral-900 bg-clip-text text-8xl dark:text-white">
-          {item.cardNumber}
+    <SharedCard>
+      <div className="flex flex-col">
+        <h1 className="text-lg font-normal leading-loose text-gray-600 uppercase dark:text-white">
+          {item.cardTitle}
         </h1>
 
-        <p className="text-base leading-tight text-gray-600 dark:text-white">
-          {item.cardDescription}
-        </p>
+        <div className="flex flex-col gap-3">
+          <h1 className="font-semibold tracking-tighter text-left text-transparent bg-gradient-to-t from-slate-600 to-neutral-900 bg-clip-text text-8xl dark:text-white">
+            {item.cardNumber}
+          </h1>
+
+          <p className="text-base leading-tight text-gray-600 dark:text-white">
+            {item.cardDescription}
+          </p>
+        </div>
       </div>
-    </div>
+    </SharedCard>
   );
 }
 function SolutionsCard({
@@ -96,23 +96,27 @@ function SolutionsCard({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div
-      role="presentation"
-      onMouseEnter={() => setHoveredIndex(index)}
-      onMouseLeave={() => setHoveredIndex(null)}
-      className="flex flex-col gap-4 p-4 shadow-md cursor-pointer bg-gradient-to-bl from-zinc-50 to-gray-50 rounded-2xl group dark:bg-gradient-to-tr dark:from-stone-900 dark:to-slate-700"
-    >
-      <h1 className="text-lg font-normal leading-loose text-gray-600 uppercase dark:text-white">
-        {item.title}
-      </h1>
-      <Image
-        width={50}
-        src={hoveredIndex === index ? item.coloredImagePath : item.imagePath}
-        className="group-hover:scale-110 dark:invert dark:group-hover:invert-0"
-      />
-      <p className="text-base leading-tight text-gray-600 dark:text-white">
-        {item.description}
-      </p>
-    </div>
+    <SharedCard setHoveredIndex={setHoveredIndex} index={index}>
+      <div className="flex flex-col gap-4">
+        <div className="min-h-16">
+          <Image
+            width={50}
+            src={
+              hoveredIndex === index ? item.coloredImagePath : item.imagePath
+            }
+            className=" group-hover:scale-110 dark:invert dark:group-hover:invert-0"
+          />
+        </div>
+        <div>
+          <h1 className="text-lg font-semibold leading-loose text-black uppercase dark:text-white">
+            {item.title}
+          </h1>
+
+          <p className="text-sm leading-tight text-black opacity-55 dark:text-white">
+            {item.description}
+          </p>
+        </div>
+      </div>
+    </SharedCard>
   );
 }

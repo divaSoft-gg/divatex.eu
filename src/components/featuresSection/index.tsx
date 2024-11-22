@@ -3,14 +3,12 @@ import CentredLayout from "../ui/centredLayout";
 import { useTranslation } from "react-i18next";
 import { featuresProps } from "../../common/types";
 import { scrollToTop } from "../../common/utils";
+import SharedCard from "../shared/SharedCard";
 
 export default function FeaturesSection() {
   const { t } = useTranslation();
 
-  const featuresCol1: featuresProps[] = t("featuresSection.featuresCol1", {
-    returnObjects: true,
-  }) as featuresProps[];
-  const featuresCol2: featuresProps[] = t("featuresSection.featuresCol2", {
+  const features: featuresProps[] = t("featuresSection.features", {
     returnObjects: true,
   }) as featuresProps[];
 
@@ -32,14 +30,9 @@ export default function FeaturesSection() {
               Voir Plus
             </Button>
           </div>
-          <div className="grid gap-6 grid-cols-1 lg:grid-cols-[500px_1fr]">
-            {featuresCol1.map((element: featuresProps, index: number) => (
-              <FeaturesCard key={index} element={element} index={index} />
-            ))}
-          </div>
-          <div className="grid gap-6 grid-cols-1 lg:grid-cols-[1fr_500px]">
-            {featuresCol2.map((element: featuresProps, index: number) => (
-              <FeaturesCard key={index} element={element} index={index} />
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+            {features.map((element: featuresProps, index: number) => (
+              <FeaturesCard key={index} element={element} />
             ))}
           </div>
         </div>
@@ -48,12 +41,9 @@ export default function FeaturesSection() {
   );
 }
 
-function FeaturesCard({
-  element,
-  index,
-}: Readonly<{ element: featuresProps; index: number }>) {
+function FeaturesCard({ element }: Readonly<{ element: featuresProps }>) {
   return (
-    <div key={index} className=" p-4 bg-[#F7F7F7] rounded-xl dark:bg-[#161616]">
+    <SharedCard>
       <div className="flex flex-col gap-8">
         <h1 className="self-start text-4xl font-medium text-left text-black dark:text-white">
           {element.title}
@@ -63,6 +53,6 @@ function FeaturesCard({
           <Image src={element.imagePreview} width={300} />
         </div>
       </div>
-    </div>
+    </SharedCard>
   );
 }
