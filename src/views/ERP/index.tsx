@@ -76,21 +76,21 @@ function FeatureCard({ element }: Readonly<{ element: erpFeaturesCardProps }>) {
   const IconComponent: IconType = iconMap[element.icon];
   return (
     <SharedCard>
-      <div className="flex flex-col gap-10 p-8">
+      <div className="flex flex-col gap-10 py-8">
         <p className="font-bold text-center uppercase text-2xl text-[#1a1d1e80] group-hover:text-white dark:text-white ">
           {element.title}
         </p>
         <div className="flex flex-col items-center gap-8">
           <IconComponent
             size={40}
-            className="opacity-50 group-hover:text-white group-hover:opacity-100"
+            className="opacity-50 dark:opacity-100 group-hover:text-white group-hover:opacity-100"
           />
 
-          <small className="text-center text-[#1a1d1e80] text-medium font-regular group-hover:text-white dark:text-white">
+          <small className="text-start text-[#1a1d1e80] text-medium font-regular group-hover:text-white dark:text-white">
             {element.description}
           </small>
         </div>
-        <ul className="pl-6 list-disc">
+        <ul className="pl-4 list-disc">
           {element.list.map((element: string, idx: number) => (
             <li
               key={idx}
