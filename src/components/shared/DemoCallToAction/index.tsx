@@ -19,7 +19,7 @@ export default function DemoCallToAction() {
       )}
     >
       <CentredLayout>
-        <div className="relative flex items-center justify-between p-6 overflow-hidden bg-white bg-cover border rounded-lg lg:flex-row min-h-96 dark:bg-black">
+        <div className="relative flex items-center justify-between p-6 overflow-hidden bg-white bg-cover border rounded-lg dark:border-0 lg:flex-row min-h-96 dark:bg-black">
           <div className="flex flex-col gap-8">
             <h1 className="text-4xl font-bold">
               {t("demoCallToAction.title")}
