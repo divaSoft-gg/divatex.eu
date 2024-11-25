@@ -47,7 +47,7 @@ export default function ContactUsView() {
 
           <section>
             <h1 className="custom-heading">{t("contactUs.locationTitle")}</h1>
-            <div className="grid grid-cols-3 gap-3 mt-8">
+            <div className="grid grid-cols-1 gap-3 mt-8 lg:grid-cols-3">
               {locations.map((element, index) => (
                 <LocationCard key={index} element={element} />
               ))}
