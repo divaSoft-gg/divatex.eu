@@ -41,8 +41,10 @@ export default function ERPView() {
           <div className="flex flex-col px-4 lg:px-0">
             {/* Title Description Column */}
             <div className="flex flex-col gap-8 my-8">
-              <h1 className="custom-heading">{t("erp.sectionTitle")}</h1>
-              <p className="custom-description">{t("erp.sectionSubtitle")}</p>
+              <h1 className="text-4xl font-semibold">
+                {t("erp.sectionTitle")}
+              </h1>
+              <p className="w-1/2 font-base">{t("erp.sectionSubtitle")}</p>
             </div>
             <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 gap-">
               {featuresData.map(
