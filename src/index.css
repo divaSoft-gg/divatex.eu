@@ -40,9 +40,15 @@
 }
 @layer utilities {
   .font-base {
-    @apply font-normal; /* Or any font style you need */
+    @apply font-normal;
+  }
+  .font-semiBold {
+    @apply font-semibold;
   }
 }
 .page-description {
   @apply lg:w-3/5 font-base;
+}
+.page-title {
+  @apply text-4xl font-semiBold;
 }

@@ -41,9 +41,7 @@ export default function ERPView() {
           <div className="flex flex-col px-4 lg:px-0">
             {/* Title Description Column */}
             <div className="flex flex-col gap-8 my-8">
-              <h1 className="text-4xl font-semibold">
-                {t("erp.sectionTitle")}
-              </h1>
+              <h1 className="page-title">{t("erp.sectionTitle")}</h1>
               <p
                 className="page-description"
                 dangerouslySetInnerHTML={{ __html: t("erp.sectionSubtitle") }}
