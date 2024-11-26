@@ -11,10 +11,10 @@ export default function SharedGrid({
 
   return (
     <section className="grid grid-cols-1 gap-6 px-4 lg:grid-cols-2 lg:px-0">
-      <div className="relative flex-col justify-center gap-20 p-4 border rounded-lg lg:flex">
+      <div className="relative flex-col justify-center gap-20 p-4 border dark:border-0 rounded-xl lg:flex">
         {/* Background Image with Opacity */}
         <div
-          className="absolute inset-0 bg-right bg-no-repeat bg-cover"
+          className="absolute inset-0 bg-right bg-no-repeat bg-cover rounded-xl"
           style={{
             backgroundImage: "url('images/grid-bg.svg')",
             backgroundPosition: "right -100px center",
@@ -25,7 +25,7 @@ export default function SharedGrid({
         {/* Content */}
         {children}
       </div>
-      <div className="h-full bg-white border rounded-lg">
+      <div className="h-full bg-white border rounded-xl">
         {demoCard ? (
           <InlineWidget
             url="https://calendly.com/rochdi-ktir"
