@@ -16,19 +16,19 @@ export default function DemoView() {
           <SharedGrid demoCard={true}>
             <div className="z-10 flex flex-col justify-center gap-20 p-4">
               <div className="flex flex-col gap-4">
-                <h1 className="text-4xl text-black">
+                <h1 className="text-4xl text-black dark:text-white">
                   {t("demo.sectionTitle")}
                 </h1>
-                <p className="text-base text-black ">
+                <p className="text-base text-black dark:text-white ">
                   {t("contactUs.description")}
                 </p>
               </div>
               <div className="flex flex-col gap-4">
-                <p className="font-semibold text-black ">
+                <p className="font-semibold text-black dark:text-white ">
                   {" "}
                   {t("demo.stepsTitle")}
                 </p>
-                <ol className="px-4 space-y-2 text-black list-decimal">
+                <ol className="px-4 space-y-2 text-black list-decimal dark:text-white">
                   {steps.map((element: demoStepsProps, index: number) => (
                     <li key={index}>
                       <h1 className="text-sm">

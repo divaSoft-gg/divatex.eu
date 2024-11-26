@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
-import ContactUsForm from "../contactUsForm";
-import { useTranslation } from "react-i18next";
 import { InlineWidget } from "react-calendly";
-import { cn } from "../../../common/utils";
+import { useTranslation } from "react-i18next";
+import ContactUsForm from "../contactUsForm";
 
 export default function SharedGrid({
   children,
@@ -12,17 +11,21 @@ export default function SharedGrid({
 
   return (
     <section className="grid grid-cols-1 gap-6 px-4 lg:grid-cols-2 lg:px-0">
-      <div className="flex-col justify-center gap-20 p-4 border rounded-lg lg:flex bg-gradient-to-tr from-slate-100 to-zinc-300">
+      <div className="relative flex-col justify-center gap-20 p-4 border rounded-lg lg:flex">
+        {/* Background Image with Opacity */}
+        <div
+          className="absolute inset-0 bg-right bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: "url('images/grid-bg.svg')",
+            backgroundPosition: "right -100px center",
+            opacity: 0.5,
+            zIndex: -1,
+          }}
+        ></div>
+        {/* Content */}
         {children}
       </div>
-      <div
-        className={cn(
-          "h-full border rounded-lg",
-          demoCard
-            ? "bg-white"
-            : "bg-gradient-to-tr from-stone-100 to-slate-200"
-        )}
-      >
+      <div className="h-full bg-white border rounded-lg">
         {demoCard ? (
           <InlineWidget
             url="https://calendly.com/rochdi-ktir"

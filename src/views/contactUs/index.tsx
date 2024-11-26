@@ -22,21 +22,21 @@ export default function ContactUsView() {
           <SharedGrid>
             <div className="flex flex-col justify-center gap-20 ">
               <div className="flex flex-col w-full gap-12">
-                <h6 className="text-black custom-heading ">
+                <h6 className="text-black dark:text-white custom-heading ">
                   {t("contactUs.sectionTitleView")}
                 </h6>
-                <p className="text-black custom-description">
+                <p className="text-black dark:text-white custom-description ">
                   {t("contactUs.description")}
                 </p>
 
                 <div>
-                  <p className="text-base font-semibold tracking-tight text-black dark:text-black">
+                  <p className="text-base font-semibold tracking-tight text-black dark:text-white">
                     {t("contactUs.contactUsAt")}
                   </p>
                   {socials.map((element: socialsProps, index: number) => (
                     <p
                       key={index}
-                      className="text-sm leading-tight text-left text-gray-700 dark:text-black"
+                      className="text-sm leading-tight text-left text-gray-700 dark:text-white"
                     >
                       {element.answer}
                     </p>
