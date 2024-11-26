@@ -38,3 +38,11 @@
 .custom-description {
   @apply text-sm font-light text-gray-800 dark:text-white;
 }
+@layer utilities {
+  .font-base {
+    @apply font-normal; /* Or any font style you need */
+  }
+}
+.page-description {
+  @apply lg:w-3/5 font-base;
+}

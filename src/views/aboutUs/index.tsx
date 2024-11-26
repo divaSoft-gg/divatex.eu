@@ -25,7 +25,7 @@ export default function AboutUs() {
         <div className="flex flex-col gap-16 px-4 lg:px-0">
           <div className="flex flex-col gap-8">
             <h1 className="text-4xl font-semibold">{t("aboutus.title")}</h1>
-            <p className="lg:w-1/2 font-base">{t("aboutus.subtitle")}</p>
+            <p className="page-description">{t("aboutus.subtitle")}</p>
           </div>
           <div className="flex flex-col w-full gap-2">
             {[0, 1].map((element) => (

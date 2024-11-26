@@ -44,7 +44,10 @@ export default function ERPView() {
               <h1 className="text-4xl font-semibold">
                 {t("erp.sectionTitle")}
               </h1>
-              <p className="lg:w-1/2 font-base">{t("erp.sectionSubtitle")}</p>
+              <p
+                className="page-description"
+                dangerouslySetInnerHTML={{ __html: t("erp.sectionSubtitle") }}
+              ></p>
             </div>
             <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 gap-">
               {featuresData.map(
