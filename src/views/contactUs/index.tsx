@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import CentredLayout from "../../components/ui/centredLayout";
-import ContactUsForm from "../../components/shared/contactUsForm";
 import { locationsProps, socialsProps } from "../../common/types";
 import { MdOutlineEmail, MdOutlinePhoneEnabled } from "react-icons/md";
 
 import { Avatar } from "@nextui-org/react";
 import SharedCard from "../../components/shared/SharedCard";
+import SharedGrid from "../../components/shared/SharedGrid";
 
 export default function ContactUsView() {
   const { t } = useTranslation();
@@ -18,66 +18,33 @@ export default function ContactUsView() {
   return (
     <section id="contact-us" className="my-8">
       <CentredLayout>
-        <div className="grid grid-cols-1 gap-6 px-4 lg:grid-cols-2 lg:px-0">
-          <section className="flex-col justify-center gap-20 p-4 border rounded-lg lg:flex bg-gradient-to-tr from-slate-100 to-zinc-300">
-            <div className="flex flex-col w-full gap-12">
-              <h6 className="custom-heading">
-                {t("contactUs.sectionTitleView")}
-              </h6>
-              <p className="custom-description">{t("contactUs.description")}</p>
-
-              <div>
-                <p className="text-base font-semibold tracking-tight text-black dark:text-white">
-                  {t("contactUs.contactUsAt")}
+        <div className="flex flex-col gap-12 px-4 lg:px-0 ">
+          <SharedGrid>
+            <div className="flex-col justify-center gap-20 p-4 border rounded-lg lg:flex bg-gradient-to-tr from-slate-100 to-zinc-300">
+              <div className="flex flex-col w-full gap-12">
+                <h6 className="text-black custom-heading ">
+                  {t("contactUs.sectionTitleView")}
+                </h6>
+                <p className="text-black custom-description">
+                  {t("contactUs.description")}
                 </p>
-                {socials.map((element: socialsProps, index: number) => (
-                  <p
-                    key={index}
-                    className="text-sm leading-tight text-left text-gray-700 dark:text-white"
-                  >
-                    {element.answer}
+
+                <div>
+                  <p className="text-base font-semibold tracking-tight text-black dark:text-black">
+                    {t("contactUs.contactUsAt")}
                   </p>
-                ))}
+                  {socials.map((element: socialsProps, index: number) => (
+                    <p
+                      key={index}
+                      className="text-sm leading-tight text-left text-gray-700 dark:text-black"
+                    >
+                      {element.answer}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
-          </section>
-          <div className="border rounded-lg bg-gradient-to-tr from-stone-100 to-slate-200">
-            <ContactUsForm t={t} />
-          </div>
-        </div>
-      </CentredLayout>
-    </section>
-  );
-  return (
-    <section id="contact-us" className="my-8">
-      <CentredLayout>
-        <div className="flex flex-col gap-12 px-4 lg:px-0">
-          <section className="flex flex-col w-full gap-16 lg:flex-row">
-            <div className="flex flex-col w-full gap-12">
-              <h6 className="custom-heading">
-                {t("contactUs.sectionTitleView")}
-              </h6>
-              <p className="custom-description">{t("contactUs.description")}</p>
-
-              <div>
-                <p className="text-base font-semibold tracking-tight text-black dark:text-white">
-                  {t("contactUs.contactUsAt")}
-                </p>
-                {socials.map((element: socialsProps, index: number) => (
-                  <p
-                    key={index}
-                    className="text-sm leading-tight text-left text-gray-700 dark:text-white"
-                  >
-                    {element.answer}
-                  </p>
-                ))}
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md w-full mx-auto lg:min-w-[500px]">
-              <ContactUsForm t={t} />
-            </div>
-          </section>
-
+          </SharedGrid>
           <section>
             <h1 className="custom-heading">{t("contactUs.locationTitle")}</h1>
             <div className="grid grid-cols-1 gap-3 mt-8 lg:grid-cols-3">
@@ -98,7 +65,7 @@ function LocationCard({ element }: Readonly<{ element: locationsProps }>) {
       <div className="flex flex-col gap-10 ">
         <div className="flex flex-row items-center justify-start gap-2">
           <Avatar src={element.flag} size="sm" className="scale-75" />
-          <p className="text-2xl font-bold text-black uppercase dark:text-white ">
+          <p className="text-2xl font-bold text-black uppercase dark:text-white">
             {element.countryName}
           </p>
         </div>

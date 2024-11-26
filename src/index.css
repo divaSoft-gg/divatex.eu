@@ -36,7 +36,7 @@
   @apply text-4xl leading-tight text-left lg:text-6xl;
 }
 .custom-description {
-  @apply text-sm font-light text-gray-800 dark:text-white;
+  @apply text-sm font-light;
 }
 @layer utilities {
   .font-base {
