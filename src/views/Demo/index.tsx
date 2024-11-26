@@ -14,9 +14,9 @@ export default function DemoView() {
       <CentredLayout>
         <div className="flex flex-col gap-20 px-4 my-10 lg:px-0">
           <SharedGrid demoCard={true}>
-            <div className="z-10 flex-col justify-center hidden gap-20 p-4 lg:flex">
+            <div className="z-10 flex flex-col justify-center gap-20 p-4">
               <div className="flex flex-col gap-4">
-                <h1 className="text-5xl text-black">
+                <h1 className="text-4xl text-black">
                   {t("demo.sectionTitle")}
                 </h1>
                 <p className="text-base text-black ">
