@@ -20,7 +20,7 @@ export default function ContactUsView() {
       <CentredLayout>
         <div className="flex flex-col gap-12 px-4 lg:px-0 ">
           <SharedGrid>
-            <div className="flex-col justify-center gap-20 p-4 border rounded-lg lg:flex bg-gradient-to-tr from-slate-100 to-zinc-300">
+            <div className="flex flex-col justify-center gap-20 ">
               <div className="flex flex-col w-full gap-12">
                 <h6 className="text-black custom-heading ">
                   {t("contactUs.sectionTitleView")}
