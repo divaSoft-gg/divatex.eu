@@ -26,12 +26,26 @@ export default {
           "100%": { left: "0%" },
         },
       },
+      utilities: {
+        ".font-base": {
+          "@apply font-normal": "",
+        },
+        ".font-semiBold": {
+          "@apply font-semibold": "",
+        },
+      },
       components: {
         ".custom-heading": {
           "@apply text-4xl lg:text-6xl leading-tight text-left": "",
         },
         ".custom-description": {
           "@apply text-sm font-light text-gray-800 dark:text-white": "",
+        },
+        ".page-description": {
+          "@apply lg:w-3/5 font-base": "",
+        },
+        ".page-title": {
+          "@apply text-4xl font-semibold": "",
         },
       },
     },

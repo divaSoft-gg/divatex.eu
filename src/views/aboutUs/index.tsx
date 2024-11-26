@@ -24,8 +24,8 @@ export default function AboutUs() {
       <CentredLayout>
         <div className="flex flex-col gap-16 px-4 lg:px-0">
           <div className="flex flex-col gap-8">
-            <h1 className="custom-heading">{t("aboutus.title")}</h1>
-            <p className="custom-description">{t("aboutus.subtitle")}</p>
+            <h1 className="page-title">{t("aboutus.title")}</h1>
+            <p className="page-description">{t("aboutus.subtitle")}</p>
           </div>
           <div className="flex flex-col w-full gap-2">
             {[0, 1].map((element) => (
