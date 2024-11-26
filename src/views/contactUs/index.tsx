@@ -18,6 +18,39 @@ export default function ContactUsView() {
   return (
     <section id="contact-us" className="my-8">
       <CentredLayout>
+        <div className="grid grid-cols-1 gap-6 px-4 lg:grid-cols-2 lg:px-0">
+          <section className="flex-col justify-center gap-20 p-4 border rounded-lg lg:flex bg-gradient-to-tr from-slate-100 to-zinc-300">
+            <div className="flex flex-col w-full gap-12">
+              <h6 className="custom-heading">
+                {t("contactUs.sectionTitleView")}
+              </h6>
+              <p className="custom-description">{t("contactUs.description")}</p>
+
+              <div>
+                <p className="text-base font-semibold tracking-tight text-black dark:text-white">
+                  {t("contactUs.contactUsAt")}
+                </p>
+                {socials.map((element: socialsProps, index: number) => (
+                  <p
+                    key={index}
+                    className="text-sm leading-tight text-left text-gray-700 dark:text-white"
+                  >
+                    {element.answer}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </section>
+          <div className="border rounded-lg bg-gradient-to-tr from-stone-100 to-slate-200">
+            <ContactUsForm t={t} />
+          </div>
+        </div>
+      </CentredLayout>
+    </section>
+  );
+  return (
+    <section id="contact-us" className="my-8">
+      <CentredLayout>
         <div className="flex flex-col gap-12 px-4 lg:px-0">
           <section className="flex flex-col w-full gap-16 lg:flex-row">
             <div className="flex flex-col w-full gap-12">

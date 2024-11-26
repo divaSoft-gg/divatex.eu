@@ -10,24 +10,22 @@ export default function ContactUsSection() {
     returnObjects: true,
   }) as locationProps[];
   return (
-    <section id="contact-us" className="h-[500px]">
+    <section id="contact-us">
       <CentredLayout>
-        <div className="flex flex-row gap-6 bg-[url('/images/cover.jpg')] bg-cover bg-center lg:rounded-2xl relative shadow-2xl h-[300px] lg:h-full">
-          <div className="absolute inset-0 z-0 bg-black opacity-50 rounded-2xl"></div>
-
-          <div className="z-10 flex-col justify-center hidden gap-20 p-4 lg:flex">
+        <div className="grid grid-cols-1 gap-6 px-4 lg:grid-cols-2 lg:px-0">
+          <div className="flex-col justify-center gap-20 p-4 border rounded-lg lg:flex bg-gradient-to-tr from-slate-100 to-zinc-300">
             <div className="flex flex-col gap-4">
-              <h1 className="text-5xl text-white">{t("contactUs.title")}</h1>
-              <p className="text-base text-white">
+              <h1 className="text-5xl text-black">{t("contactUs.title")}</h1>
+              <p className="text-base text-black">
                 {t("contactUs.description")}
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-black">
                 {t("contactUs.locationQuestion")}
               </p>
 
-              <ul className="text-white ">
+              <ul className="text-black ">
                 {location.map((element: locationProps, index: number) => (
                   <li className="flex flex-row items-center gap-3" key={index}>
                     <FaArrowRightLong className="scale-75" />
@@ -40,7 +38,7 @@ export default function ContactUsSection() {
               </ul>
             </div>
           </div>
-          <div className="bg-white shadow-2xl h-fit rounded-2xl lg:w-[700px] w-[90%] mx-auto relative -bottom-8 lg:-bottom-20 lg:right-4">
+          <div className="border rounded-lg bg-gradient-to-tr from-stone-100 to-slate-200">
             <ContactUsForm t={t} />
           </div>
         </div>
