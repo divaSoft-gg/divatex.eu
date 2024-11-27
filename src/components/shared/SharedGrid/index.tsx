@@ -10,7 +10,7 @@ export default function SharedGrid({
   const { t } = useTranslation();
 
   return (
-    <section className="grid grid-cols-1 gap-6 px-4 lg:grid-cols-2 lg:px-0">
+    <section className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:px-0">
       <div className="relative flex-col justify-center gap-20 p-4 border dark:border-0 rounded-xl lg:flex">
         {/* Background Image with Opacity */}
         <div
@@ -31,6 +31,7 @@ export default function SharedGrid({
             url="https://calendly.com/rochdi-ktir"
             styles={{
               height: "100%",
+              zIndex: -99,
             }}
           />
         ) : (

@@ -43,7 +43,7 @@ export default function MobileNavbar({
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
       </NavbarContent>
-      <NavbarMenu className="mt-14">
+      <NavbarMenu className="pt-14">
         {navbarItems.map((item: NavbarItemsProps, index: number) => (
           <NavbarMenuItem key={`${index}`}>
             <Link
