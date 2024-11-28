@@ -7,7 +7,7 @@ import DesktopNavbar from "./desktop";
 export default function Navbar() {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
   const { t } = useTranslation();
-  const navbarItems: NavbarItemsProps[] = t("navbar", {
+  const navbarItems: NavbarItemsProps[] = t("navbar.items", {
     returnObjects: true,
   }) as NavbarItemsProps[];
 

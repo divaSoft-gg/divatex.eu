@@ -1,25 +1,15 @@
-import { Button, Image, Link } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import CentredLayout from "../../ui/centredLayout";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
-import { cn, scrollToTop } from "../../../common/utils";
+import { scrollToTop } from "../../../common/utils";
 
 export default function DemoCallToAction() {
   const { t } = useTranslation();
-  const location = useLocation();
 
   return (
-    <section
-      id="call-to-action"
-      className={cn(
-        "py-16 lg:px-0",
-        location.pathname === "/"
-          ? "bg-[#F8FAFC] dark:bg-[#161616]"
-          : "bg-white dark:bg-black"
-      )}
-    >
+    <section id="call-to-action" className="px-4 lg:px-0">
       <CentredLayout>
-        <div className="relative flex items-center justify-between p-6 overflow-hidden bg-white bg-cover border rounded-lg dark:border-0 lg:flex-row min-h-96 dark:bg-black">
+        <div className="relative flex items-center justify-between overflow-hidden bg-white bg-cover lg:flex-row dark:bg-black">
           <div className="flex flex-col gap-8">
             <h1 className="text-4xl font-bold">
               {t("demoCallToAction.title")}
@@ -37,13 +27,6 @@ export default function DemoCallToAction() {
             >
               {t("demoCallToAction.buttonText")}
             </Button>
-          </div>
-          <div className="absolute hidden -right-4 lg:block -bottom-48 ">
-            <Image
-              src="images/demo-call-to-action/cover.webp"
-              width={350}
-              className="scale-75 grayscale dark:invert"
-            />
           </div>
         </div>
       </CentredLayout>

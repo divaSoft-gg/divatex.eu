@@ -35,14 +35,14 @@ export default function HeroSection() {
                   {t("heroSection.paragraph")}
                 </p>
                 <div className="flex gap-3">
-                  <Button as={Link} href="/erp" color="default">
+                  <Button as={Link} href="/erp" variant="flat">
                     {t("heroSection.moreButton")}
                   </Button>
                   <Button
                     as={Link}
                     href="/demo"
-                    color="default"
-                    variant="bordered"
+                    color="primary"
+                    variant="solid"
                   >
                     {t("heroSection.demoButton")}
                   </Button>
