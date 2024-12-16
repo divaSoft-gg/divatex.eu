@@ -10,16 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aymen_diva/diva-shared-navbar": "0.0.38",
+    "@hookform/resolvers": "^3.9.1",
     "@nextui-org/react": "^2.4.8",
+    "phone": "^3.1.55",
     "react": "^18.3.1",
     "react-calendly": "^4.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^4.0.13",
     "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.54.1",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.26.2",
     "tailwind-merge": "^2.5.2",
-    "@aymen_diva/diva-shared-navbar": "0.0.38"
+    "yup": "^1.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

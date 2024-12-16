@@ -38,3 +38,12 @@ export interface IFunctionality {
   title: string;
   functionalities: string[];
 }
+
+export interface ContactForm {
+  company: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  message: string;
+  phone: string;
+}
