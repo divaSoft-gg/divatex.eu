@@ -1,14 +1,74 @@
 import { CONTACT_ARRAY } from "../../common/data";
-import { IContactInfo } from "../../common/types";
+import { ContactForm, IContactInfo } from "../../common/types";
 import HeroSection from "../../components/HeroSection";
 import { useMediaQuery } from "react-responsive";
+import { phone } from "phone";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { Input, Textarea } from "@nextui-org/react";
+
+const schema = yup
+  .object({
+    firstName: yup.string().required("Le nom est un champ requis."),
+    lastName: yup.string().required("Le prénom est un champ requis."),
+    company: yup.string().required("L'entreprise est un champ requis."),
+    phone: yup.string().required("Le téléphone est un champ requis."),
+    email: yup
+      .string()
+      .email("L'email doit être au format valide.")
+      .required("L'email est un champ requis."),
+    message: yup.string().required("Le message est un champ requis."),
+  })
+  .required();
 
 export default function Contact() {
+  const {
+    register,
+    setError,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  const onSubmit = (values: ContactForm) => {
+    const phoneNumber: string = values.phone.trim();
+    const regexLocal = /^(2\d|4\d|5\d|7\d|9\d)\d{6}$/;
+
+    if (phoneNumber.startsWith("+")) {
+      const regexInternational = /^\+\(\d{3}\)\s\d*$/;
+      if (regexInternational.test(phoneNumber)) {
+        const isValidInternationalNumber = phone(phoneNumber);
+        if (!isValidInternationalNumber.isValid) {
+          setError("phone", {
+            type: "manual",
+            message: "Country Code does not exist",
+          });
+        }
+      } else {
+        setError("phone", {
+          type: "manual",
+          message:
+            "Invalid phone number format. Please use +(<country code>) <number>",
+        });
+      }
+    } else {
+      if (!regexLocal.test(phoneNumber)) {
+        setError("phone", {
+          type: "manual",
+          message: "The Phone Number does not match a tunisian Phone number",
+        });
+      }
+    }
+  };
 
   const heroSectionParams = {
     coverPath: "/images/it-services-4-asx-cuw3-2.jpg",
     maxHeight: isMobile ? "300px" : "500px",
+
     renderContent: () => {
       return (
         <>
@@ -38,7 +98,10 @@ export default function Contact() {
       {/* </div> */}
 
       <div className="max-w-[var(--max-content-width)] px-5 mx-auto py-16">
-        <form className="max-w-[800px] mx-auto">
+        <form
+          className="max-w-[800px] mx-auto"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div className="grid gap-6 mb-4 md:grid-cols-2">
             <div>
               <label
@@ -47,12 +110,14 @@ export default function Contact() {
               >
                 Nom
               </label>
-              <input
+              <Input
                 type="text"
                 id="first_name"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                {...register("firstName")}
+                className="block w-full text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                 placeholder="John"
-                required
+                isInvalid={errors.firstName && true}
+                errorMessage={errors.firstName?.message}
               />
             </div>
             <div>
@@ -62,12 +127,15 @@ export default function Contact() {
               >
                 Prénom
               </label>
-              <input
+              <Input
                 type="text"
                 id="last_name"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                {...register("lastName")}
+                className="block w-full text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 "
                 placeholder="Doe"
-                required
+                isInvalid={errors.lastName ? true : false}
+                errorMessage={"Ce champ est obligatoire."}
+                color="default"
               />
             </div>
             <div>
@@ -77,12 +145,14 @@ export default function Contact() {
               >
                 Entreprise
               </label>
-              <input
+              <Input
+                {...register("company")}
                 type="text"
                 id="company"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="block w-full text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Diva-Software"
-                required
+                isInvalid={errors.company ? true : false}
+                errorMessage={"Ce champ est obligatoire."}
               />
             </div>
             <div>
@@ -92,13 +162,14 @@ export default function Contact() {
               >
                 Téléphone
               </label>
-              <input
+              <Input
                 type="tel"
+                {...register("phone")}
                 id="phone"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                isInvalid={errors.phone ? true : false}
+                errorMessage={errors.phone?.message}
+                className="block w-full text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                 placeholder="123-45-678"
-                pattern="^(?:\+\d*[0-9]{8}|[0-9]{8})$"
-                required
               />
             </div>
           </div>
@@ -109,12 +180,13 @@ export default function Contact() {
           >
             Email
           </label>
-          <input
-            type="email"
+          <Input
+            isInvalid={errors.email ? true : false}
+            errorMessage={"Ce champ est obligatoire."}
+            {...register("email")}
             id="email"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="block w-full text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500"
             placeholder="john.doe@company.com"
-            required
           />
 
           <label
@@ -123,12 +195,15 @@ export default function Contact() {
           >
             Message
           </label>
-          <textarea
+          <Textarea
+            isInvalid={errors.message ? true : false}
+            errorMessage={"Ce champ est obligatoire."}
+            {...register("message")}
             id="message"
             rows={4}
-            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            className="block w-full text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500"
             placeholder="Votre message..."
-          ></textarea>
+          ></Textarea>
 
           <button
             type="submit"
