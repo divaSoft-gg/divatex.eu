@@ -1,4 +1,4 @@
-import { INav } from "./types";
+import { INav, locationsProps } from "./types";
 
 export const NAV: INav[] = [
   {
@@ -198,5 +198,44 @@ export const DIVATEX_MODULES = [
     image: "functionlity-3.png",
     title: "Production",
     functionalities: ["Suivi de la coupe", "MES", "Planification avancée"],
+  },
+];
+
+export const LOCATION: locationsProps[] = [
+  {
+    countryName: "Luxembourg",
+    map: "images/location/luxembourg.png",
+    flag: "images/location/luxembourg-flag.png",
+    address: "8 rue des marguerites 8056 Strassen",
+    list: ["lionel@diva-software.io", "+352621545054"],
+  },
+  {
+    countryName: "Belgium",
+    map: "images/location/belgium.png",
+    flag: "images/location/belgium-flag.png",
+    address: "Apostelhuizen 93 9000 Gent",
+    list: ["lionel@diva-software.io", "+32460228844"],
+  },
+  {
+    countryName: "France",
+    map: "images/location/france.png",
+    flag: "images/location/france-flag.png",
+    address: "5 impasse de la colombette 31000 Toulouse",
+    list: ["sammy@diva-software.io", "+33756810077"],
+  },
+  {
+    countryName: "Morocco",
+    map: "images/location/morocco.png",
+    flag: "images/location/morocco-flag.png",
+    address: "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca.",
+    list: ["fabrizio@diva-software.io", "+212763086382"],
+  },
+  {
+    countryName: "Tunisia",
+    map: "images/location/tunisia.png",
+    flag: "images/location/tunisia-flag.png",
+    address:
+      "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse",
+    list: ["rochdi@diva-software.io", "+21653333853"],
   },
 ];

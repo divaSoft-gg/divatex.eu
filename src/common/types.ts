@@ -38,3 +38,11 @@ export interface IFunctionality {
   title: string;
   functionalities: string[];
 }
+
+export interface locationsProps {
+  countryName: string;
+  map: string;
+  flag: string;
+  address: string;
+  list: string[];
+}
