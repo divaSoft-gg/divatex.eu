@@ -210,7 +210,7 @@ export const LOCATION: locationsProps[] = [
     list: ["lionel@diva-software.io", "+352621545054"],
   },
   {
-    countryName: "Belgium",
+    countryName: "Belgique",
     map: "images/location/belgium.png",
     flag: "images/location/belgium-flag.png",
     address: "Apostelhuizen 93 9000 Gent",
@@ -224,14 +224,14 @@ export const LOCATION: locationsProps[] = [
     list: ["sammy@diva-software.io", "+33756810077"],
   },
   {
-    countryName: "Morocco",
+    countryName: "Maroc",
     map: "images/location/morocco.png",
     flag: "images/location/morocco-flag.png",
     address: "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca.",
     list: ["fabrizio@diva-software.io", "+212763086382"],
   },
   {
-    countryName: "Tunisia",
+    countryName: "Tunisie",
     map: "images/location/tunisia.png",
     flag: "images/location/tunisia-flag.png",
     address:
