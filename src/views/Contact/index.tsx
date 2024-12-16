@@ -31,10 +31,35 @@ export default function Contact() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const sendEmail = async (message: string) => {
+    try {
+      const response = await fetch(import.meta.env.VITE_SENDGRID_MAIL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "aymen@diva-software.com",
+          to: "aymen@diva-software.com",
+          subject: "Contact Support",
+          html: `<div>${message}</div>`,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorBody = await response.text();
+        throw new Error(
+          `HTTP error! status: ${response.status}, body: ${errorBody}`
+        );
+      }
+    } catch (error) {
+      console.error(" sending email:", error);
+    }
+  };
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  const onSubmit = (values: ContactForm) => {
+  const onSubmit = async (values: ContactForm) => {
     const phoneNumber: string = values.phone.trim();
     const regexLocal = /^(2\d|4\d|5\d|7\d|9\d)\d{6}$/;
 
@@ -63,6 +88,7 @@ export default function Contact() {
         });
       }
     }
+    await sendEmail(JSON.stringify(values));
   };
 
   const heroSectionParams = {
@@ -92,10 +118,7 @@ export default function Contact() {
 
   return (
     <div className="w-full bg-gray-100 ">
-      {/* <div className="relative w-full bg-center bg-no-repeat bg-fill"> */}
-
       <HeroSection data={heroSectionParams} />
-      {/* </div> */}
 
       <div className="max-w-[var(--max-content-width)] px-5 mx-auto py-16">
         <form
