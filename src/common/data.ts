@@ -145,28 +145,28 @@ export const CONTACT_ARRAY = [
     id: 1,
     location: "Luxembourg",
     addresse: "8 rue des marguerites 8056 Strassen",
-    email: "luxembourg@divatex.eu",
+    email: "lionel@diva-software.io",
     phone: "+352621545054",
   },
   {
     id: 2,
     location: "Belgique",
     addresse: "Apostelhuizen 93 9000 Gent",
-    email: "belgique@divatex.eu",
+    email: "lionel@diva-software.io",
     phone: "+32460228844",
   },
   {
     id: 3,
     location: "France",
     addresse: "5 impasse de la colombette 31000 Toulouse",
-    email: "france@divatex.eu",
+    email: "sammy@diva-software.io",
     phone: "+33756810077",
   },
   {
     id: 4,
     location: "Maroc",
     addresse: "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca.",
-    email: "fabrizio@divatex.eu",
+    email: "fabrizio@diva-software.io",
     phone: "+212763086382",
   },
   {
@@ -174,8 +174,8 @@ export const CONTACT_ARRAY = [
     location: "Tunisie",
     addresse:
       "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse",
-    email: "contact@diva-software.com",
-    phone: "+21653333853%20",
+    email: "rochdi@diva-software.io",
+    phone: "+21653333853",
   },
 ];
 
