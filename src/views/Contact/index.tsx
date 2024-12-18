@@ -32,13 +32,9 @@ export default function Contact() {
   });
 
   const onSubmit = async (values: ContactForm) => {
-    const response = await sendEmail(JSON.stringify(values));
+    const response = await sendEmail(values);
     if (response) {
-      await sendEmail(
-        JSON.stringify(values),
-        values.email,
-        "Your Email Is Sent Successfully"
-      );
+      await sendEmail(values, values.email, "Your Email Is Sent Successfully");
     }
   };
 
