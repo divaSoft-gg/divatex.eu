@@ -2,11 +2,11 @@ import { CONTACT_ARRAY } from "../../common/data";
 import { ContactForm, IContactInfo } from "../../common/types";
 import HeroSection from "../../components/HeroSection";
 import { useMediaQuery } from "react-responsive";
-import { phone } from "phone";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { Input, Textarea } from "@nextui-org/react";
+import { sendEmail } from "../../services/sendGrid";
 
 const schema = yup
   .object({
@@ -25,45 +25,20 @@ const schema = yup
 export default function Contact() {
   const {
     register,
-    setError,
     handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
-  const onSubmit = (values: ContactForm) => {
-    const phoneNumber: string = values.phone.trim();
-    const regexLocal = /^(2\d|4\d|5\d|7\d|9\d)\d{6}$/;
-
-    if (phoneNumber.startsWith("+")) {
-      const regexInternational = /^\+\(\d{3}\)\s\d*$/;
-      if (regexInternational.test(phoneNumber)) {
-        const isValidInternationalNumber = phone(phoneNumber);
-        if (!isValidInternationalNumber.isValid) {
-          setError("phone", {
-            type: "manual",
-            message: "Country Code does not exist",
-          });
-        }
-      } else {
-        setError("phone", {
-          type: "manual",
-          message:
-            "Invalid phone number format. Please use +(<country code>) <number>",
-        });
-      }
-    } else {
-      if (!regexLocal.test(phoneNumber)) {
-        setError("phone", {
-          type: "manual",
-          message: "The Phone Number does not match a tunisian Phone number",
-        });
-      }
+  const onSubmit = async (values: ContactForm) => {
+    const response = await sendEmail(values);
+    if (response) {
+      await sendEmail(values, values.email, "Your Email Is Sent Successfully");
     }
   };
+
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const heroSectionParams = {
     coverPath: "/images/it-services-4-asx-cuw3-2.jpg",
@@ -92,10 +67,7 @@ export default function Contact() {
 
   return (
     <div className="w-full bg-gray-100 ">
-      {/* <div className="relative w-full bg-center bg-no-repeat bg-fill"> */}
-
       <HeroSection data={heroSectionParams} />
-      {/* </div> */}
 
       <div className="max-w-[var(--max-content-width)] px-5 mx-auto py-16">
         <form
@@ -169,7 +141,7 @@ export default function Contact() {
                 isInvalid={errors.phone ? true : false}
                 errorMessage={errors.phone?.message}
                 className="block w-full text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-                placeholder="123-45-678"
+                placeholder="xxxxxxx or +(country code) your number"
               />
             </div>
           </div>

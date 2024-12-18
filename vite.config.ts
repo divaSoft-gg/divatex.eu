@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// vite.config.ts
+import { defineConfig } from "vite";
+import env from "vite-plugin-env-compatible";
 
-// https://vitejs.dev/config/
+// @see https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    env({
+      prefix: "VITE_", // Optional: custom prefix (default is 'VITE_')
+    }),
+  ],
+});
