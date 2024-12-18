@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@aymen_diva/diva-shared-navbar": "0.0.56",
+    "@aymen_diva/diva-shared-navbar": "0.0.55",
     "@hookform/resolvers": "^3.9.1",
     "@nextui-org/react": "^2.4.8",
     "phone": "^3.1.55",
