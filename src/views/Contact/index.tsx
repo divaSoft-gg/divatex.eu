@@ -58,8 +58,7 @@ export default function Contact() {
         );
       }
       return true;
-    } catch (error) {
-      console.log(error);
+    } catch (e) {
       return false;
     }
   };
@@ -68,21 +67,6 @@ export default function Contact() {
     phoneNumber: string
   ): { isValid: boolean; message?: string } => {
     const regexLocal = /^(2\d|4\d|5\d|7\d|9\d)\d{6}$/;
-    // const regexInternational = /^\+\(\d{3}\)\s\d*$/;
-
-    // if (phoneNumber.startsWith("+")) {
-    //   if (!regexInternational.test(phoneNumber)) {
-    //     return {
-    //       isValid: false,
-    //       message:
-    //         "Invalid phone number format. Please use +(<country code>) <number>",
-    //     };
-    //   }
-    //   const isValidInternationalNumber = phone(phoneNumber);
-    //   if (!isValidInternationalNumber.isValid) {
-    //     return { isValid: false, message: "Country Code does not exist" };
-    //   }
-    // } else
 
     if (!regexLocal.test(phoneNumber)) {
       return {
@@ -118,90 +102,6 @@ export default function Contact() {
     await processEmailSending(values);
   };
 
-  // const sendEmail = async (
-  //   message: string,
-  //   toEmail?: string,
-  //   successMessage?: string
-  // ): Promise<boolean> => {
-  //   try {
-  //     const response = await fetch(import.meta.env.VITE_SENDGRID_MAIL, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         from: "aymen@diva-software.com",
-  //         to: toEmail ?? "aymen@diva-software.com",
-  //         subject: "Contact Support",
-  //         html: successMessage
-  //           ? `<div>${successMessage}</div>`
-  //           : `<div>${JSON.stringify(message)}</div>`,
-  //       }),
-  //     });
-
-  //     if (!response.ok) {
-  //       const errorBody = await response.text();
-  //       throw new Error(
-  //         `HTTP error! status: ${response.status}, body: ${errorBody}`
-  //       );
-  //     }
-
-  //     console.log("Email sent successfully");
-  //     return true; // Indicate that the email was sent successfully
-  //   } catch (error) {
-  //     console.error("Error sending email:", error);
-  //     return false; // Indicate that there was an error
-  //   }
-  // };
-  // const onSubmit = async (values: ContactForm) => {
-  //   const phoneNumber: string = values.phone.trim();
-  //   const regexLocal = /^(2\d|4\d|5\d|7\d|9\d)\d{6}$/;
-
-  //   if (phoneNumber.startsWith("+")) {
-  //     const regexInternational = /^\+\(\d{3}\)\s\d*$/;
-  //     if (regexInternational.test(phoneNumber)) {
-  //       const isValidInternationalNumber = phone(phoneNumber);
-  //       if (!isValidInternationalNumber.isValid) {
-  //         setError("phone", {
-  //           type: "manual",
-  //           message: "Country Code does not exist",
-  //         });
-  //       } else {
-  //         const response = await sendEmail(JSON.stringify(values));
-  //         if (response) {
-  //           sendEmail(
-  //             JSON.stringify(values),
-  //             values.email,
-  //             "Your Email Is Sent Succefully"
-  //           );
-  //         }
-  //       }
-  //     } else {
-  //       setError("phone", {
-  //         type: "manual",
-  //         message:
-  //           "Invalid phone number format. Please use +(<country code>) <number>",
-  //       });
-  //     }
-  //   } else {
-  //     if (!regexLocal.test(phoneNumber)) {
-  //       setError("phone", {
-  //         type: "manual",
-  //         message: "The Phone Number does not match a tunisian Phone number",
-  //       });
-  //     } else {
-  //       const response = await sendEmail(JSON.stringify(values));
-
-  //       if (response) {
-  //         sendEmail(
-  //           JSON.stringify(values),
-  //           values.email,
-  //           "Your Email Is Sent Succefully"
-  //         );
-  //       }
-  //     }
-  //   }
-  // };
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const heroSectionParams = {
