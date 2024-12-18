@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { Input, Textarea } from "@nextui-org/react";
+import { sendEmail } from "../../services/sendGrid";
 
 const schema = yup
   .object({
@@ -24,60 +25,13 @@ const schema = yup
 export default function Contact() {
   const {
     register,
-    setError,
     handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const sendEmail = async (
-    message: string,
-    toEmail: string = "aymen@diva-software.com",
-    successMessage?: string
-  ) => {
-    try {
-      const body = {
-        from: "aymen@diva-software.com",
-        to: toEmail,
-        subject: "Contact Support",
-        html: successMessage
-          ? `<div>${successMessage}</div>`
-          : `<div>${JSON.stringify(message)}</div>`,
-      };
-      const response = await fetch(import.meta.env.VITE_SENDGRID_MAIL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
-
-      if (!response.ok) {
-        const errorBody = await response.text();
-        throw new Error(
-          `HTTP error! status: ${response.status}, body: ${errorBody}`
-        );
-      }
-      return true;
-    } catch (e) {
-      return false;
-    }
-  };
-
-  const validatePhoneNumber = (
-    phoneNumber: string
-  ): { isValid: boolean; message?: string } => {
-    const regexLocal = /^(2\d|4\d|5\d|7\d|9\d)\d{6}$/;
-
-    if (!regexLocal.test(phoneNumber)) {
-      return {
-        isValid: false,
-        message: "The Phone Number does not match a Tunisian Phone number",
-      };
-    }
-
-    return { isValid: true };
-  };
-  const processEmailSending = async (values: ContactForm) => {
+  const onSubmit = async (values: ContactForm) => {
     const response = await sendEmail(JSON.stringify(values));
     if (response) {
       await sendEmail(
@@ -86,20 +40,6 @@ export default function Contact() {
         "Your Email Is Sent Successfully"
       );
     }
-  };
-  const onSubmit = async (values: ContactForm) => {
-    const phoneNumber: string = values.phone.trim();
-    const validation = validatePhoneNumber(phoneNumber);
-
-    if (!validation.isValid) {
-      setError("phone", {
-        type: "manual",
-        message: validation.message,
-      });
-      return;
-    }
-
-    await processEmailSending(values);
   };
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
