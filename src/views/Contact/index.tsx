@@ -5,8 +5,11 @@ import { useMediaQuery } from "react-responsive";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
-import { Input, Textarea } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@nextui-org/react";
 import { sendEmail } from "../../services/sendGrid";
+import { useState } from "react";
+import { CiCircleCheck } from "react-icons/ci";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const schema = yup
   .object({
@@ -26,17 +29,47 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
   const onSubmit = async (values: ContactForm) => {
-    const response = await sendEmail(values);
-    if (response) {
-      await sendEmail(values, values.email, "Your Email Is Sent Successfully");
+    setIsSubmitting(true);
+    setStatus("idle"); // Reset status before starting a new submission
+    try {
+      const response = await sendEmail(values);
+      if (response) {
+        await sendEmail(
+          values,
+          values.email,
+          "Your Email Is Sent Successfully"
+        );
+        setStatus("success");
+        reset();
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setStatus("idle"), 3000); // Reset status to idle after 3 seconds
     }
   };
+  // const onSubmit = async (values: ContactForm) => {
+  //   setIsSubmitting(true);
+  //   const response = await sendEmail(values);
+  //   if (response) {
+  //     await sendEmail(values, values.email, "Your Email Is Sent Successfully");
+  //     setIsSubmitting(false);
+  //     reset();
+  //   }
+  //   setIsSubmitting(false);
+  // };
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
@@ -177,12 +210,33 @@ export default function Contact() {
             placeholder="Votre message..."
           ></Textarea>
 
-          <button
+          <div className="flex flex-row items-center gap-1">
+            <Button
+              isLoading={isSubmitting}
+              isDisabled={isSubmitting}
+              type="submit"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+            >
+              Submit
+            </Button>
+            <span>
+              {status === "success" && (
+                <CiCircleCheck className="w-5 h-5 text-green-700" />
+              )}
+              {status === "error" && (
+                <IoIosCloseCircleOutline className="w-5 h-5 text-red-500" />
+              )}
+            </span>
+          </div>
+
+          {/* <Button
+            isLoading={isSubmitting}
+            isDisabled={isSubmitting}
             type="submit"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-8"
           >
             Submit
-          </button>
+          </Button> */}
         </form>
       </div>
 
