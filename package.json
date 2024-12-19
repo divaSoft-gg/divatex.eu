@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@aymen_diva/diva-shared-navbar": "^0.0.52",
+    "@aymen_diva/diva-shared-navbar": "^0.0.56",
+    "@aymen_diva/diva-contact-form": "^1.0.20",
     "@nextui-org/react": "^2.4.8",
     "@tailwindcss/typography": "^0.5.15",
     "clsx": "^2.1.1",

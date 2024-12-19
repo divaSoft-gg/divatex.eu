@@ -29,8 +29,8 @@ export interface erpFeaturesCardProps {
 }
 
 export interface locationProps {
-  country: string;
-  address: string;
+  question: string;
+  answer: string;
 }
 export interface socialsProps {
   question: string;
