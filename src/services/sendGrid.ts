@@ -2,7 +2,7 @@ import { ContactForm } from "../common/types";
 
 export const sendEmail = async (
   message: ContactForm,
-  toEmail: string = "aymen@diva-software.com",
+  toEmail: string = "support@diva-software.io",
   successMessage?: string
 ) => {
   try {
