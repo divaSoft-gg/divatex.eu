@@ -192,24 +192,24 @@
     "locationQuestion": "Où nous trouver?",
     "places": [
       {
-        "country": "Luxembourg",
-        "address": "8 rue des marguerites 8056 Strassen"
+        "question": "Luxembourg",
+        "answer": "8 rue des marguerites 8056 Strassen"
       },
       {
-        "country": "Belgique",
-        "address": "Apostelhuizen 93 9000 Gent"
+        "question": "Belgique",
+        "answer": "Apostelhuizen 93 9000 Gent"
       },
       {
-        "country": "France",
-        "address": "5 impasse de la colombette 31000 Toulouse"
+        "question": "France",
+        "answer": "5 impasse de la colombette 31000 Toulouse"
       },
       {
-        "country": "Maroc",
-        "address": "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca."
+        "question": "Maroc",
+        "answer": "Boulevard d’Anfa, Résidence le petit paradis 20000 Casablanca."
       },
       {
-        "country": "Tunisie",
-        "address": "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse"
+        "question": "Tunisie",
+        "answer": "Boulevard Yasser Arafat Immeuble N° 38 Bureau 44 Sahloul 4054 Sousse"
       }
     ],
     "socials": [

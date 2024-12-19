@@ -5,9 +5,16 @@ import { MdOutlineEmail, MdOutlinePhoneEnabled } from "react-icons/md";
 
 import { Avatar } from "@nextui-org/react";
 import SharedCard from "../../components/shared/SharedCard";
-import SharedGrid from "../../components/shared/SharedGrid";
+import {
+  CardDescription,
+  CardHeader,
+  CardList,
+  ContactUsForm,
+} from "@aymen_diva/diva-contact-form";
+import { useTheme } from "../../hooks/useTheme";
 
 export default function ContactUsView() {
+  const { theme } = useTheme();
   const { t } = useTranslation();
   const socials: socialsProps[] = t("contactUs.socials", {
     returnObjects: true,
@@ -19,32 +26,25 @@ export default function ContactUsView() {
     <section id="contact-us" className="my-8">
       <CentredLayout>
         <div className="flex flex-col gap-12 px-4 lg:px-0 ">
-          <SharedGrid>
-            <div className="flex flex-col justify-center gap-20 ">
-              <div className="flex flex-col w-full gap-12">
-                <h6 className="text-black dark:text-white custom-heading ">
-                  {t("contactUs.sectionTitleView")}
-                </h6>
-                <p className="text-black dark:text-white custom-description ">
-                  {t("contactUs.description")}
-                </p>
-
-                <div>
-                  <p className="text-base font-semibold tracking-tight text-black dark:text-white">
-                    {t("contactUs.contactUsAt")}
-                  </p>
-                  {socials.map((element: socialsProps, index: number) => (
-                    <p
-                      key={index}
-                      className="text-sm leading-tight text-left text-gray-700 dark:text-white"
-                    >
-                      {element.answer}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </SharedGrid>
+          <ContactUsForm theme={theme}>
+            <CardHeader
+              textSize="text5xl"
+              title={t("contactUs.sectionTitleView")}
+            />
+            <CardDescription
+              description={t("contactUs.description")}
+              font="normal"
+            />
+            <CardList
+              list={socials}
+              listTitle={t("contactUs.contactUsAt")}
+              font="bold"
+              listTextSize="lg"
+              listFont="semiBold"
+              elementListGap="small"
+              paddingY="small"
+            />
+          </ContactUsForm>
           <section>
             <h1 className="custom-heading">{t("contactUs.locationTitle")}</h1>
             <div className="grid grid-cols-1 gap-3 mt-8 lg:grid-cols-3">
